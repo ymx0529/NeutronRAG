@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeutronRAG Demo</title>
+    <link rel="stylesheet" href="../static/css/demo.css">
+    <!-- <link rel="stylesheet" href="../static/css/analysis.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.3.5/gauge.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="title">
+                <h1> <img src="https://raw.githubusercontent.com/SciEcon/img/main/202312151408537.png" alt="Logo" class="logo"> NeutronRAG Demo</h1>
+                <h2 class="subtitle">Multi-Dimension Feedback</h2>
+            </div>
+            <input type="text" placeholder="请输入内容..." id="user-input" class="input-box">
+            <button id="send-button" class="send-button">发送</button>
+            <div>
+                <i class="material-icons user-icon">account_circle</i>
+            </div>
+        </header>
+
+        <!-- 左侧栏：下拉菜单 -->
+        <aside class="left-sidebar">
+            <div class="dropdown-group">
+                <div class="dropdown">
+                    <button class="dropbtn" data-type="dataset">Dataset ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-subtype="dataset1">Dataset 1</a>
+                        <a href="#" data-subtype="dataset2">Dataset 2</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" data-type="vector">Vector ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-subtype="rag1">Vector RAG 1</a>
+                        <a href="#" data-subtype="rag2">Vector RAG 2</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" data-type="graph">Graph ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-subtype="rag3">Graph RAG 3</a>
+                        <a href="#" data-subtype="rag4">Graph RAG 4</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" data-type="hybrid">Hybrid ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-subtype="hybrid1">Hybrid 1</a>
+                        <a href="#" data-subtype="hybrid2">Hybrid 2</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主要内容区域 -->
+        <main class="main-content">
+          <!-- 第一部分：Answer & Advice -->
+          <section class="answer-advice-section section-box">
+            <div class="resize-toggle" onclick="toggleResize(this, 'section')">
+                <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
+            </div>
+              <div class="section-title">Answer</div>
+              <div class="content-wrapper">
+                <div class="answer-section">
+                    <div class="answer-content">
+                        <!-- Vector Answer -->
+                        <div class="box" id="vector-answer">
+                            <div class="resize-toggle" onclick="toggleResize(this, 'box')">
+                                <i class="material-icons resize-icon enlarge-icon small-icon">fullscreen</i>
+                            </div>
+                            <div class="content">
+                                <h3 class="box-title small-title">Vector Answer</h3>
+                                <div id="vector-answer-content">
+                                    <!-- 后端返回的Vector RAG答案 -->
+                                </div>
+                                <div class="preference-icon" onclick="selectPreference('vector')">
+                                    <i class="material-icons small-icon">thumb_up</i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Graph Answer -->
+                        <div class="box" id="graph-answer">
+                            <div class="resize-toggle" onclick="toggleResize(this, 'box')">
+                                <i class="material-icons resize-icon enlarge-icon small-icon">fullscreen</i>
+                            </div>
+                            <div class="content">
+                                <h3 class="box-title small-title">Graph Answer</h3>
+                                <div id="graph-answer-content">
+                                    <!-- 后端返回的Graph RAG答案 -->
+                                </div>
+                                <div class="preference-icon" onclick="selectPreference('graph')">
+                                    <i class="material-icons small-icon">thumb_up</i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hybrid Answer -->
+                        <div class="box" id="hybrid-answer">
+                            <div class="resize-toggle" onclick="toggleResize(this, 'box')">
+                                <i class="material-icons resize-icon enlarge-icon small-icon">fullscreen</i>
+                            </div>
+                            <div class="content">
+                                <h3 class="box-title small-title">Hybrid Answer</h3>
+                                <div id="hybrid-answer-content">
+                                    <!-- 后端返回的Hybrid RAG答案 -->
+                                </div>
+                                <div class="preference-icon" onclick="selectPreference('hybrid')">
+                                    <i class="material-icons small-icon">thumb_up</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-title">Advice</div>
+                <!-- 建议 -->
+                <div class="advice-section">
+                    <div class="box" id="advice-box">
+                        <div class="resize-toggle" onclick="toggleResize(this, 'box')">
+                            <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
+                        </div>
+                      <div class="content" id="advice-content">
+                          <!-- 后端返回的建议内容 -->
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </section>
+
+            <!-- 第二部分：Analysis -->
+            <section class="analysis-section section-box">
+                <div class="resize-toggle" onclick="toggleResize(this, 'section')">
+                  <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
+                </div>
+                <div class="section-title">Analysis</div>
+                <div class="analysis-content">
+                    <div class="gauges-container">
+                        <!-- 仪表盘 -->
+                        <div class="gauge-wrapper">
+                            <div class="gauge-container">
+                                <canvas id="gauge1"></canvas>
+                                <div class="percentage" id="percentage1"></div>
+                            </div>
+                        </div>
+                        <div class="gauge-wrapper">
+                            <div class="gauge-container">
+                                <canvas id="gauge2"></canvas>
+                                <div class="percentage" id="percentage2"></div>
+                            </div>
+                        </div>
+                        <div class="gauge-wrapper">
+                            <div class="gauge-container">
+                                <canvas id="gauge3"></canvas>
+                                <div class="percentage" id="percentage3"></div>
+                            </div>
+                        </div>
+                        <div class="gauge-wrapper">
+                            <div class="gauge-container">
+                                <canvas id="gauge4"></canvas>
+                                <div class="percentage" id="percentage4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="all-charts-container" style="display: none;">
+                        <!-- 仪表盘 -->
+                        <div class="panel-container">
+                            <div class="gauge-wrapper">
+                                <div class="gauge-container">
+                                    <canvas id="gauge1-big"></canvas>
+                                    <div class="percentage" id="percentage1-big"></div>
+                                </div>
+                            </div>
+                            <div class="gauge-wrapper">
+                                <div class="gauge-container">
+                                    <canvas id="gauge2-big"></canvas>
+                                    <div class="percentage" id="percentage2-big"></div>
+                                </div>
+                            </div>
+                            <div class="gauge-wrapper">
+                                <div class="gauge-container">
+                                    <canvas id="gauge3-big"></canvas>
+                                    <div class="percentage" id="percentage3-big"></div>
+                                </div>
+                            </div>
+                            <div class="gauge-wrapper">
+                                <div class="gauge-container">
+                                    <canvas id="gauge4-big"></canvas>
+                                    <div class="percentage" id="percentage4-big"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 饼图部分 -->
+                        <div class="chart-container">
+                            <div class="chart-box">
+                                <canvas id="pieChart1"></canvas>
+                            </div>
+                            <div class="chart-box">
+                                <canvas id="pieChart2"></canvas>
+                            </div>
+                            <div class="chart-box">
+                                <canvas id="pieChart3"></canvas>
+                            </div>
+                            <div class="chart-box" style="width: 20%;">
+                                <canvas id="largePie"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- 雷达图部分 -->
+                        <div class="radar-container">
+                            <div class="radar-box">
+                                <canvas id="radarChart1"></canvas>
+                            </div>
+                            <div class="radar-box">
+                                <canvas id="radarChart2"></canvas>
+                            </div>
+                            <div class="radar-box">
+                                <canvas id="radarChart3"></canvas>
+                            </div>
+                            <div class="radar-box">
+                                <canvas id="radarChart4"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- 第三部分：Retrieval Result -->
+            <section class="retrieval-result section-box">
+                <div class="resize-toggle" onclick="toggleResize(this, 'section')">
+                  <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
+                </div>
+                <div class="section-title">Retrieval Result</div>
+                <div class="retrieval-content">
+                    <!-- Vector Result -->
+                    <div class="box" id="vector-result">
+                        <div class="content">
+                            <h3 class="box-title">Vector Result</h3>
+                            <div id="vector-content">
+                                <!-- 占位符 -->
+                                <div class="placeholder" id="vector-placeholder">
+                                    <img src="https://raw.githubusercontent.com/SciEcon/img/main/202312151739946.png" alt="Vector Placeholder">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Graph Result -->
+                    <div class="box" id="graph-result">
+                        <div class="content">
+                            <h3 class="box-title">Graph Result</h3>
+                            <div id="graph-content">
+                                <!-- 占位符 -->
+                                <div class="placeholder" id="graph-placeholder">
+                                    <img src="https://raw.githubusercontent.com/SciEcon/img/main/202312151739334.png" alt="Graph Placeholder">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第四部分：History -->
+            <section class="history-section section-box">
+                <div class="resize-toggle" onclick="toggleResize(this, 'section')">
+                  <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
+                </div>
+                <div class="section-title">History</div>
+                <div class="history-content">
+                    <!-- 数据集选择 -->
+                    <div class="dataset-title">数据集名称</div>
+                    <select id="dataset-select">
+                        <option value="">选择数据集</option>
+                        <!-- 数据集选项将通过 JavaScript 动态添加 -->
+                    </select>
+                    <!-- 问题列表 -->
+                    <div id="question-list">
+                        <!-- 问题将通过 JavaScript 动态添加 -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../static/js/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* 四个仪表盘的容器 */
+.panel-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.gauge-wrapper {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 250px; /* Adjusted size for the white rectangle */
+    height: 250px; /* Adjusted size for the white rectangle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px; /* Add margin to move gauges to the right */
+}
+
+.gauge-container {
+    width: 220px;
+    height: 220px;
+    position: relative;
+}
+
+.gauge-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gauge-container .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Ensure text does not break */
+}
+
+/* 饼图和雷达图的布局 */
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chart-box {
+    flex: 1;
+    min-width: 0;
+}
+
+.chart-box canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* 最下面四个雷达图的布局 */
+.radar-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.radar-box {
+    flex: 1;
+    min-width: 0;
+}
+
+.radar-box canvas {
+    width: 100%;
+    height: 100%;
+}
