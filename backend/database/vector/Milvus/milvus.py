@@ -109,14 +109,14 @@ class MilvusClientTool:
         print(fmt.format(f'clear collection {collection_name}'))
         self.client.drop_collection(collection_name)
 
-class MilvusDB:
+class MilvusDB(VectorDatabase):
 
     def __init__(self,
                  collection_name,
                  dim,
                  overwrite=False,
                  similarity_top_k=5,
-                 server_ip='202.199.13.67',
+                 server_ip='127.0.0.1',
                  server_port='19530',
                  log_file='./database/milvus.log',
                  store=False,
@@ -297,7 +297,7 @@ class MilvusDB:
 
     
 def test_retrieve_nodes(db_name):
-    from RAGWebUi_demo.backend.llmragenv.Cons_Retri.Embedding_Model import  EmbeddingEnv
+    from llmragenv.Cons_Retri.Embedding_Model import  EmbeddingEnv
 
     vector_db = MilvusDB(db_name, 1024, overwrite=False, store=True,retriever=True)
     vector_db.show_collections_stats()
