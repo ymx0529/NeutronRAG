@@ -75,6 +75,12 @@ class ChatUnionRAG(ChatBase):
 
     def Graph_retrieval_result(self):
         return self.triplets
+    
+
+# 我想的是并集是拼起来，交集是看三元组中的每个字是否在段中出现，如果出现用户优先保留哪个
+
+
+
     @override
     def web_chat(self, message: str, history: List[Optional[List]] | None):
 
@@ -98,3 +104,19 @@ class ChatUnionRAG(ChatBase):
         return answers
         
         # ic(result)
+
+
+if __name__ == '__main__':
+    from database.graph.nebulagraph.nebulagraph import NebulaDB
+    from llmragenv.LLM.ollama.client import OllamaClient
+    from database.vector.Milvus.milvus import MilvusDB
+    graph_db = NebulaDB()
+    vector_db = MilvusDB()
+    llm = OllamaClient(model_name = "llama3:8b")
+
+
+    testRAG = ChatUnionRAG(OllamaClient,vector_db=vector_db,graph_db=graph_db)
+    answers = testRAG.web_chat(message="Who was the MVP of Super Bowl 2022?")
+    print(answers)
+
+
