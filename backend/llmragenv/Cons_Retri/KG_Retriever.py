@@ -1,8 +1,8 @@
 '''
 Author: fzb fzb0316@163.com
 Date: 2024-09-19 08:48:47
-LastEditors: fzb0316 fzb0316@163.com
-LastEditTime: 2024-11-20 20:05:22
+LastEditors: lpz 1565561624@qq.com
+LastEditTime: 2025-02-09 23:27:41
 FilePath: /RAGWebUi_demo/llmragenv/Retriever/retriever_graph.py
 Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
@@ -122,6 +122,7 @@ class RetrieverGraph(object):
 
     def extract_keyword(self, question, max_keywords=5):
         prompt = keyword_extract_prompt.format(question=question, max_keywords=max_keywords)
+        print(prompt)
         
         # 获取 LLM 的 response
         # if self._llm.__class__.__name__ == "OllamaClient":

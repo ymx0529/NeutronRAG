@@ -1,14 +1,3 @@
-'''
-Author: fzb fzb0316@163.com
-Date: 2024-09-15 21:12:31
-LastEditors: fzb0316 fzb0316@163.com
-LastEditTime: 2024-11-20 20:04:44
-FilePath: /RAGWebUi_demo/chat/chat_unionrag.py
-Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-'''
-
-
-
 # from icecream import ic
 from typing import List, Optional
 from overrides import override
@@ -90,7 +79,7 @@ class ChatUnionRAG(ChatBase):
 
         self.triplets = self.retriver_graph.retrieve_2hop(question=message, pruning = 30)
 
-        prompt = Hybrid_prompt(message = message, nodes_text = node_result, context = self.triplets)
+        prompt = Hybrid_prompt.format(message = message, nodes_text = node_result, context = self.triplets)
         
         # ic(message)
         # ic(history)
@@ -111,12 +100,12 @@ if __name__ == '__main__':
     from llmragenv.LLM.ollama.client import OllamaClient
     from database.vector.Milvus.milvus import MilvusDB
     graph_db = NebulaDB()
-    vector_db = MilvusDB()
-    llm = OllamaClient(model_name = "llama3:8b")
+    vector_db = MilvusDB('rgb', 1024, overwrite=False, store=True,retriever=True)
+    llm = OllamaClient(model_name = "llama3:8b",url="http://localhost:11434/v1",key="ollama")
 
 
-    testRAG = ChatUnionRAG(OllamaClient,vector_db=vector_db,graph_db=graph_db)
-    answers = testRAG.web_chat(message="Who was the MVP of Super Bowl 2022?")
+    testRAG = ChatUnionRAG(llm=llm,vector_db=vector_db,graph_db=graph_db)
+    answers = testRAG.web_chat(message="Who was the MVP of Super Bowl 2022?",history=None)
     print(answers)
 
 
