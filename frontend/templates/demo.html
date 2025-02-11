@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeutronRAG Demo</title>
     <link rel="stylesheet" href="../static/css/demo.css">
-    <!-- <link rel="stylesheet" href="../static/css/analysis.css"> -->
+  	<link rel="stylesheet" href="../static/css/analysis.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
@@ -28,33 +28,125 @@
 
         <!-- 左侧栏：下拉菜单 -->
         <aside class="left-sidebar">
-            <div class="dropdown-group">
-                <div class="dropdown">
-                    <button class="dropbtn" data-type="dataset">Dataset ▼</button>
-                    <div class="dropdown-content">
-                        <a href="#" data-subtype="dataset1">Dataset 1</a>
-                        <a href="#" data-subtype="dataset2">Dataset 2</a>
-                    </div>
+            <div class="sidebar-section">
+                <div class="sidebar-header" onclick="toggleSidebarSection(this)">
+                    <h3>Setting Bar</h3>
+                    <i class="material-icons">expand_more</i>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn" data-type="vector">Vector ▼</button>
-                    <div class="dropdown-content">
-                        <a href="#" data-subtype="rag1">Vector RAG 1</a>
-                        <a href="#" data-subtype="rag2">Vector RAG 2</a>
+                <div class="sidebar-content setting-content">
+                    <div class="input-group">
+                        <label for="model-select">Model:</label>
+                        <select id="model-select" name="model-select">
+                            <option value="ModelA">Llama3:70b</option>
+                            <option value="ModelB">ModelB</option>
+                            <option value="ModelC">ModelC</option>
+                        </select>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" data-type="graph">Graph ▼</button>
-                    <div class="dropdown-content">
-                        <a href="#" data-subtype="rag3">Graph RAG 3</a>
-                        <a href="#" data-subtype="rag4">Graph RAG 4</a>
+                    <div class="input-group">
+                        <label for="api-key-input">API-KEY:</label>
+                        <input type="text" id="api-key-input" name="api-key-input" readonly>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" data-type="hybrid">Hybrid ▼</button>
-                    <div class="dropdown-content">
-                        <a href="#" data-subtype="hybrid1">Hybrid 1</a>
-                        <a href="#" data-subtype="hybrid2">Hybrid 2</a>
+                    <div class="sidebar-section-inner">
+                        <div class="sidebar-header-inner" onclick="toggleSidebarSection(this)">
+                            <h3>Dataset</h3>
+                            <i class="material-icons">expand_more</i>
+                        </div>
+                        <div class="sidebar-content-inner">
+                            <div class="input-group">
+                                <input type="radio" id="dataset-rgb" name="dataset" value="RGB">
+                                <label for="dataset-rgb">RGB</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="radio" id="dataset-multihop" name="dataset" value="Multihop">
+                                <label for="dataset-multihop">Multihop</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="radio" id="dataset-ragas" name="dataset" value="RAGAS">
+                                <label for="dataset-ragas">RAGAS</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="radio" id="dataset-rageval" name="dataset" value="RAGEval">
+                                <label for="dataset-rageval">RAGEval</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="radio" id="dataset-crud-rag" name="dataset" value="CRUD-RAG">
+                                <label for="dataset-crud-rag">CRUD-RAG</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="radio" id="dataset-recall" name="dataset" value="RECALL">
+                                <label for="dataset-recall">RECALL</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section-inner">
+                        <div class="sidebar-header-inner" onclick="toggleSidebarSection(this)">
+                            <h3>VectorRAG</h3>
+                            <i class="material-icons">expand_more</i>
+                        </div>
+                        <div class="sidebar-content-inner">
+                            <div class="input-group">
+                                <label for="top-k">TOP-K:</label>
+                                <input type="number" id="top-k" name="top-k" value="5">
+                            </div>
+                            <div class="input-group">
+                                <label for="similarity-threshold">Threshold:</label>
+                                <input type="number" id="similarity-threshold" name="similarity-threshold" value="0.8">
+                            </div>
+                            <div class="input-group">
+                                <label for="chunk-size">ChunkSize:</label>
+                                <input type="number" id="chunk-size" name="chunk-size" value="128">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section-inner">
+                        <div class="sidebar-header-inner" onclick="toggleSidebarSection(this)">
+                            <h3>GraphRAG</h3>
+                            <i class="material-icons">expand_more</i>
+                        </div>
+                        <div class="sidebar-content-inner">
+                            <div class="input-group">
+                                <label for="k-hop">K-HOP:</label>
+                                <select id="k-hop" name="k-hop">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="max-keywords">Keywords:</label>
+                                <input type="number" id="max-keywords" name="max-keywords" value="10">
+                            </div>
+                            <div class="input-group">
+                                <label for="pruning">Pruning:</label>
+                                <select id="pruning" name="pruning">
+                                    <option value="yes">YES</option>
+                                    <option value="no">NO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section-inner">
+                        <div class="sidebar-header-inner" onclick="toggleSidebarSection(this)">
+                            <h3>HybridRAG</h3>
+                            <i class="material-icons">expand_more</i>
+                        </div>
+                        <div class="sidebar-content-inner">
+                            <div class="input-group">
+                                <label for="strategy">Strategy:</label>
+                                <select id="strategy" name="strategy">
+                                    <option value="union">Union</option>
+                                    <option value="intersection">Intersection</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="vector-proportion">Vector:</label>
+                                <input type="number" id="vector-proportion" name="vector-proportion" min="0" max="1" step="0.1" value="0.9">
+                            </div>
+                            <div class="input-group">
+                                <label for="graph-proportion">Graph:</label>
+                                <input type="number" id="graph-proportion" name="graph-proportion" min="0" max="1" step="0.1" value="0.8">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,181 +154,84 @@
 
         <!-- 主要内容区域 -->
         <main class="main-content">
-          <!-- 第一部分：Answer & Advice -->
-          <section class="answer-advice-section section-box">
-            <div class="resize-toggle" onclick="toggleResize(this, 'section')">
-                <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
-            </div>
-              <div class="section-title">Answer</div>
-              <div class="content-wrapper">
-                <div class="answer-section">
-                    <div class="answer-content">
-                        <!-- Vector Answer -->
-                        <div class="box" id="vector-answer">
-                            <div class="resize-toggle" onclick="toggleResize(this, 'box')">
-                                <i class="material-icons resize-icon enlarge-icon small-icon">fullscreen</i>
-                            </div>
-                            <div class="content">
-                                <h3 class="box-title small-title">Vector Answer</h3>
-                                <div id="vector-answer-content">
-                                    <!-- 后端返回的Vector RAG答案 -->
-                                </div>
-                                <div class="preference-icon" onclick="selectPreference('vector')">
-                                    <i class="material-icons small-icon">thumb_up</i>
-                                </div>
-                            </div>
+            <!-- 第一部分：Answer -->
+            <section class="answer-section section-box">
+                <div class="answer-box">
+                    <div class="section-title answer-title">
+                        <span>Answer</span>
+                        <div class="title-icons">
+                            <img class="answer-icon" src="../lib/qa.png" alt="Answer Icon">
                         </div>
-                        <!-- Graph Answer -->
-                        <div class="box" id="graph-answer">
-                            <div class="resize-toggle" onclick="toggleResize(this, 'box')">
-                                <i class="material-icons resize-icon enlarge-icon small-icon">fullscreen</i>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="answer-section">
+                            <div class="rag-selector">
+                                <label for="rag-select">Mode:</label>
+                                <select id="rag-select">
+                                    <option value="vector">Vector</option>
+                                    <option value="graph">Graph</option>
+                                    <option value="hybrid">Hybrid</option>
+                                </select>
                             </div>
-                            <div class="content">
-                                <h3 class="box-title small-title">Graph Answer</h3>
-                                <div id="graph-answer-content">
-                                    <!-- 后端返回的Graph RAG答案 -->
+                            <div class="answer-content">
+                                <!-- Vector Answer -->
+                                <div class="box" id="vector-answer">
+                                    <div class="content">
+                                        <div id="vector-answer-content" class="answer-text">
+                                            <!-- 后端返回的Vector RAG答案 -->
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="preference-icon" onclick="selectPreference('graph')">
-                                    <i class="material-icons small-icon">thumb_up</i>
+                                <!-- Graph Answer -->
+                                <div class="box" id="graph-answer" style="display: none;">
+                                    <div class="content">
+                                        <div id="graph-answer-content" class="answer-text">
+                                            <!-- 后端返回的Graph RAG答案 -->
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Hybrid Answer -->
-                        <div class="box" id="hybrid-answer">
-                            <div class="resize-toggle" onclick="toggleResize(this, 'box')">
-                                <i class="material-icons resize-icon enlarge-icon small-icon">fullscreen</i>
-                            </div>
-                            <div class="content">
-                                <h3 class="box-title small-title">Hybrid Answer</h3>
-                                <div id="hybrid-answer-content">
-                                    <!-- 后端返回的Hybrid RAG答案 -->
-                                </div>
-                                <div class="preference-icon" onclick="selectPreference('hybrid')">
-                                    <i class="material-icons small-icon">thumb_up</i>
+                                <!-- Hybrid Answer -->
+                                <div class="box" id="hybrid-answer" style="display: none;">
+                                    <div class="content">
+                                        <div id="hybrid-answer-content" class="answer-text">
+                                            <!-- 后端返回的Hybrid RAG答案 -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="section-title">Advice</div>
-                <!-- 建议 -->
-                <div class="advice-section">
-                    <div class="box" id="advice-box">
-                        <div class="resize-toggle" onclick="toggleResize(this, 'box')">
-                            <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
+            </section>
+  
+            <!-- 第二部分：Suggestion -->
+            <section class="suggestion-section section-box">
+                <div class="advice-box">
+                    <div class="section-title suggestion-title">
+                        <span>Suggestions</span>
+                        <div class="title-icons">
+                            <img src="../lib/lantern.jpg" alt="Suggestion Icon" class="suggestion-icon">
                         </div>
-                      <div class="content" id="advice-content">
-                          <!-- 后端返回的建议内容 -->
-                      </div>
-                  </div>
-              </div>
-            </div>
-        </section>
-
-            <!-- 第二部分：Analysis -->
-            <section class="analysis-section section-box">
-                <div class="resize-toggle" onclick="toggleResize(this, 'section')">
-                  <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
-                </div>
-                <div class="section-title">Analysis</div>
-                <div class="analysis-content">
-                    <div class="gauges-container">
-                        <!-- 仪表盘 -->
-                        <div class="gauge-wrapper">
-                            <div class="gauge-container">
-                                <canvas id="gauge1"></canvas>
-                                <div class="percentage" id="percentage1"></div>
-                            </div>
-                        </div>
-                        <div class="gauge-wrapper">
-                            <div class="gauge-container">
-                                <canvas id="gauge2"></canvas>
-                                <div class="percentage" id="percentage2"></div>
-                            </div>
-                        </div>
-                        <div class="gauge-wrapper">
-                            <div class="gauge-container">
-                                <canvas id="gauge3"></canvas>
-                                <div class="percentage" id="percentage3"></div>
-                            </div>
-                        </div>
-                        <div class="gauge-wrapper">
-                            <div class="gauge-container">
-                                <canvas id="gauge4"></canvas>
-                                <div class="percentage" id="percentage4"></div>
+                    </div>
+                    <!-- 建议 -->
+                    <div class="advice-section">
+                        <div class="box" id="advice-box">
+                            <div class="content" id="advice-content">
+                                <!-- 后端返回的建议内容 -->
                             </div>
                         </div>
                     </div>
-                    <div class="all-charts-container" style="display: none;">
-                        <!-- 仪表盘 -->
-                        <div class="panel-container">
-                            <div class="gauge-wrapper">
-                                <div class="gauge-container">
-                                    <canvas id="gauge1-big"></canvas>
-                                    <div class="percentage" id="percentage1-big"></div>
-                                </div>
-                            </div>
-                            <div class="gauge-wrapper">
-                                <div class="gauge-container">
-                                    <canvas id="gauge2-big"></canvas>
-                                    <div class="percentage" id="percentage2-big"></div>
-                                </div>
-                            </div>
-                            <div class="gauge-wrapper">
-                                <div class="gauge-container">
-                                    <canvas id="gauge3-big"></canvas>
-                                    <div class="percentage" id="percentage3-big"></div>
-                                </div>
-                            </div>
-                            <div class="gauge-wrapper">
-                                <div class="gauge-container">
-                                    <canvas id="gauge4-big"></canvas>
-                                    <div class="percentage" id="percentage4-big"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 饼图部分 -->
-                        <div class="chart-container">
-                            <div class="chart-box">
-                                <canvas id="pieChart1"></canvas>
-                            </div>
-                            <div class="chart-box">
-                                <canvas id="pieChart2"></canvas>
-                            </div>
-                            <div class="chart-box">
-                                <canvas id="pieChart3"></canvas>
-                            </div>
-                            <div class="chart-box" style="width: 20%;">
-                                <canvas id="largePie"></canvas>
-                            </div>
-                        </div>
-
-                        <!-- 雷达图部分 -->
-                        <div class="radar-container">
-                            <div class="radar-box">
-                                <canvas id="radarChart1"></canvas>
-                            </div>
-                            <div class="radar-box">
-                                <canvas id="radarChart2"></canvas>
-                            </div>
-                            <div class="radar-box">
-                                <canvas id="radarChart3"></canvas>
-                            </div>
-                            <div class="radar-box">
-                                <canvas id="radarChart4"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </section>
 
             <!-- 第三部分：Retrieval Result -->
             <section class="retrieval-result section-box">
-                <div class="resize-toggle" onclick="toggleResize(this, 'section')">
-                  <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
+                <div class="section-title">
+                  <span>Retrieval Result</span>
+                  <div class="title-icons">
+                    <i class="material-icons resize-icon enlarge-icon" onclick="toggleResize(this, 'section')">fullscreen</i>
+                  </div>
                 </div>
-                <div class="section-title">Retrieval Result</div>
                 <div class="retrieval-content">
                     <!-- Vector Result -->
                     <div class="box" id="vector-result">
@@ -252,6 +247,7 @@
                     </div>
                     <!-- Graph Result -->
                     <div class="box" id="graph-result">
+                        
                         <div class="content">
                             <h3 class="box-title">Graph Result</h3>
                             <div id="graph-content">
@@ -267,21 +263,115 @@
 
             <!-- 第四部分：History -->
             <section class="history-section section-box">
-                <div class="resize-toggle" onclick="toggleResize(this, 'section')">
-                  <i class="material-icons resize-icon enlarge-icon">fullscreen</i>
+                <div class="section-title" id="history-title">
+                    <span id="history-title-text"></span>
+                    <img src="../lib/history.png" alt="History Icon" class="history-icon">
                 </div>
-                <div class="section-title">History</div>
                 <div class="history-content">
-                    <!-- 数据集选择 -->
-                    <div class="dataset-title">数据集名称</div>
-                    <select id="dataset-select">
-                        <option value="">选择数据集</option>
-                        <!-- 数据集选项将通过 JavaScript 动态添加 -->
-                    </select>
-                    <!-- 问题列表 -->
                     <div id="question-list">
                         <!-- 问题将通过 JavaScript 动态添加 -->
                     </div>
+                    <div class="more-info">
+                        <span class="more-info-text">if you want to know more detailed metric, please click</span>
+                        <i class="material-icons more-button">arrow_forward</i>
+                        <span class="more-text">More</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 第五部分：Analysis -->
+            <section class="analysis-section section-box" style="display: none;">
+                <button class="back-button">返回</button>  <!-- 添加返回按钮 -->
+                <div class="analysis-title-row">
+                    <div class="section-title">Metric Area</div>
+                </div>
+                <div class="analysis-content">
+                    <div class="gauges-container">
+                        <div class="section-title analysis-sub-title">Accuracy</div>
+                        <!-- 仪表盘 -->
+                        <div class="gauge-wrapper">
+                            <div class="gauge-container">
+                                <div class="gauge-title">VectorRAG</div>
+                                <canvas id="gauge1"></canvas>
+                                <div class="percentage" id="percentage1"></div>
+                            </div>
+                        </div>
+                        <div class="gauge-wrapper">
+                            <div class="gauge-container">
+                                <div class="gauge-title">GraphRAG</div>
+                                <canvas id="gauge2"></canvas>
+                                <div class="percentage" id="percentage2"></div>
+                            </div>
+                        </div>
+                        <div class="gauge-wrapper">
+                            <div class="gauge-container">
+                                <div class="gauge-title">HybridRAG</div>
+                                <canvas id="gauge3"></canvas>
+                                <div class="percentage" id="percentage3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="all-charts-container" style="display: none;">
+                        <!-- 仪表盘 -->
+                        <div class="panel-container">
+                            <div class="section-title analysis-sub-title">Accuracy</div>
+                            <div class="gauge-wrapper">
+                                <div class="gauge-container">
+                                    <div class="gauge-title">VectorRAG</div>
+                                    <canvas id="gauge1-big"></canvas>
+                                    <div class="percentage" id="percentage1-big"></div>
+                                </div>
+                            </div>
+                            <div class="gauge-wrapper">
+                                <div class="gauge-container">
+                                    <div class="gauge-title">GraphRAG</div>
+                                    <canvas id="gauge2-big"></canvas>
+                                    <div class="percentage" id="percentage2-big"></div>
+                                </div>
+                            </div>
+                            <div class="gauge-wrapper">
+                                <div class="gauge-container">
+                                    <div class="gauge-title">HybridRAG</div>
+                                    <canvas id="gauge3-big"></canvas>
+                                    <div class="percentage" id="percentage3-big"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 饼图部分 -->
+                        <div class="chart-container">
+                            <div class="section-title analysis-sub-title">Error Statistic</div>
+                            <div class="chart-box">
+                                <div class="chart-title">VectorRAG</div>
+                                <canvas id="pieChart1"></canvas>
+                            </div>
+                            <div class="chart-box">
+                                <div class="chart-title">GraphRAG</div>
+                                <canvas id="pieChart2"></canvas>
+                            </div>
+                            <div class="chart-box">
+                                <div class="chart-title">HybridRAG</div>
+                                <canvas id="pieChart3"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- 雷达图部分 -->
+                        <div class="radar-container">
+                            <div class="section-title analysis-sub-title">Evaluation Metric</div>
+                            <div class="radar-box">
+                                <div class="radar-title">VectorRAG</div>
+                                <canvas id="radarChart1"></canvas>
+                            </div>
+                            <div class="radar-box">
+                                <div class="radar-title">GraphRAG</div>
+                                <canvas id="radarChart2"></canvas>
+                            </div>
+                            <div class="radar-box">
+                                <div class="radar-title">HybridRAG</div>
+                                <canvas id="radarChart3"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </section>
         </main>

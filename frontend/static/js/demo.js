@@ -1,62 +1,3 @@
-// 切换放大/缩小
-function toggleResize(element, type) {
-  let target = element.closest("." + type + "-box");
-
-  const icon = element.querySelector(".material-icons");
-
-  // 切换放大缩小状态
-  if (target.classList.contains("enlarged")) {
-    target.classList.remove("enlarged");
-    icon.textContent = "fullscreen"; // 切换回放大图标
-    // 恢复所有的图表到 gauge
-    const gaugesContainer = document.querySelector('.gauges-container');
-    const allChartsContainer = document.querySelector('.all-charts-container');
-    const analysisContent = document.querySelector(".analysis-content");
-
-    if (gaugesContainer) {
-      gaugesContainer.style.display = 'flex';
-    }
-
-    if (allChartsContainer) {
-      allChartsContainer.style.display = 'none';
-    }
-    if (analysisContent) {
-      analysisContent.style.display = "flex";
-    }
-  } else {
-    // 关闭其他已放大的部分
-    document.querySelectorAll(".enlarged").forEach((enlargedElement) => {
-      enlargedElement.classList.remove("enlarged");
-      const enlargedIcon = enlargedElement.querySelector(".resize-toggle .material-icons");
-      if (enlargedIcon) {
-        enlargedIcon.textContent = "fullscreen"; // 切换回放大图标
-      }
-    });
-
-    // 放大当前部分
-    target.classList.add("enlarged");
-    icon.textContent = "fullscreen_exit"; // 切换到缩小图标
-
-    // 如果是 analysis 部分, 则隐藏 gauge，显示所有图表
-    if (type === "section" && target.classList.contains("analysis-section")) {
-      const gaugesContainer = document.querySelector('.gauges-container');
-      const allChartsContainer = document.querySelector('.all-charts-container');
-      const analysisSection = document.querySelector('.analysis-section');
-      const analysisContent = document.querySelector(".analysis-content");
-      if (gaugesContainer) {
-        gaugesContainer.style.display = 'none';
-      }
-
-      if (allChartsContainer) {
-        allChartsContainer.style.display = 'block';
-        analysisSection.style.overflow = 'auto';
-        analysisContent.style.display = "block";
-      }
-    }
-  }
-}
-
-// 发送按钮的加载状态及中断
 const sendButton = document.getElementById("send-button");
 let isGenerating = false;
 let abortController = new AbortController();
@@ -104,168 +45,211 @@ sendButton.addEventListener("click", async () => {
 
 // 模拟后端数据更新UI
 function updateUIWithResponse(data) {
-  document.getElementById("vector-content").innerHTML = data.vectorResult;
-  document.getElementById("vector-placeholder").style.display = "none";
+  // 更新 Retrieval Result 部分
+  document.getElementById("vector-content").innerHTML = "";
+  if (data.vectorResult && data.vectorResult.length > 0) {
+      document.getElementById("vector-placeholder").style.display = "none";
+      data.vectorResult.forEach((item, index) => {
+          const vectorResultItem = document.createElement("div");
+          vectorResultItem.classList.add("retrieval-result-item");
+          vectorResultItem.innerHTML = `
+              <p><b>Chunk ${index + 1}:</b> ${item}</p>
+          `;
+          document.getElementById("vector-content").appendChild(vectorResultItem);
+      });
+  } else {
+      document.getElementById("vector-placeholder").style.display = "flex";
+  }
 
-  document.getElementById("graph-content").innerHTML = data.graphResult;
-  document.getElementById("graph-placeholder").style.display = "none";
+  document.getElementById("graph-content").innerHTML = "";
+  if (data.graphResult && data.graphResult.length > 0) {
+      document.getElementById("graph-placeholder").style.display = "none";
+      data.graphResult.forEach((item, index) => {
+          const graphResultItem = document.createElement("div");
+          graphResultItem.classList.add("retrieval-result-item");
+          graphResultItem.innerHTML = `
+              <p><b>Chunk ${index + 1}:</b> ${item}</p>
+          `;
+          document.getElementById("graph-content").appendChild(graphResultItem);
+      });
+  } else {
+      document.getElementById("graph-placeholder").style.display = "flex";
+  }
+  
 
-  document.getElementById("vector-answer-content").innerText = data.vectorAnswer;
-  document.getElementById("graph-answer-content").innerText = data.graphAnswer;
-  document.getElementById("hybrid-answer-content").innerText = data.hybridAnswer;
+  // 更新 Answer 部分
+ document.getElementById("vector-answer-content").innerHTML = `
+        <div class="question-container">
+            <img src="./lib/employee.png" alt="Question Icon" class="question-icon">
+            <p class="question-text">When was Pixel Fold announced?</p>
+        </div>
+        <div class="answer-text">
+            <img src="./lib/llama.png" alt="Answer Icon" class="answer-icon-llama">
+            According to the provided context information, Pixel Fold was announced on September 12, 2022.
+        </div>
+  `;
+  document.getElementById("graph-answer-content").innerText = data.graphAnswer; // 这里需要根据实际数据更新
+  document.getElementById("hybrid-answer-content").innerText = data.hybridAnswer; // 这里需要根据实际数据更新
 
-  // 更新分析参数，确保数据存在
-  document.getElementById("analysis-content").innerText = data.analysisParams
-    ? `Count: ${data.analysisParams.count}, Other Params: ${JSON.stringify(
-        data.analysisParams.other
-      )}`
-    : "No parameters available";
+  // 更新 Suggestions 部分
+  document.getElementById("advice-content").innerHTML = `
+    <ul class="advice-list">
+        <li class="advice-item">
+            <img src="./lib/advice.png" alt="Advice Icon" class="advice-icon">
+            <span class="advice-text">Most of the errors are caused by lack useful information.</span>
+        </li>
+        <li class="advice-item">
+            <img src="./lib/advice.png" alt="Advice Icon" class="advice-icon">
+            <span class="advice-text"><b>VectorRAG:</b></span>
+        </li>
+        <li class="advice-item">
+            <img src="./lib/advice.png" alt="Advice Icon" class="advice-icon">
+            <span class="advice-text">Try to increase Chunksize</span>
+        </li>
+        <li class="advice-item">
+            <img src="./lib/advice.png" alt="Advice Icon" class="advice-icon">
+            <span class="advice-text">Increase the value of TOP-K</span>
+        </li>
+        <li class="advice-item">
+            <img src="./lib/advice.png" alt="Advice Icon" class="advice-icon">
+            <span class="advice-text"><b>GraphRAG:</b></span>
+        </li>
+        <li class="advice-item">
+            <img src="./lib/advice.png" alt="Advice Icon" class="advice-icon">
+            <span class="advice-text">Increase K-HOP value</span>
+        </li>
+    </ul>
+  `;
 
-  document.getElementById("advice-content").innerText = data.advice;
+  // 更新 Analysis 部分
   updateGauges(data.gaugeData);
   initializeCharts(data.chartData);
 }
 
-// 下拉菜单的当前选中项
-let activeDropdowns = {};
-
-// 下拉菜单点击事件
-document.querySelectorAll(".dropbtn").forEach((button) => {
-  button.addEventListener("click", () => {
-    const type = button.dataset.type;
-
-    // 如果已经有选中的选项，并且不是当前的下拉菜单，则先关闭其他下拉菜单
-    if (activeDropdowns[type]) {
-      document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
-        dropdown.style.display = "none";
-      });
+// 控制左侧栏各个部分折叠的函数
+function toggleSidebarSection(header) {
+    const content = header.nextElementSibling;
+    header.classList.toggle("collapsed");
+    if (content.style.display === "none") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
     }
-
-    // 切换当前下拉菜单的显示状态
-    const dropdownContent = button.nextElementSibling;
-    dropdownContent.style.display =
-      dropdownContent.style.display === "block" ? "none" : "block";
-
-    // 更新当前选中的下拉菜单
-    activeDropdowns[type] = !activeDropdowns[type];
-  });
-});
-
-// 下拉菜单选项点击事件
-document.querySelectorAll(".dropdown-content a").forEach((item) => {
-  item.addEventListener("click", () => {
-    const type = item.closest(".dropdown").querySelector(".dropbtn").dataset.type;
-    const subtype = item.dataset.subtype;
-
-    // 更新按钮文本为选中的选项
-    const button = item.closest(".dropdown").querySelector(".dropbtn");
-    button.textContent = `${type.charAt(0).toUpperCase() +
-      type.slice(1)}: ${subtype} ▼`;
-
-    // 关闭下拉菜单
-    item.closest(".dropdown-content").style.display = "none";
-
-    console.log(`Fetching data for ${type} - ${subtype}...`);
-    // 这里可以根据 type 和 subtype 发送请求到后端，获取对应的数据
-    // 更新 UI，例如显示对应 type 和 subtype 的内容，隐藏其他内容
-  });
-});
-
-function selectPreference(type) {
-  // 移除所有已选中的偏好图标
-  document
-    .querySelectorAll(".preference-icon.selected")
-    .forEach((icon) => {
-      icon.classList.remove("selected");
-    });
-
-  // 为当前选中的类型添加选中状态
-  if (type === "vector") {
-    document
-      .getElementById("vector-answer")
-      .querySelector(".preference-icon")
-      .classList.add("selected");
-  } else if (type === "graph") {
-    document
-      .getElementById("graph-answer")
-      .querySelector(".preference-icon")
-      .classList.add("selected");
-  } else if (type === "hybrid") {
-    document
-      .getElementById("hybrid-answer")
-      .querySelector(".preference-icon")
-      .classList.add("selected");
-  }
 }
 
-// 新增：History 部分的逻辑
-const datasetSelect = document.getElementById("dataset-select");
+// History 部分的逻辑
 const questionList = document.getElementById("question-list");
+let currentDataset = null;
 
 // 模拟数据集数据
 const datasets = {
-  dataset1: [
+  RGB: [
     { id: 1, question: "What is the capital of France?", answer: "Paris", correct: true },
     { id: 2, question: "What is the highest mountain in the world?", answer: "Mount Everest", correct: true },
     { id: 3, question: "Who painted the Mona Lisa?", answer: "Michelangelo", correct: false },
   ],
-  dataset2: [
+  Multihop: [
     { id: 4, question: "What is the smallest country in the world?", answer: "Vatican City", correct: true },
     { id: 5, question: "What is the largest ocean in the world?", answer: "Atlantic Ocean", correct: false },
     { id: 6, question: "Who wrote Hamlet?", answer: "William Shakespeare", correct: true }
-  ]
+  ],
+    RAGAS: [
+        { id: 7, question: "What is the capital of Italy?", answer: "Rome", correct: true },
+        { id: 8, question: "What is the deepest lake in the world?", answer: "Lake Baikal", correct: true },
+        { id: 9, question: "Who painted the Last Supper?", answer: "Leonardo da Vinci", correct: true },
+    ],
+    RAGEval: [
+        { id: 10, question: "What is the longest river in the world?", answer: "Nile", correct: true },
+        { id: 11, question: "What is the largest desert in the world?", answer: "Sahara Desert", correct: false },
+        { id: 12, question: "Who wrote The Odyssey?", answer: "Homer", correct: true }
+    ],
+    "CRUD-RAG": [
+        { id: 13, question: "What is the capital of Canada?", answer: "Ottawa", correct: true },
+        { id: 14, question: "What is the highest waterfall in the world?", answer: "Angel Falls", correct: true },
+        { id: 15, question: "Who painted The Starry Night?", answer: "Vincent van Gogh", correct: true },
+    ],
+    RECALL: [
+        { id: 16, question: "What is the largest country in the world?", answer: "Russia", correct: true },
+        { id: 17, question: "What is the smallest continent in the world?", answer: "Australia", correct: true },
+        { id: 18, question: "Who wrote The Iliad?", answer: "Homer", correct: true }
+    ]
 };
-
-// 初始化数据集选项
-for (const dataset in datasets) {
-  const option = document.createElement("option");
-  option.value = dataset;
-  option.text = dataset;
-  datasetSelect.add(option);
-}
-
-// 数据集选择事件
-datasetSelect.addEventListener("change", () => {
-  const selectedDataset = datasetSelect.value;
-  displayQuestions(selectedDataset);
-});
 
 // 显示问题列表
 function displayQuestions(dataset) {
   questionList.innerHTML = ""; // 清空问题列表
+  currentDataset = dataset;
 
-  if (datasets[dataset]) {
+  if (dataset && datasets[dataset]) {
     datasets[dataset].forEach(item => {
       const questionItem = document.createElement("div");
       questionItem.classList.add("question-item");
       if (item.correct) {
         questionItem.classList.add("correct");
+        questionItem.innerHTML = `
+          <img src="./lib/correct.png" alt="Correct Icon" class="question-icon">
+          <p>id: ${item.id},  query: ${item.question} Ground truth: ${item.answer}</p>
+        `;
       } else {
         questionItem.classList.add("wrong");
+        questionItem.innerHTML = `
+          <img src="./lib/wrong.png" alt="Wrong Icon" class="question-icon">
+          <p>id: ${item.id},  query: ${item.question} Ground truth: ${item.answer}</p>
+        `;
       }
-      questionItem.innerHTML = `
-        <p>ID: ${item.id}</p>
-        <p>Question: ${item.question}</p>
-        <p>Answer: ${item.answer}</p>
-      `;
       questionList.appendChild(questionItem);
     });
+  } else {
+      // 如果没有选择数据集，则显示提示信息
+      questionList.innerHTML = "<p>Please select a dataset from the left sidebar.</p>";
+  }
+  updateHistoryTitle(dataset);
+  addMoreButtonEventListeners();
+}
+
+// 更新 History 标题
+function updateHistoryTitle(dataset = "") {
+    const historyTitle = document.getElementById("history-title-text");
+    historyTitle.textContent = `History: ${dataset}`;
+}
+
+// 为 More 按钮添加事件监听器
+document.addEventListener('DOMContentLoaded', () => {
+    const backButton = document.querySelector(".analysis-section .back-button");
+    const analysisSection = document.querySelector('.analysis-section');
+
+    if(backButton && analysisSection){
+        backButton.addEventListener("click", function() {
+            analysisSection.classList.remove("enlarged");
+            analysisSection.style.display = "none";
+        });
+    }
+  // 在 DOMContentLoaded 事件中调用 addMoreButtonEventListeners
+  addMoreButtonEventListeners();
+});
+
+// 为 More 按钮添加事件监听器
+function addMoreButtonEventListeners() {
+  const moreButton = document.querySelector(".more-info .material-icons");
+  const analysisSection = document.querySelector('.analysis-section');
+
+  if (analysisSection) {
+      moreButton.addEventListener("click", function(event) {
+          event.stopPropagation();
+
+          analysisSection.classList.toggle("enlarged");
+
+          if (analysisSection.classList.contains("enlarged")) {
+            analysisSection.style.display = "flex";
+          } else {
+            analysisSection.style.display = "none";
+          }
+      });
+  } else {
+      console.error("Error: .analysis-section element not found!");
   }
 }
-// 更新仪表盘数据
-function updateGauges(data) {
-    if (data && data.length === 4) {
-        createGauge('gauge1', data[0] * 100, 'percentage1');
-        createGauge('gauge2', data[1] * 100, 'percentage2');
-        createGauge('gauge3', data[2] * 100, 'percentage3');
-        createGauge('gauge4', data[3] * 100, 'percentage4');
-        // 大图
-        createGauge('gauge1-big', data[0] * 100, 'percentage1-big');
-        createGauge('gauge2-big', data[1] * 100, 'percentage2-big');
-        createGauge('gauge3-big', data[2] * 100, 'percentage3-big');
-        createGauge('gauge4-big', data[3] * 100, 'percentage4-big');
-    }
-}
+
 // 创建仪表盘的函数
 function createGauge(elementId, percentage, textFiledId) {
     const isBig = elementId.includes('-big');
@@ -326,28 +310,46 @@ function initializeCharts(data) {
         console.error("No chart data provided to initializeCharts");
         return;
     }
+    console.log("Chart Data:", data); // 打印数据
     // 饼图
-    createPieChart(document.getElementById('pieChart1').getContext('2d'), data.pieChart1 || [10, 20, 30, 40]);
-    createPieChart(document.getElementById('pieChart2').getContext('2d'), data.pieChart2 || [15, 25, 35, 25]);
-    createPieChart(document.getElementById('pieChart3').getContext('2d'), data.pieChart3 || [5, 50, 25, 20]);
-    createPieChart(document.getElementById('largePie').getContext('2d'), data.largePie || [10, 30, 20, 40]);
+    console.log("pieChart1 context:", document.getElementById('pieChart1').getContext('2d'));  // 打印上下文
+    createPieChart(document.getElementById('pieChart1').getContext('2d'), data.pieChart1 || [10, 20, 30, 40], ["None Result", "Lack Information", "Noisy", "Other"]);
+    createPieChart(document.getElementById('pieChart2').getContext('2d'), data.pieChart2 || [15, 25, 35, 25], ["None Result", "Lack Information", "Noisy", "Other"]);
+    createPieChart(document.getElementById('pieChart3').getContext('2d'), data.pieChart3 || [5, 50, 25, 20], ["None Result", "Lack Information", "Noisy", "Other"]);
 
     // 雷达图
-    createRadarChart(document.getElementById('radarChart1').getContext('2d'), ['指标1', '指标2', '指标3', '指标4', '指标5'], data.radarChart1 || [6, 7, 8, 5, 6]);
-    createRadarChart(document.getElementById('radarChart2').getContext('2d'), ['指标1', '指标2', '指标3', '指标4', '指标5'], data.radarChart2 || [5, 6, 7, 6, 5]);
-    createRadarChart(document.getElementById('radarChart3').getContext('2d'), ['指标1', '指标2', '指标3', '指标4', '指标5'], data.radarChart3 || [7, 8, 6, 5, 7]);
-    createRadarChart(document.getElementById('radarChart4').getContext('2d'), ['指标1', '指标2', '指标3', '指标4', '指标5'], data.radarChart4 || [6, 7, 8, 5, 6]);
-}
+    createRadarChart(document.getElementById('radarChart1').getContext('2d'), ['Accuracy', 'Relevance', 'Recall', 'Faithfulness'], data.radarChart1 || [0.6, 0.7, 0.8, 0.5]);
+    createRadarChart(document.getElementById('radarChart2').getContext('2d'), ['Accuracy', 'Relevance', 'Recall', 'Faithfulness'], data.radarChart2 || [0.5, 0.6, 0.7, 0.6]);
+    createRadarChart(document.getElementById('radarChart3').getContext('2d'), ['Accuracy', 'Relevance', 'Recall', 'Faithfulness'], data.radarChart3 || [0.7, 0.8, 0.6, 0.5]);
+    const pieChart1 = document.getElementById('pieChart1');
+    pieChart1.width = pieChart1.width;
 
+    const radarChart1 = document.getElementById('radarChart1');
+    radarChart1.width = radarChart1.width;
+  }
+  window.onload = function() {
+    // 从后端获取数据
+    fetch('/api/chart-data')
+        .then(response => response.json())
+        .then(data => {
+            // 初始化图表
+            initializeCharts(data);
+        })
+        .catch(error => {
+            console.error('Error fetching chart data:', error);
+        });
+};
 // 饼图创建函数
-function createPieChart(ctx, data) {
+function createPieChart(ctx, data, labels) {
     return new Chart(ctx, {
         type: 'pie',
         data: {
             datasets: [{
                 data: data,
                 backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                label: 'Dataset 1'
             }],
+            labels: labels
         },
         options: {
             responsive: true,
@@ -365,7 +367,11 @@ function createPieChart(ctx, data) {
                     anchor: 'center', // 文字居中显示
                     align: 'center'   // 文字居中显示
                 }
-            }
+            },
+            legend: {
+                display: true, // 显示图例
+                position: 'bottom', // 图例位置
+            },
         },
         plugins: [ChartDataLabels]
         
@@ -389,13 +395,79 @@ function createRadarChart(ctx, labels, data) {
         options: {
             responsive: true,
             maintainAspectRatio: false,
-            scale: {
-                ticks: {
+            scales: {
+                r: {
                     beginAtZero: true,
-                    max: 10,
-                    stepSize: 1
+                    max: 1,
+                    min: 0,
+                    ticks: {
+                        stepSize: 0.2
+                    }
                 }
             }
         }
     });
 }
+
+// RAG 模式切换逻辑
+const ragSelect = document.getElementById("rag-select");
+const vectorAnswerBox = document.getElementById("vector-answer");
+const graphAnswerBox = document.getElementById("graph-answer");
+const hybridAnswerBox = document.getElementById("hybrid-answer");
+
+ragSelect.addEventListener("change", () => {
+    const selectedRag = ragSelect.value;
+
+    // 隐藏所有 RAG 答案
+    vectorAnswerBox.style.display = "none";
+    graphAnswerBox.style.display = "none";
+    hybridAnswerBox.style.display = "none";
+
+    // 显示选中的 RAG 答案
+    if (selectedRag === "vector") {
+        vectorAnswerBox.style.display = "block";
+    } else if (selectedRag === "graph") {
+        graphAnswerBox.style.display = "block";
+    } else if (selectedRag === "hybrid") {
+        hybridAnswerBox.style.display = "block";
+    }
+});
+
+// 页面加载时, 将dataset的内容发送给后端, 保持history更新
+document.addEventListener('DOMContentLoaded', () => {
+  // 获取所有 dataset 选项的单选按钮
+  const datasetRadios = document.querySelectorAll('input[name="dataset"]');
+
+  // 默认不选中数据集
+  // 为每个 dataset 单选按钮添加事件监听器
+  datasetRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+          if (radio.checked) {
+              const selectedDataset = radio.value;
+              console.log(`Dataset selected: ${selectedDataset}`);
+              // 在这里发送请求到后端，更新 history 部分
+              displayQuestions(selectedDataset);
+          }
+      });
+  });
+
+  // 模型选择和 API-KEY 联动
+  const modelSelect = document.getElementById("model-select");
+  const apiKeyInput = document.getElementById("api-key-input");
+
+  const modelApiKeys = {
+      ModelA: "API-KEY-A",
+      ModelB: "API-KEY-B",
+      ModelC: "API-KEY-C",
+  };
+
+  // 初始设置 API-KEY
+  apiKeyInput.value = modelApiKeys[modelSelect.value];
+
+  modelSelect.addEventListener("change", () => {
+      apiKeyInput.value = modelApiKeys[modelSelect.value];
+  });
+
+  // 在 DOMContentLoaded 事件中调用 addMoreButtonEventListeners
+  addMoreButtonEventListeners();
+});
