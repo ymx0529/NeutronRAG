@@ -22,6 +22,10 @@ def register():
 def analysis():
     return render_template('analysis.html')
 
+#测试路径
+
+VECTOR_FILE_PATH = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json'
+GRAPH_FILE_PATH = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_retrieval_merged.json'
 
 # [
     # {
@@ -35,12 +39,28 @@ def analysis():
     #     "hybrid_response": "Jonas Vingegaard",
     #     "type": "GREEN"
     # },
+##加载响应的id数据
+def load_and_filter_data(file_path, item_id):
+    try:
+        with open(file_path, 'r') as file:
+            data = json.load(file)  # 加载 JSON 数据
+            # 通过 item_id 查找对应的元素
+            filtered_data = next((item for item in data if item.get('id') == int(item_id)), None)
+            return filtered_data
+    except FileNotFoundError:
+        print(f"File {file_path} not found.")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error decoding JSON from {file_path}.")
+        return None
+
+
 
 @app.route('/read-file', methods=['GET'])
 def read_file():
     try:
         # 设定文件路径
-        file_path = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/type_result.json'
+        file_path = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/test.json'
         
         # 读取文件并解析 JSON 内容
         with open(file_path, 'r') as file:
@@ -64,6 +84,25 @@ def read_file():
     
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+@app.route('/get-vector/<item_id>', methods=['GET'])
+def get_vector(item_id):
+    # 获取与 item_id 相关的 vector 数据
+    filtered_data = load_and_filter_data(VECTOR_FILE_PATH, item_id)
+    if filtered_data:
+        return jsonify(filtered_data)  # 返回找到的数据
+    else:
+        return jsonify({'error': 'Item not found'}), 404
+
+@app.route('/get-graph/<item_id>', methods=['GET'])
+def get_graph(item_id):
+    # 获取与 item_id 相关的 graph 数据
+    filtered_data = load_and_filter_data(GRAPH_FILE_PATH, item_id)
+    if filtered_data:
+        return jsonify(filtered_data)  # 返回找到的数据
+    else:
+        return jsonify({'error': 'Item not found'}), 404
+
 
 
 @app.route('/api/register', methods=['POST'])

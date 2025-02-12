@@ -490,7 +490,7 @@ document.getElementById('readButton').addEventListener('click', function() {
 
         if (data.content) {
             const list = data.content;
-            
+
             // 使用 setTimeout 来模拟逐条添加
             let index = 0;
             const interval = setInterval(() => {
@@ -500,6 +500,7 @@ document.getElementById('readButton').addEventListener('click', function() {
                     // 创建一个新的 div 来包裹内容
                     const div = document.createElement('div');
                     div.classList.add('question-item');  // 为每个 div 添加一个类名，方便样式设置
+                    div.id = item.id; // 将每个 div 设置为它的 ID，方便后端选择数据
                     
                     // 根据 item.type 为 div 设置背景色
                     switch (item.type) {
@@ -523,6 +524,50 @@ document.getElementById('readButton').addEventListener('click', function() {
 
                     // 将 li 添加到 div 中
                     div.appendChild(li);
+
+                    // 为 div 添加点击事件
+                    div.addEventListener('click', function() {
+                        const answerContentDiv = document.querySelector('.answer-content');
+                        if (answerContentDiv) {
+                            answerContentDiv.innerHTML = `
+                                <strong>Query:</strong> ${item.question}<br>
+                                <strong>Answer:</strong> ${item.answer}
+                            `;
+
+                            // 根据 div 的 ID，动态获取对应的 JSON 文件内容
+                            const itemId = div.id;
+
+                            // 请求第一个 JSON 文件（向量数据）
+                            fetch(`/get-vector/${itemId}`, {
+                                method: 'GET',
+                                headers: { 'Content-Type': 'application/json' }
+                            })
+                            .then(response => response.json())
+                            .then(vectorData => {
+                                const vectorContentDiv = document.getElementById('vector-content');
+                                vectorContentDiv.innerHTML = `<pre>${JSON.stringify(vectorData, null, 2)}</pre>`;
+                            })
+                            .catch(error => {
+                                console.error('Error fetching vector data:', error);
+                                alert('Error fetching vector data');
+                            });
+
+                            // 请求第二个 JSON 文件（图数据）
+                            fetch(`/get-graph/${itemId}`, {
+                                method: 'GET',
+                                headers: { 'Content-Type': 'application/json' }
+                            })
+                            .then(response => response.json())
+                            .then(graphData => {
+                                const graphContentDiv = document.getElementById('graph-content');
+                                graphContentDiv.innerHTML = `<pre>${JSON.stringify(graphData, null, 2)}</pre>`;
+                            })
+                            .catch(error => {
+                                console.error('Error fetching graph data:', error);
+                                alert('Error fetching graph data');
+                            });
+                        }
+                    });
 
                     // 将整个 div 添加到 questionListDiv
                     questionListDiv.appendChild(div);
