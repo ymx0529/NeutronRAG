@@ -23,6 +23,48 @@ def analysis():
     return render_template('analysis.html')
 
 
+# [
+    # {
+    #     "id": 83,
+    #     "question": "Who won the 2022 Tour de France?",
+    #     "answer": [
+    #         "Jonas Vingegaard"
+    #     ],
+    #     "vector_response": "Denmark's Jonas Vingegaard (Jumbo-Visma) won the yellow jersey as the overall winner of the 2022 Tour de France.",
+    #     "graph_response": "Jonas Vingegaard",
+    #     "hybrid_response": "Jonas Vingegaard",
+    #     "type": "GREEN"
+    # },
+
+@app.route('/read-file', methods=['GET'])
+def read_file():
+    try:
+        # 设定文件路径
+        file_path = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/type_result.json'
+        
+        # 读取文件并解析 JSON 内容
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        # 这里可以根据需要处理数据
+        # 例如，如果你只想返回某些字段，可以在这里做处理
+        result = []
+        for item in data:
+            # 假设你想返回 id, question, answer 和 response 字段
+            result.append({
+                'id': item.get('id'),
+                'question': item.get('question'),
+                'answer': item.get('answer'),
+                'hybrid_response': item.get('hybrid_response'),
+                'type' : item.get('type')
+            })
+
+        # 返回经过处理的数据
+        return jsonify({'content': result})
+    
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 
 @app.route('/api/register', methods=['POST'])
 def register_user():

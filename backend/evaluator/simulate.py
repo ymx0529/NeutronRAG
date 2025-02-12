@@ -37,7 +37,10 @@ def statistic_graph_generation(dataset):
     total_count = len(dataset)
     assert total_count > 0, "The dataset is empty"
 
+
+
     for data in dataset:
+        # print(f"data:{data}")
         exact_match_sum += data['generation_evaluation']['exact_match']
         hallucinations_sum += data['generation_evaluation']['hallucinations']
 
@@ -284,7 +287,7 @@ def statistic_error_cause(generation_dataset, retrieval_dataset, mode):
             'correct_answer': correct_answer
         })
         # 保存到文件方便查看（可删除）
-        with open("/home/yangxb/RAGWebUi_demo/rgb/result.json", 'w', encoding='utf-8') as f:
+        with open("rgb/result.json", 'w', encoding='utf-8') as f:
             json.dump(result_data, f, ensure_ascii=False, indent=4)
 
         if retrieved:
@@ -350,7 +353,7 @@ def statistic_question(vector_dataset, graph_dataset, hybrid_dataset):
             'hybrid_response': hybrid_data['response'],
             'type': response_situation
         })
-        with open("/home/yangxb/RAGWebUi_demo/rgb/result.json", 'w', encoding='utf-8') as f:
+        with open("rgb/type_result.json", 'w', encoding='utf-8') as f:
             json.dump(question_eval, f, ensure_ascii=False, indent=4)
 
     return question_eval
@@ -358,14 +361,17 @@ def statistic_question(vector_dataset, graph_dataset, hybrid_dataset):
 if __name__ == '__main__':
     
     # 数据集路径，需要替换一下
-    rgb_result_path = "/home/yangxb/RAGWebUi_demo/rgb"
-    rgb_graph_generation = "/home/yangxb/RAGWebUi_demo/rgb/graphrag/analysis_generation___merged.json"
-    rgb_graph_retrieval = "/home/yangxb/RAGWebUi_demo/rgb/graphrag/analysis_retrieval_merged.json"
-    rgb_vector_generation = "/home/yangxb/RAGWebUi_demo/rgb/vectorrag/analysis_generation___top5_2024-11-26_21-32-23.json"
-    rgb_vector_retrieval = "/home/yangxb/RAGWebUi_demo/rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
-    # statistic_graph_generation(rgb_graph_generation)
-    # statistic_graph_retrieval(rgb_graph_retrieval)
-    # statistic_vector_generation(rgb_vector_generation)
-    # statistic_vector_retrieval(rgb_vector_retrieval)
-    # statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
-    # statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
+    rgb_result_path = "rgb"
+    rgb_graph_generation = "rgb/graphrag/analysis_generation___merged.json"
+    rgb_graph_retrieval = "rgb/graphrag/analysis_retrieval_merged.json"
+    rgb_vector_generation = "rgb/vectorrag/analysis_generation___top5_2024-11-26_21-32-23.json"
+    rgb_vector_retrieval = "rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
+    rgb_hybrid_generation = "rgb/hybridrag/hybrid_result.json"
+    statistic_graph_generation(rgb_graph_generation)
+    statistic_graph_retrieval(rgb_graph_retrieval)
+    statistic_vector_generation(rgb_vector_generation)
+    statistic_vector_retrieval(rgb_vector_retrieval)
+    statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
+    statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
+
+    question_eval = statistic_question(vector_dataset=rgb_vector_generation,graph_dataset=rgb_graph_generation,hybrid_dataset=rgb_graph_generation)

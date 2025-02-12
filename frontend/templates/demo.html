@@ -150,6 +150,7 @@
                     </div>
                 </div>
             </div>
+            <button id = "readButton" style="height: 50px;">Run</button>
         </aside>
 
         <!-- 主要内容区域 -->
@@ -264,10 +265,10 @@
             <!-- 第四部分：History -->
             <section class="history-section section-box">
                 <div class="section-title" id="history-title">
-                    <span id="history-title-text"></span>
+                    <span id="history-title-text">History</span>
                     <img src="../lib/history.png" alt="History Icon" class="history-icon">
                 </div>
-                <div class="history-content">
+                <div class="history-content" id="scroll-container" style="background-color: #D8B7DD; overflow-y: auto; padding: 10px; border: 1px solid #ccc;">
                     <div id="question-list">
                         <!-- 问题将通过 JavaScript 动态添加 -->
                     </div>

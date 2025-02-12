@@ -1,0 +1,2854 @@
+[
+    {
+        "id": 83,
+        "answers": [
+            "Jonas Vingegaard"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 142,
+        "answers": [
+            "Richard Childress Racing"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 187,
+        "answers": [
+            "Morgan Monaco"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 71,
+        "answers": [
+            "September 9",
+            "Sep 9",
+            "Sep. 9",
+            "9 September",
+            "9 Sep",
+            "9 Sep.",
+            "Sept 9",
+            "Sept. 9",
+            "9 Sept",
+            "9 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 101,
+        "answers": [
+            "August 21",
+            "Aug 21",
+            "Aug. 21",
+            "21 August",
+            "21 Aug",
+            "21 Aug."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 276,
+        "answers": [
+            "Jodie Comer"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 198,
+        "answers": [
+            "November 9",
+            "Nov 9",
+            "Nov. 9",
+            "9 November",
+            "9 Nov",
+            "9 Nov."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 76,
+        "answers": [
+            "48"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 185,
+        "answers": [
+            "October 13",
+            "Oct 13",
+            "Oct. 13",
+            "13 October",
+            "13 Oct",
+            "13 Oct."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 188,
+        "answers": [
+            "Wargaming Sydney"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 294,
+        "answers": [
+            "$3,499",
+            "$3499"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 53,
+        "answers": [
+            "Rafael Nadal",
+            "Nadal"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 78,
+        "answers": [
+            "Metropolitan Museum of Art"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 125,
+        "answers": [
+            "Arcane"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 73,
+        "answers": [
+            "April 23 2022",
+            "Apr 23, 2022",
+            "Apr. 23, 2022",
+            "April 23, 2022",
+            "23 April 2022",
+            "23 Apr, 2022",
+            "23 Apr., 2022",
+            "23 April, 2022"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 162,
+        "answers": [
+            "November 18",
+            "Nov 18",
+            "Nov. 18",
+            "18 November",
+            "18 Nov",
+            "18 Nov."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 193,
+        "answers": [
+            "November 9",
+            "Nov 9",
+            "Nov. 9",
+            "9 November",
+            "9 Nov",
+            "9 Nov."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 61,
+        "answers": [
+            "Marketa Vondrousova",
+            "Markéta Vondroušová"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 271,
+        "answers": [
+            "July 28",
+            "Jul 28",
+            "Jul. 28",
+            "28 July",
+            "28 Jul",
+            "28 Jul."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 109,
+        "answers": [
+            "Francis Lawrence"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 296,
+        "answers": [
+            "Kate Ryder"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 144,
+        "answers": [
+            "Titus Welliver"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 104,
+        "answers": [
+            "ColdQuanta"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 46,
+        "answers": [
+            "December 18",
+            "Dec 18",
+            "Dec. 18",
+            "18 December",
+            "18 Dec",
+            "18 Dec."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 261,
+        "answers": [
+            "Michelle Yeoh"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 194,
+        "answers": [
+            "Ethan Hawke"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 295,
+        "answers": [
+            "Vision Pro"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 177,
+        "answers": [
+            "Svante Pääbo",
+            "Svante Paabo"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 36,
+        "answers": [
+            "Zhurong"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 67,
+        "answers": [
+            "Brent Pry"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 207,
+        "answers": [
+            "Group B"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 74,
+        "answers": [
+            "Chris Licht"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 4,
+        "answers": [
+            "936,172",
+            "936172"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 249,
+        "answers": [
+            "David Holz"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 135,
+        "answers": [
+            "Balmoral"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 197,
+        "answers": [
+            "6.99"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 257,
+        "answers": [
+            "Meta"
+        ],
+        "retrieved": false,
+        "correct_answer": true
+    },
+    {
+        "id": 199,
+        "answers": [
+            "Sicily"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 130,
+        "answers": [
+            "October 11",
+            "Oct 11",
+            "Oct. 11",
+            "11 October",
+            "11 Oct",
+            "11 Oct."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 184,
+        "answers": [
+            "April 14 2023",
+            "Apr 14, 2023",
+            "Apr. 14, 2023",
+            "April 14, 2023",
+            "14 April 2023",
+            "14 Apr, 2023",
+            "14 Apr., 2023",
+            "14 April, 2023"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 284,
+        "answers": [
+            "Chengdu"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 191,
+        "answers": [
+            "Dónde Vives"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 259,
+        "answers": [
+            "Daniel Scheinert",
+            "Daniel Kwan"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 293,
+        "answers": [
+            "June 22",
+            "Jun 22",
+            "Jun. 22",
+            "22 June",
+            "22 Jun",
+            "22 Jun."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 63,
+        "answers": [
+            "Carlos Alcaraz"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 12,
+        "answers": [
+            "$68.7 billion",
+            "$68.7bn"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 123,
+        "answers": [
+            "September 9",
+            "Sep 9",
+            "Sep. 9",
+            "9 September",
+            "9 Sep",
+            "9 Sep.",
+            "Sept 9",
+            "Sept. 9",
+            "9 Sept",
+            "9 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 134,
+        "answers": [
+            "September 8",
+            "Sep 8",
+            "Sep. 8",
+            "8 September",
+            "8 Sep",
+            "8 Sep.",
+            "Sept 8",
+            "Sept. 8",
+            "8 Sept",
+            "8 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 263,
+        "answers": [
+            "$72.99"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 202,
+        "answers": [
+            "Catherine Cortez Masto"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 75,
+        "answers": [
+            "Emmanuel Macron"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 286,
+        "answers": [
+            "May 10",
+            "May 10",
+            "May. 10",
+            "10 May",
+            "10 May",
+            "10 May."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 242,
+        "answers": [
+            "France"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 95,
+        "answers": [
+            "1.7 billion"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 56,
+        "answers": [
+            "Iga Swiatek"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 167,
+        "answers": [
+            "January 10",
+            "Jan 10",
+            "Jan. 10",
+            "10 January",
+            "10 Jan",
+            "10 Jan."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 47,
+        "answers": [
+            "310,048"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 208,
+        "answers": [
+            "Group C"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 171,
+        "answers": [
+            "July 8 2022",
+            "Jul 8, 2022",
+            "Jul. 8, 2022",
+            "July 8, 2022",
+            "8 July 2022",
+            "8 Jul, 2022",
+            "8 Jul., 2022",
+            "8 July, 2022"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 260,
+        "answers": [
+            "Brendan Fraser"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 163,
+        "answers": [
+            "Three",
+            "3"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 7,
+        "answers": [
+            "February 21",
+            "Feb 21",
+            "Feb. 21",
+            "21 February",
+            "21 Feb",
+            "21 Feb."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 98,
+        "answers": [
+            "August 29",
+            "Aug 29",
+            "Aug. 29",
+            "29 August",
+            "29 Aug",
+            "29 Aug."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 49,
+        "answers": [
+            "44 billion"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 3,
+        "answers": [
+            "defensive coordinator"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 51,
+        "answers": [
+            "Ashleigh Barty"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 100,
+        "answers": [
+            "$15,000"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 169,
+        "answers": [
+            "Robin Roberts"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 289,
+        "answers": [
+            "May 11",
+            "May 11",
+            "May. 11",
+            "11 May",
+            "11 May",
+            "11 May."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 281,
+        "answers": [
+            "Nida Manzoor"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 275,
+        "answers": [
+            "May 10",
+            "May 10",
+            "May. 10",
+            "10 May",
+            "10 May",
+            "10 May."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 102,
+        "answers": [
+            "February 22",
+            "Feb 22",
+            "Feb. 22",
+            "22 February",
+            "22 Feb",
+            "22 Feb."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 210,
+        "answers": [
+            "Matt Rhule"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 79,
+        "answers": [
+            "Manchester City"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 10,
+        "answers": [
+            "February 20",
+            "Feb 20",
+            "Feb. 20",
+            "20 February",
+            "20 Feb",
+            "20 Feb."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 224,
+        "answers": [
+            "Nelly Cheboi"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 250,
+        "answers": [
+            "GPT"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 22,
+        "answers": [
+            "Los Angeles Rams"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 87,
+        "answers": [
+            "July 29",
+            "Jul 29",
+            "Jul. 29",
+            "29 July",
+            "29 Jul",
+            "29 Jul."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 152,
+        "answers": [
+            "September 30",
+            "Sep 30",
+            "Sep. 30",
+            "30 September",
+            "30 Sep",
+            "30 Sep.",
+            "Sept 30",
+            "Sept. 30",
+            "30 Sept",
+            "30 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 111,
+        "answers": [
+            "Argentina"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 196,
+        "answers": [
+            "October 25 2022",
+            "Oct 25, 2022",
+            "Oct. 25, 2022",
+            "October 25, 2022",
+            "25 October 2022",
+            "25 Oct, 2022",
+            "25 Oct., 2022",
+            "25 October, 2022"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 267,
+        "answers": [
+            "Beau Ferrari"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 222,
+        "answers": [
+            "Caleb Williams"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 69,
+        "answers": [
+            "May 7",
+            "May 7",
+            "May. 7",
+            "7 May",
+            "7 May",
+            "7 May."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 180,
+        "answers": [
+            "Max Verstappen"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 126,
+        "answers": [
+            "12"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 252,
+        "answers": [
+            "July 21",
+            "Jul 21",
+            "Jul. 21",
+            "21 July",
+            "21 Jul",
+            "21 Jul."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 129,
+        "answers": [
+            "September 8",
+            "Sep 8",
+            "Sep. 8",
+            "8 September",
+            "8 Sep",
+            "8 Sep.",
+            "Sept 8",
+            "Sept. 8",
+            "8 Sept",
+            "8 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 34,
+        "answers": [
+            "May 11",
+            "12"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 26,
+        "answers": [
+            "crime"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 50,
+        "answers": [
+            "Scottie Scheffler"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 258,
+        "answers": [
+            "Everything Everywhere All at Once"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 237,
+        "answers": [
+            "January 18 2023",
+            "Jan 18, 2023",
+            "Jan. 18, 2023",
+            "January 18, 2023",
+            "18 January 2023",
+            "18 Jan, 2023",
+            "18 Jan., 2023",
+            "18 January, 2023"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 94,
+        "answers": [
+            "March 14 2023",
+            "Mar 14, 2023",
+            "Mar. 14, 2023",
+            "March 14, 2023",
+            "14 March 2023",
+            "14 Mar, 2023",
+            "14 Mar., 2023",
+            "14 March, 2023"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 85,
+        "answers": [
+            "Alex de Minaur"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 99,
+        "answers": [
+            "Konnor McClain"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 195,
+        "answers": [
+            "Rishi Sunak"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 254,
+        "answers": [
+            "Amazon"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 127,
+        "answers": [
+            "Ecuador"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 166,
+        "answers": [
+            "Aces"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 283,
+        "answers": [
+            "Roy Wood Jr."
+        ],
+        "retrieved": false,
+        "correct_answer": true
+    },
+    {
+        "id": 239,
+        "answers": [
+            "March 10",
+            "Mar 10",
+            "Mar. 10",
+            "10 March",
+            "10 Mar",
+            "10 Mar."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 117,
+        "answers": [
+            "3.7%",
+            "3.7 percent"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 16,
+        "answers": [
+            "Project Iris"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 279,
+        "answers": [
+            "Oklahoma State"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 58,
+        "answers": [
+            "Rafael Nadal",
+            "Nadal"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 59,
+        "answers": [
+            "Novak Djokovic"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 106,
+        "answers": [
+            "September 21",
+            "Sep 21",
+            "Sep. 21",
+            "21 September",
+            "21 Sep",
+            "21 Sep.",
+            "Sept 21",
+            "Sept. 21",
+            "21 Sept",
+            "21 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 255,
+        "answers": [
+            "Kansas City Chiefs"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 174,
+        "answers": [
+            "The Princess and the Queen"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 151,
+        "answers": [
+            "May 12 2023",
+            "May 12, 2023",
+            "May. 12, 2023",
+            "May 12, 2023",
+            "12 May 2023",
+            "12 May, 2023",
+            "12 May., 2023",
+            "12 May, 2023"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 172,
+        "answers": [
+            "Tetsuya Yamagami"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 82,
+        "answers": [
+            "October 4 2022",
+            "Oct 4, 2022",
+            "Oct. 4, 2022",
+            "October 4, 2022",
+            "4 October 2022",
+            "4 Oct, 2022",
+            "4 Oct., 2022",
+            "4 October, 2022"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 150,
+        "answers": [
+            "Tears of the Kingdom"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 218,
+        "answers": [
+            "Margot Robbie"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 264,
+        "answers": [
+            "Gina Miles"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 231,
+        "answers": [
+            "April 19 2023",
+            "Apr 19, 2023",
+            "Apr. 19, 2023",
+            "April 19, 2023",
+            "19 April 2023",
+            "19 Apr, 2023",
+            "19 Apr., 2023",
+            "19 April, 2023"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 262,
+        "answers": [
+            "All Quiet on the Western Front"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 24,
+        "answers": [
+            "February 11",
+            "Feb 11",
+            "Feb. 11",
+            "February 11",
+            "11 February",
+            "11 Feb",
+            "11 Feb.",
+            "11 February"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 223,
+        "answers": [
+            "Morocco"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 179,
+        "answers": [
+            "Rob Wade"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 15,
+        "answers": [
+            "Lawrence Williams",
+            "Ralph Long Jr.",
+            "Ford Greene",
+            "Ronald Yancey"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 265,
+        "answers": [
+            "Chris Cocks"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 54,
+        "answers": [
+            "Novak Djokovic"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 282,
+        "answers": [
+            "April 28",
+            "Apr 28",
+            "Apr. 28",
+            "28 April",
+            "28 Apr",
+            "28 Apr."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 136,
+        "answers": [
+            "Frances Tiafoe"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 80,
+        "answers": [
+            "Golden State Warriors",
+            "Boston Celtics"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 28,
+        "answers": [
+            "February 25",
+            "Feb 25",
+            "Feb. 25",
+            "25 February",
+            "25 Feb",
+            "25 Feb."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 33,
+        "answers": [
+            "A15"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 181,
+        "answers": [
+            "Sarah Shahi"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 120,
+        "answers": [
+            "Brent Pry"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 9,
+        "answers": [
+            "$100 per seat"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 43,
+        "answers": [
+            "March 27",
+            "Mar 27",
+            "Mar. 27",
+            "27 March",
+            "27 Mar",
+            "27 Mar."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 148,
+        "answers": [
+            "8.3%"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 178,
+        "answers": [
+            "Annie Ernaux"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 48,
+        "answers": [
+            "Elon Musk"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 244,
+        "answers": [
+            "February 26",
+            "Feb 26",
+            "Feb. 26",
+            "26 February",
+            "26 Feb",
+            "26 Feb."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 253,
+        "answers": [
+            "11,000",
+            "11000"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 105,
+        "answers": [
+            "Caleb Williams"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 280,
+        "answers": [
+            "Cal Kestis"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 23,
+        "answers": [
+            "Erin Jackson"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 39,
+        "answers": [
+            "Sandra Bullock",
+            "Channing Tatum"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 131,
+        "answers": [
+            "405 million euros"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 159,
+        "answers": [
+            "September 19",
+            "Sep 19",
+            "Sep. 19",
+            "19 September",
+            "19 Sep",
+            "19 Sep.",
+            "Sept 19",
+            "Sept. 19",
+            "19 Sept",
+            "19 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 245,
+        "answers": [
+            "Nothing, Forever"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 291,
+        "answers": [
+            "Magic Editor"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 165,
+        "answers": [
+            "Knee",
+            "injury"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 93,
+        "answers": [
+            "November 30 2022",
+            "Nov 30, 2022",
+            "Nov. 30, 2022",
+            "November 30, 2022",
+            "30 November 2022",
+            "30 Nov, 2022",
+            "30 Nov., 2022",
+            "30 November, 2022"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 157,
+        "answers": [
+            "$350"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 38,
+        "answers": [
+            "2.45",
+            "1,112.4"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 238,
+        "answers": [
+            "December 22",
+            "Dec 22",
+            "Dec. 22",
+            "22 December",
+            "22 Dec",
+            "22 Dec."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 41,
+        "answers": [
+            "June 6",
+            "Jun 6",
+            "Jun. 6",
+            "6 June",
+            "6 Jun",
+            "6 Jun."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 108,
+        "answers": [
+            "January 2024",
+            "Jan 2024",
+            "Jan. 2024",
+            "January, 2024",
+            "Jan, 2024",
+            "Jan., 2024"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 164,
+        "answers": [
+            "Giorgia Meloni"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 170,
+        "answers": [
+            "Rihanna"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 232,
+        "answers": [
+            "Guillermo del Toro's Pinocchio"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 25,
+        "answers": [
+            "silver",
+            "Silver",
+            "bronze",
+            "Bronze"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 248,
+        "answers": [
+            "Bard"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 60,
+        "answers": [
+            "Elena Rybakina"
+        ],
+        "retrieved": false,
+        "correct_answer": true
+    },
+    {
+        "id": 215,
+        "answers": [
+            "Netherlands"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 19,
+        "answers": [
+            "March 4",
+            "Mar 4",
+            "Mar. 4",
+            "4 March",
+            "4 Mar",
+            "4 Mar."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 122,
+        "answers": [
+            "Mickey Joseph"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 268,
+        "answers": [
+            "X.AI",
+            "xAI"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 18,
+        "answers": [
+            "2024"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 145,
+        "answers": [
+            "22"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 21,
+        "answers": [
+            "Carolyn R. Bertozzi",
+            "Morten Meldal",
+            "K. Barry Sharpless"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 88,
+        "answers": [
+            "Ghost"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 173,
+        "answers": [
+            "September 27 2022",
+            "Sep 27, 2022",
+            "Sep. 27, 2022",
+            "September 27, 2022",
+            "27 September 2022",
+            "27 Sep, 2022",
+            "27 Sep., 2022",
+            "27 September, 2022",
+            "Sept 27, 2022",
+            "Sept. 27, 2022",
+            "27 Sept, 2022",
+            "27 Sept., 2022"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 13,
+        "answers": [
+            "$6.5 million"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 190,
+        "answers": [
+            "2.41 million"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 175,
+        "answers": [
+            "EVO Entertainment Group"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 233,
+        "answers": [
+            "Gennadiy Borisov"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 225,
+        "answers": [
+            "May 7",
+            "May 7",
+            "May. 7",
+            "7 May",
+            "7 May",
+            "7 May."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 92,
+        "answers": [
+            "Meta"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 206,
+        "answers": [
+            "Group D"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 31,
+        "answers": [
+            "Chris Stapleton"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 84,
+        "answers": [
+            "83 billion",
+            "83.0 billion"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 113,
+        "answers": [
+            "Katie Sinclair"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 251,
+        "answers": [
+            "Bill Ready"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 114,
+        "answers": [
+            "740,000",
+            "740K"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 121,
+        "answers": [
+            "sky diving accident",
+            "skydiving accident"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 277,
+        "answers": [
+            "Rizz"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 292,
+        "answers": [
+            "May 18",
+            "May 18",
+            "May. 18",
+            "18 May",
+            "18 May",
+            "18 May."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 141,
+        "answers": [
+            "Autumn Spice Milkshake"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 133,
+        "answers": [
+            "pneumonia"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 66,
+        "answers": [
+            "Carlos Alcaraz"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 182,
+        "answers": [
+            "Raymond Lee"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 68,
+        "answers": [
+            "Austin"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 147,
+        "answers": [
+            "5.4 billion"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 149,
+        "answers": [
+            "Gayle King"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 42,
+        "answers": [
+            "CODA"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 112,
+        "answers": [
+            "John Fuller"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 5,
+        "answers": [
+            "EVO Entertainment Group"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 217,
+        "answers": [
+            "Brian Kemp"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 229,
+        "answers": [
+            "Daniel Alegre"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 243,
+        "answers": [
+            "March 23",
+            "Mar 23",
+            "Mar. 23",
+            "23 March",
+            "23 Mar",
+            "23 Mar."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 139,
+        "answers": [
+            "October 7",
+            "Oct 7",
+            "Oct. 7",
+            "October 7",
+            "7 October",
+            "7 Oct",
+            "7 Oct.",
+            "7 October"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 20,
+        "answers": [
+            "February 13",
+            "Feb 13",
+            "Feb. 13",
+            "13 February",
+            "13 Feb",
+            "13 Feb."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 220,
+        "answers": [
+            "Costco"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 246,
+        "answers": [
+            "7,598",
+            "7598"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 155,
+        "answers": [
+            "December 6",
+            "Dec 6",
+            "Dec. 6",
+            "6 December",
+            "6 Dec",
+            "6 Dec."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 200,
+        "answers": [
+            "Mark Kelly"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 273,
+        "answers": [
+            "JW Marriott Los Angeles"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 2,
+        "answers": [
+            "Kentucky"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 86,
+        "answers": [
+            "19.7 billion"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 107,
+        "answers": [
+            "Damien Comolli"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 64,
+        "answers": [
+            "eight",
+            "8"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 132,
+        "answers": [
+            "October 21",
+            "Oct 21",
+            "Oct. 21",
+            "21 October",
+            "21 Oct",
+            "21 Oct."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 62,
+        "answers": [
+            "Novak Djokovic"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 156,
+        "answers": [
+            "Singapore"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 115,
+        "answers": [
+            "Sony",
+            "Tencent"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 192,
+        "answers": [
+            "22.99 per month"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 287,
+        "answers": [
+            "Pixel Fold"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 154,
+        "answers": [
+            "Toronto"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 290,
+        "answers": [
+            "Copilot"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 168,
+        "answers": [
+            "October 13",
+            "Oct 13",
+            "Oct. 13",
+            "13 October",
+            "13 Oct",
+            "13 Oct."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 0,
+        "answers": [
+            "January 2 2022",
+            "Jan 2, 2022",
+            "Jan. 2, 2022",
+            "January 2, 2022",
+            "2 January 2022",
+            "2 Jan, 2022",
+            "2 Jan., 2022",
+            "2 January, 2022"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 189,
+        "answers": [
+            "Jim Lanzone"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 44,
+        "answers": [
+            "March 29",
+            "Mar 29",
+            "Mar. 29",
+            "29 March",
+            "29 Mar",
+            "29 Mar."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 227,
+        "answers": [
+            "Charlie Baker"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 118,
+        "answers": [
+            "Ajla Tomljanovic"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 209,
+        "answers": [
+            "Evolution"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 97,
+        "answers": [
+            "September 20",
+            "Sep 20",
+            "Sep. 20",
+            "20 September",
+            "20 Sep",
+            "20 Sep.",
+            "Sept 20",
+            "Sept. 20",
+            "20 Sept",
+            "20 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 91,
+        "answers": [
+            "August 5",
+            "Aug 5",
+            "Aug. 5",
+            "5 August",
+            "5 Aug",
+            "5 Aug."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 235,
+        "answers": [
+            "Michigan Tech"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 186,
+        "answers": [
+            "Savannah Guthrie"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 247,
+        "answers": [
+            "Robert Glasper"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 211,
+        "answers": [
+            "Kat Callaghan"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 285,
+        "answers": [
+            "Katie Koch"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 37,
+        "answers": [
+            "Shad Gaspard"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 299,
+        "answers": [
+            "Cooper Kupp"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 72,
+        "answers": [
+            "Najafi Companies"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 212,
+        "answers": [
+            "gaslighting"
+        ],
+        "retrieved": false,
+        "correct_answer": true
+    },
+    {
+        "id": 119,
+        "answers": [
+            "Eight",
+            "8"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 52,
+        "answers": [
+            "Aryna Sabalenka"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 116,
+        "answers": [
+            "Camila Cabello"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 278,
+        "answers": [
+            "Matt Crocker"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 234,
+        "answers": [
+            "Georgia"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 219,
+        "answers": [
+            "Tyler Adams"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 40,
+        "answers": [
+            "slapped"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 228,
+        "answers": [
+            "Linda Yaccarino"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 221,
+        "answers": [
+            "36 billion"
+        ],
+        "retrieved": false,
+        "correct_answer": true
+    },
+    {
+        "id": 236,
+        "answers": [
+            "$1.99"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 270,
+        "answers": [
+            "Rebecka Peterson"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 201,
+        "answers": [
+            "Republican "
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 1,
+        "answers": [
+            "medical"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 45,
+        "answers": [
+            "We are"
+        ],
+        "retrieved": false,
+        "correct_answer": true
+    },
+    {
+        "id": 298,
+        "answers": [
+            "July 11",
+            "Jul 11",
+            "Jul. 11",
+            "11 July",
+            "11 Jul",
+            "11 Jul."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 256,
+        "answers": [
+            "18.7%"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 274,
+        "answers": [
+            "226 million"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 143,
+        "answers": [
+            "Carlos Alcaraz"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 8,
+        "answers": [
+            "The Power of the Dog"
+        ],
+        "retrieved": false,
+        "correct_answer": true
+    },
+    {
+        "id": 138,
+        "answers": [
+            "Albie Roman"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 226,
+        "answers": [
+            "Adam Sandler"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 204,
+        "answers": [
+            "Millie Gibson"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 14,
+        "answers": [
+            "May 26",
+            "May 26",
+            "May. 26",
+            "26 May",
+            "26 May",
+            "26 May."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 160,
+        "answers": [
+            "Westminster Abbey"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 29,
+        "answers": [
+            "Anett Kontaveit"
+        ],
+        "retrieved": false,
+        "correct_answer": true
+    },
+    {
+        "id": 176,
+        "answers": [
+            "October 7",
+            "Oct 7",
+            "Oct. 7",
+            "7 October",
+            "7 Oct",
+            "7 Oct."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 96,
+        "answers": [
+            "Dyersville, Iowa"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 11,
+        "answers": [
+            "Real Madrid"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 57,
+        "answers": [
+            "Karolina Muchova"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 213,
+        "answers": [
+            "Singapore"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 110,
+        "answers": [
+            "September 20",
+            "Sep 20",
+            "Sep. 20",
+            "20 September",
+            "20 Sep",
+            "20 Sep.",
+            "Sept 20",
+            "Sept. 20",
+            "20 Sept",
+            "20 Sept."
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 272,
+        "answers": [
+            "Mumbai",
+            "New Delhi"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 205,
+        "answers": [
+            "Ralph Lauren"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 214,
+        "answers": [
+            "3.7%"
+        ],
+        "retrieved": true,
+        "correct_answer": true
+    },
+    {
+        "id": 137,
+        "answers": [
+            "May 6 2023",
+            "May 6, 2023",
+            "May. 6, 2023",
+            "May 6, 2023",
+            "6 May 2023",
+            "6 May, 2023",
+            "6 May., 2023",
+            "6 May, 2023"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 17,
+        "answers": [
+            "RSC",
+            "the AI Research SuperCluster"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 230,
+        "answers": [
+            "134 million"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 153,
+        "answers": [
+            "July 9",
+            "Jul 9",
+            "Jul. 9",
+            "9 July",
+            "9 Jul",
+            "9 Jul."
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 241,
+        "answers": [
+            "Zachary Levi"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 65,
+        "answers": [
+            "Iga Swiatek",
+            "Iga Świątek"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 288,
+        "answers": [
+            "253,000",
+            "253000"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 128,
+        "answers": [
+            "San Diego"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 55,
+        "answers": [
+            "Iga Swiatek"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 183,
+        "answers": [
+            "$1599",
+            "$1,599"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 216,
+        "answers": [
+            "Croatia"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 297,
+        "answers": [
+            "Wyndham Clark"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 161,
+        "answers": [
+            "Mayyas",
+            "Kristy Sellars"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 77,
+        "answers": [
+            "49"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 266,
+        "answers": [
+            "ESPN"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 240,
+        "answers": [
+            "2.1"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 27,
+        "answers": [
+            "February 24",
+            "Feb 24",
+            "Feb. 24",
+            "24 February",
+            "24 Feb",
+            "24 Feb."
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 269,
+        "answers": [
+            "maroon"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 146,
+        "answers": [
+            "Lee Jung-jae"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 103,
+        "answers": [
+            "TMRW Sports"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 158,
+        "answers": [
+            "October 22",
+            "Oct 22",
+            "Oct. 22",
+            "22 October",
+            "22 Oct",
+            "22 Oct."
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 81,
+        "answers": [
+            "4.56 million"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 203,
+        "answers": [
+            "John R. Leonetti"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 70,
+        "answers": [
+            "18.76 billion"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 6,
+        "answers": [
+            "SoFi Stadium"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 89,
+        "answers": [
+            "July 22 2022",
+            "Jul 22, 2022",
+            "Jul. 22, 2022",
+            "July 22, 2022",
+            "22 July 2022",
+            "22 Jul, 2022",
+            "22 Jul., 2022",
+            "22 July, 2022"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 32,
+        "answers": [
+            "Virginia Tech"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 30,
+        "answers": [
+            "Norway"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 35,
+        "answers": [
+            "Jeymes Samuel"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    },
+    {
+        "id": 124,
+        "answers": [
+            "Microsoft",
+            "Apple",
+            "Tesla",
+            "Alphabet",
+            "Nvidia",
+            "Amazon"
+        ],
+        "retrieved": true,
+        "correct_answer": false
+    },
+    {
+        "id": 90,
+        "answers": [
+            "Joo Won"
+        ],
+        "retrieved": false,
+        "correct_answer": false
+    }
+]

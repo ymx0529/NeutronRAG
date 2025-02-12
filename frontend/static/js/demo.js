@@ -471,3 +471,76 @@ document.addEventListener('DOMContentLoaded', () => {
   // 在 DOMContentLoaded 事件中调用 addMoreButtonEventListeners
   addMoreButtonEventListeners();
 });
+
+
+
+// ### History显示question_list
+document.getElementById('readButton').addEventListener('click', function() {
+    fetch('/read-file', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        const questionListDiv = document.getElementById('question-list');
+        questionListDiv.innerHTML = '';  // 清空之前的输出
+
+        if (data.content) {
+            const list = data.content;
+            
+            // 使用 setTimeout 来模拟逐条添加
+            let index = 0;
+            const interval = setInterval(() => {
+                if (index < list.length) {
+                    const item = list[index];
+
+                    // 创建一个新的 div 来包裹内容
+                    const div = document.createElement('div');
+                    div.classList.add('question-item');  // 为每个 div 添加一个类名，方便样式设置
+                    
+                    // 根据 item.type 为 div 设置背景色
+                    switch (item.type) {
+                        case 'GREEN':
+                            div.style.backgroundColor = '#d9f7be';  // 浅绿色
+                            break;
+                        case 'RED':
+                            div.style.backgroundColor = '#ffccc7';  // 浅红色
+                            break;
+                        case 'YELLOW':
+                            div.style.backgroundColor = '#fff2e8';  // 浅橙色
+                            break;
+                        default:
+                            div.style.backgroundColor = '#f0f0f0';  // 默认背景色
+                            break;
+                    }
+
+                    // 创建一个 li 元素，并将内容放入
+                    const li = document.createElement('li');
+                    li.textContent = JSON.stringify(item, null, 2); // 美化显示 JSON
+
+                    // 将 li 添加到 div 中
+                    div.appendChild(li);
+
+                    // 将整个 div 添加到 questionListDiv
+                    questionListDiv.appendChild(div);
+
+                    // 让容器自动滚动到底部
+                    questionListDiv.scrollTop = questionListDiv.scrollHeight;
+
+                    index++;
+                } else {
+                    clearInterval(interval);  // 清除定时器，停止添加
+                }
+            }, 1000); // 每秒添加一个新的列表项
+        } else {
+            alert('No content returned');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error reading file');
+    });
+});
