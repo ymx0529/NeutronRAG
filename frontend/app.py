@@ -1,4 +1,5 @@
 import json
+import re
 import time
 from flask import Flask, Response, request, jsonify, render_template, session
 from zhipuai import ZhipuAI
@@ -55,6 +56,55 @@ def load_and_filter_data(file_path, item_id):
         return None
 
 
+# def parse_chain_relationship(relationship_str):
+    
+#     return triples
+
+
+def parse_relationship(relationship_str):
+    """
+    解析输入的关系，判断是否为链式关系并调用相应的解析函数。
+    """
+    # 判断关系中的箭头数量和方向，确认解析规则
+    out_edges = relationship_str.count('->')  # 出边
+    in_edges = relationship_str.count('<-')   # 入边
+
+    # 如果出边的数量大于 0，则处理为链式关系
+    if out_edges >= 1 or in_edges >=1:
+        return parse_chain_relationship(relationship_str)
+    else:
+        return []  # 如果关系不能匹配任何类型，返回空列表
+
+
+def convert_to_triples(retrieve_results):
+    """
+    将 retrieve_results 中的字符串转换为三元组形式，支持多种边的关系。
+    """
+    triples = {}
+    
+    for key, value_list in retrieve_results.items():
+        triples[key] = []
+        
+        for value in value_list:
+            # 使用 parse_relationship 解析关系
+            parsed_triples = parse_relationship(value)
+            
+            # 将解析出的三元组加入到结果中
+            triples[key].extend(parsed_triples)
+                
+    return triples
+            
+                
+@app.route('/get-graph/<item_id>', methods=['GET'])
+def get_graph(item_id):
+    # 获取与 item_id 相关的 graph 数据
+    filtered_data = load_and_filter_data(GRAPH_FILE_PATH, item_id)
+    if filtered_data:
+        # 转换 retrieve_results 为三元组
+        filtered_data['retrieve_results'] = convert_to_triples(filtered_data['retrieve_results'])
+        return jsonify(filtered_data)  # 返回找到的数据
+    else:
+        return jsonify({'error': 'Item not found'}), 404
 
 @app.route('/read-file', methods=['GET'])
 def read_file():
@@ -93,16 +143,6 @@ def get_vector(item_id):
         return jsonify(filtered_data)  # 返回找到的数据
     else:
         return jsonify({'error': 'Item not found'}), 404
-
-@app.route('/get-graph/<item_id>', methods=['GET'])
-def get_graph(item_id):
-    # 获取与 item_id 相关的 graph 数据
-    filtered_data = load_and_filter_data(GRAPH_FILE_PATH, item_id)
-    if filtered_data:
-        return jsonify(filtered_data)  # 返回找到的数据
-    else:
-        return jsonify({'error': 'Item not found'}), 404
-
 
 
 @app.route('/api/register', methods=['POST'])

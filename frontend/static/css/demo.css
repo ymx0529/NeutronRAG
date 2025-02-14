@@ -979,3 +979,18 @@ canvas {
 .back-button:hover {
     background-color: #e0e0e0;
 }
+
+#vector-content {
+    height: 370px; /* 设置固定高度 */
+    overflow-y: auto; /* 添加垂直滚动条，内容超出时显示 */
+    border: 1px solid #ccc; /* 可选：为容器添加边框，方便查看 */
+    padding: 10px; /* 可选：为内容添加内边距 */
+}
+
+
+#graph-content {
+    height: 370px; /* 设置固定高度 */
+    overflow-y: auto; /* 添加垂直滚动条，内容超出时显示 */
+    border: 1px solid #ccc; /* 可选：为容器添加边框，方便查看 */
+    padding: 10px; /* 可选：为内容添加内边距 */
+}
