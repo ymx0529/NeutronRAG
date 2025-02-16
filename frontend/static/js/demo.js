@@ -624,3 +624,27 @@ document.getElementById('readButton').addEventListener('click', function() {
         alert('Error reading file');
     });
 });
+// function adjustMainContentHeight() {
+//     const settingBar = document.querySelector('.left-sidebar');
+//     const mainContent = document.querySelector('.main-content');
+//     const header = document.querySelector('.header');
+
+//     if (!settingBar || !mainContent || !header) {
+//         console.error('One or more elements not found.');
+//         return;
+//     }
+
+//     const settingBarHeight = settingBar.clientHeight;  // 使用 clientHeight
+
+//     const headerHeight = header.offsetHeight;
+//     const mainContentPadding = 40;  // main-content 的总 padding (上下各 20px)
+
+//     // 计算 main-content 的高度，减去 header 和 padding
+//     const mainContentHeight = settingBarHeight - headerHeight - mainContentPadding;
+
+//     mainContent.style.height = `${mainContentHeight}px`;
+// }
+
+// // 在页面加载和窗口大小改变时调用该函数
+// window.addEventListener('load', adjustMainContentHeight);
+// window.addEventListener('resize', adjustMainContentHeight);
