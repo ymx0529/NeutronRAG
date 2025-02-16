@@ -557,14 +557,49 @@ document.getElementById('readButton').addEventListener('click', function() {
                                 method: 'GET',
                                 headers: { 'Content-Type': 'application/json' }
                             })
-                            .then(response => response.json())
+                            .then(response => response.json())  // 解析 JSON 数据
                             .then(graphData => {
-                                const graphContentDiv = document.getElementById('graph-content');
-                                graphContentDiv.innerHTML = `<pre>${JSON.stringify(graphData, null, 2)}</pre>`;
+                                // 创建 Cytoscape 实例
+                                var cy = cytoscape({
+                                    container: document.getElementById('cy'),  // 渲染图形的容器
+                                    elements: [],  // 初始为空，我们稍后会填充
+                                    style: [
+                                        {
+                                            selector: 'node',
+                                            style: {
+                                                'background-color': 'data(color)',  // 使用节点的颜色
+                                                'label': 'data(label)'  // 显示节点的标签
+                                            }
+                                        },
+                                        {
+                                            selector: 'edge',
+                                            style: {
+                                                'line-color': 'data(color)',  // 使用边的颜色
+                                                'target-arrow-color': 'data(color)',  // 设置箭头的颜色
+                                                'curve-style': 'bezier',  // 设置边的曲线样式
+                                                'target-arrow-shape': 'triangle',  // 设置箭头的形状
+                                                'label': 'data(label)'  // 显示边的标签
+                                            }
+                                        }
+                                    ],
+                                    layout: {
+                                        name: 'cose',  // 布局类型
+                                        fit: true,  // 自动适应图形
+                                        animate: true,  // 启用动画
+                                        animationDuration: 1000,  // 动画持续时间
+                                        animationEasing: 'ease-in-out'  // 动画缓动函数
+                                    }
+                                });
+                            
+                                // 根据 graphData 动态添加节点和边
+                                cy.add(graphData.nodes);  // 添加节点
+                                cy.add(graphData.edges);  // 添加边
+                            
+                                // 重新布局
+                                cy.layout({ name: 'cose' }).run();  // 运行布局算法，使图形按合理的位置显示
                             })
                             .catch(error => {
                                 console.error('Error fetching graph data:', error);
-                                alert('Error fetching graph data');
                             });
                         }
                     });

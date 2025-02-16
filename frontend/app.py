@@ -55,56 +55,234 @@ def load_and_filter_data(file_path, item_id):
         print(f"Error decoding JSON from {file_path}.")
         return None
 
+def find_right_arrow(s):
+    """
+    查找字符串中所有 "->" 的起始位置
+    """
+    right_arrow_positions = []
+    i = 0
+    while i < len(s) - 1:  # 确保不会越界
+        if s[i:i+2] == "->":
+            right_arrow_positions.append(i)
+            i += 2  # 跳过这两个字符，避免重复查找
+        else:
+            i += 1
+    return right_arrow_positions
 
-# def parse_chain_relationship(relationship_str):
+
+def find_left_arrow(s):
+    """
+    查找字符串中所有 "<-" 的起始位置
+    """
+    left_arrow_positions = []
+    i = 0
+    while i < len(s) - 1:  # 确保不会越界
+        if s[i:i+2] == "<-":
+            left_arrow_positions.append(i)
+            i += 2  # 跳过这两个字符，避免重复查找
+        else:
+            i += 1
+
+    return left_arrow_positions
     
-#     return triples
-
-
-def parse_relationship(relationship_str):
+def find_dash_positions(s):
     """
-    解析输入的关系，判断是否为链式关系并调用相应的解析函数。
+    查找字符串中所有单独的 "-" 的位置
+    参数:
+        s: 字符串
     """
-    # 判断关系中的箭头数量和方向，确认解析规则
-    out_edges = relationship_str.count('->')  # 出边
-    in_edges = relationship_str.count('<-')   # 入边
+    dash_positions = []
+    i = 0
+    while i < len(s):
+        if s[i] == "-":
+            # 检查当前位置是否属于箭头的一部分
+            if i > 0 and ((s[i:i+2] == "->") or (s[i-1:i+1] == "<-")):
+                i += 1  # 跳过整个箭头（两个字符），避免误判 "-" 为单独的 "-"
+                continue
+            dash_positions.append(i)
+        i += 1
+    return dash_positions
 
-    # 如果出边的数量大于 0，则处理为链式关系
-    if out_edges >= 1 or in_edges >=1:
-        return parse_chain_relationship(relationship_str)
-    else:
-        return []  # 如果关系不能匹配任何类型，返回空列表
+
+
+
+def split_relation(rel_seq):
+    parts = []
+    right_arrows = find_right_arrow(rel_seq)
+    left_arrows = find_left_arrow(rel_seq)
+    dash_positions = find_dash_positions(rel_seq)
+
+    arrows_index = sorted(right_arrows+left_arrows)
+
+    if len(arrows_index) == 1:
+        if arrows_index[0] in right_arrows:
+            source = rel_seq[:dash_positions[0]]
+            rel = rel_seq[dash_positions[0]+1:arrows_index[0]]
+            dst = rel_seq[arrows_index[0]+2:]
+            parts.append((source,rel,dst))
+        else:
+            dst = rel_seq[:arrows_index[0]]
+            rel = rel_seq[arrows_index[0]+2:dash_positions[0]]
+            source = rel_seq[dash_positions[0]+1:]
+            parts.append((source,rel,dst))
+
+        return parts
+
+    ###多跳的分解###
+    i = 0
+    for arrows in arrows_index:
+        if  arrows in right_arrows:
+            if i == 0:
+                source = rel_seq[:dash_positions[0]].strip()
+                rel = rel_seq[dash_positions[0]+1:arrows_index[0]].strip()
+                print(rel_seq,rel)
+                dst = rel_seq[arrows_index[0]+2:min(dash_positions[1],arrows_index[1])].strip()
+                parts.append((source,rel,dst))
+                i+=1
+            elif i == len(arrows_index)-1:
+                dst = rel_seq[arrows_index[-1]+2:].strip()
+                rel = rel_seq[dash_positions[-1]+1:arrows_index[-1]].strip()
+                source = rel_seq[max(dash_positions[i-1]+1,arrows_index[i-1]+2):dash_positions[-1]].strip()
+                print(rel_seq,source)
+                parts.append((source,rel,dst))
+                i+=1
+
+            else:#既不是第一个也不是最后一个
+                source = rel_seq[max(dash_positions[i-1]+1,arrows_index[i-1]+2):dash_positions[i]].strip()
+                rel = rel_seq[dash_positions[i]+1:arrows_index[i]].strip()
+                dst = rel_seq[arrows_index[i]+2:min(dash_positions[i+1],arrows_index[i+1])].strip()
+                parts.append((source,rel,dst))
+                i+=1
+
+
+        if arrows in left_arrows:
+            if i == 0:
+                dst = rel_seq[:arrows_index[i]].strip()
+                rel = rel_seq[arrows_index[i]+2:dash_positions[i]].strip()
+                source = rel_seq[dash_positions[i]+1:min(dash_positions[i+1],arrows_index[i+1])].strip()
+                parts.append((source,rel,dst))
+                i+=1
+            elif i == len(arrows_index)-1:
+                source = rel_seq[dash_positions[i]+1:].strip()
+                rel = rel_seq[arrows_index[i]+2:dash_positions[i]].strip()
+                dst = rel_seq[max(arrows_index[i-1]+2,dash_positions[i-1]+1):arrows_index[i]].strip()
+                parts.append((source,rel,dst))
+                i+=1
+                
+            else:
+                source = rel_seq[dash_positions[i]:min(dash_positions[i+1],arrows_index[i+1])].strip()
+                rel = rel_seq[arrows_index[i]+2:dash_positions[i]].strip()
+                dst = rel_seq[max(dash_positions[i-1]+1,arrows_index[i-1]+2):arrows_index[i]].strip()
+                parts.append((source,rel,dst))
+                i+=1
+
+
+    return parts
+
+
+
+
 
 
 def convert_to_triples(retrieve_results):
     """
     将 retrieve_results 中的字符串转换为三元组形式，支持多种边的关系。
     """
-    triples = {}
+    triples = set()
     
     for key, value_list in retrieve_results.items():
-        triples[key] = []
         
         for value in value_list:
             # 使用 parse_relationship 解析关系
-            parsed_triples = parse_relationship(value)
+            parsed_triples = split_relation(value)
             
             # 将解析出的三元组加入到结果中
-            triples[key].extend(parsed_triples)
+            for t in parsed_triples:
+                triples.add(t)
                 
-    return triples
+    return list(triples)
             
-                
+
+def triples_to_json(triples):
+
+    colors = [
+        "#FFB3BA", "#FFDFBA", "#FFFFBA", "#BAFFC9", "#BAE1FF",
+        "#B5EAD7", "#ECC5FB", "#FFC3A0", "#FF9AA2", "#FFDAC1",
+        "#E2F0CB", "#B5EAD7", "#C7CEEA", "#FFB7B2", "#FF9AA2",
+        "#FFDAC1", "#C7CEEA", "#FFB3BA", "#FFDFBA", "#FFFFBA",
+        "#BAFFC9", "#BAE1FF", "#FFC3A0", "#FF9AA2", "#FFDAC1",
+        "#E2F0CB", "#B5EAD7", "#C7CEEA", "#FFB7B2", "#FF9AA2",
+        "#FFDAC1", "#C7CEEA", "#FFB3BA", "#FFDFBA", "#FFFFBA",
+        "#BAFFC9", "#BAE1FF", "#FFC3A0", "#FF9AA2", "#FFDAC1",
+        "#E2F0CB", "#B5EAD7", "#C7CEEA", "#FFB7B2", "#FF9AA2",
+        "#FFDAC1", "#C7CEEA", "#FFB3BA", "#FFDFBA", "#FFFFBA",
+        "#BAFFC9", "#BAE1FF", "#FFC3A0", "#FF9AA2", "#FFDAC1"
+    ]
+
+    json_result = {'edges': [], 'nodes': []}
+    node_set = set()  # 用于追踪已经添加的节点
+
+    import random
+    print(f"Triples:{triples}")
+
+    for triple in triples:
+        source = triple[0]
+        relationship = triple[1]
+        destination = triple[2]
+
+        # 添加边
+        json_result['edges'].append({
+            'data': {
+                'label': relationship,
+                'source': source,
+                'target': destination,
+                'color': colors[random.randint(0,54)] # 可以根据需要自定义颜色
+            }
+        })
+
+        # 添加源节点和目标节点（避免重复）
+        if source not in node_set:
+            json_result['nodes'].append({
+                'data': {
+                    'id': source,
+                    'label': source,
+                    'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                }
+            })
+            node_set.add(source)
+
+        if destination not in node_set:
+            json_result['nodes'].append({
+                'data': {
+                    'id': destination,
+                    'label': destination,
+                    'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                }
+            })
+            node_set.add(destination)
+
+    return json_result
+
+
+
+
 @app.route('/get-graph/<item_id>', methods=['GET'])
 def get_graph(item_id):
     # 获取与 item_id 相关的 graph 数据
     filtered_data = load_and_filter_data(GRAPH_FILE_PATH, item_id)
     if filtered_data:
         # 转换 retrieve_results 为三元组
-        filtered_data['retrieve_results'] = convert_to_triples(filtered_data['retrieve_results'])
-        return jsonify(filtered_data)  # 返回找到的数据
+        filtered_data = convert_to_triples(filtered_data['retrieve_results'])
+        json_result = triples_to_json(filtered_data)
+        print("============================================")
+        print(json_result)
+        print("============================================")
+
+        return json_result  # 返回找到的数据
     else:
         return jsonify({'error': 'Item not found'}), 404
+
+
 
 @app.route('/read-file', methods=['GET'])
 def read_file():
