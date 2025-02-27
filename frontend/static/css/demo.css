@@ -159,21 +159,38 @@ body {
     gap: 10px;
 }
 
-/* 主要内容区域 */
 .main-content {
     grid-area: main-content;
     display: grid;
     grid-template-areas:
         "answer-section suggestion-section"
         "retrieval-result-section history-section";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* 恢复列的定义 */
+    grid-template-rows: 1fr 1fr;    /* 恢复行的定义 */
     gap: 20px;
     padding: 20px;
     grid-column: span 3;
-    overflow-y: auto; /* 添加溢出滚动 */
+    overflow-y: auto;
+    height: 790px;
 }
 
+.answer-section,
+.suggestion-section,
+.retrieval-result-section,
+.history-section {
+    min-height: 200px;
+    overflow: auto;
+}
+
+.main-content,
+.answer-section,
+.suggestion-section,
+.retrieval-result-section,
+.history-section {
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
 .section-box{
     border: 1px solid #ddd;
     background-color: #fff;
@@ -222,6 +239,8 @@ body {
     padding: 10px;
     flex-grow: 1;
     overflow: auto;
+    box-sizing: border-box; /* 使用 border-box 模型 */
+    height: auto;           /* 让高度自适应内容 */
 }
 
 .box-title {
@@ -981,7 +1000,7 @@ canvas {
 }
 
 #vector-content {
-    height: 370px; /* 设置固定高度 */
+    height: 300px; /* 设置固定高度 */
     overflow-y: auto; /* 添加垂直滚动条，内容超出时显示 */
     border: 1px solid #ccc; /* 可选：为容器添加边框，方便查看 */
     padding: 10px; /* 可选：为内容添加内边距 */
@@ -989,8 +1008,9 @@ canvas {
 
 
 #graph-content {
-    height: 370px; /* 设置固定高度 */
+    height: 300px; /* 设置固定高度 */
     overflow-y: auto; /* 添加垂直滚动条，内容超出时显示 */
     border: 1px solid #ccc; /* 可选：为容器添加边框，方便查看 */
     padding: 10px; /* 可选：为内容添加内边距 */
 }
+
