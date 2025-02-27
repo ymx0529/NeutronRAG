@@ -7,6 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.3.5/gauge.min.js"></script> <!-- 引入gauge.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- 引入 Chart.js datalabels 插件 -->
+    <script src="../static/js/demo.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -109,21 +110,21 @@
                 <div class="gauge-container">
                     <div class="gauge-title">VectorRAG Accuracy</div>
                     <canvas id="gauge1"></canvas>
-                    <div class="percentage" id="percentage1">75%</div>
+                    <div class="percentage" id="vector_percentage">75%</div>
                 </div>
             </div>
             <div class="gauge-wrapper">
                 <div class="gauge-container">
                     <div class="gauge-title">GraphRAG Accuracy</div>
                     <canvas id="gauge2"></canvas>
-                    <div class="percentage" id="percentage2">80%</div>
+                    <div class="percentage" id="graph_percentage">80%</div>
                 </div>
             </div>
             <div class="gauge-wrapper">
                 <div class="gauge-container">
                     <div class="gauge-title">HybridRAG Accuracy</div>
                     <canvas id="gauge3"></canvas>
-                    <div class="percentage" id="percentage3">85%</div>
+                    <div class="percentage" id="hybrid_percentage3">85%</div>
                 </div>
             </div>
         </div>
@@ -164,7 +165,7 @@
 
     <script>
         // 创建仪表盘的函数
-        function createGauge(elementId, percentage, color) {
+    function createGauge(elementId, percentage, color) {
     // 设置不同颜色的渐变色
     let colorStart, colorStop;
     switch (color) {
@@ -241,6 +242,11 @@
 const gauge1 = createGauge('gauge1', 75, 'blue');
 const gauge2 = createGauge('gauge2', 80, 'green');
 const gauge3 = createGauge('gauge3', 60, 'purple');
+
+
+
+
+
         // 饼图部分
         function createPieChart(ctx, data) {
             return new Chart(ctx, {

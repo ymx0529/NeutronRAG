@@ -624,3 +624,115 @@ document.getElementById('readButton').addEventListener('click', function() {
         alert('Error reading file');
     });
 });
+
+
+document.getElementById('get_suggestions').addEventListener('click', function() {
+    // 发送 GET 请求到 Flask 后端
+    fetch('/get_suggestions')
+        .then(response => response.json())
+        .then(data => {
+            // 获取到返回的数据后，将建议显示到 #advice-content
+            const adviceContent = document.getElementById('advice-content');
+            adviceContent.innerHTML = `
+                <h3>Vector Errors:</h3>
+                <ul>
+                    <li>Retrieve Error: ${data.vector_retrieve_error}</li>
+                    <li>Lose Error: ${data.vector_lose_error}</li>
+                    <li>Lose Correct: ${data.vector_lose_correct}</li>
+                </ul>
+                <h3>Graph Errors:</h3>
+                <ul>
+                    <li>Retrieve Error: ${data.graph_retrieve_error}</li>
+                    <li>Lose Error: ${data.graph_lose_error}</li>
+                    <li>Lose Correct: ${data.graph_lose_correct}</li>
+                </ul>
+                <h3>Advice:</h3>
+                <p>${data.advice}</p>
+            `;
+        })
+        .catch(error => {
+            console.error('Error fetching suggestions:', error);
+        });
+});
+
+
+
+document.getElementById('More_button').addEventListener('click', function() {
+    window.location.href = '/analysis';  // 假设分析页面在 Flask 路由中的 URL 是 '/analysis'
+  });
+
+
+
+
+  function createGauge(elementId, percentage, color) {
+    // 设置不同颜色的渐变色
+    let colorStart, colorStop;
+    switch (color) {
+        case 'blue':
+            colorStart = '#A6C8FF'; // Light blue
+            colorStop = '#1E4B8B';  // Dark blue
+            break;
+        case 'green':
+            colorStart = '#A6FFB3'; // Light green
+            colorStop = '#28B64D';  // Dark green
+            break;
+        case 'purple':
+            colorStart = '#D3A6FF'; // Light purple
+            colorStop = '#6A2E8C';  // Dark purple
+            break;
+        case 'yellow':
+            colorStart = '#FFFFA6'; // Light yellow
+            colorStop = '#FFD700';  // Dark yellow
+            break;
+        default:
+            colorStart = '#A6C8FF'; // Default to light blue
+            colorStop = '#1E4B8B';  // Default to dark blue
+    }
+
+    var opts = {
+        angle: 0.15, // The span of the gauge arc (this is a half-circle)
+        lineWidth: 0.4, // The line thickness
+        radiusScale: 1, // Relative radius
+        pointer: {
+            length: 0, // No pointer, because you just want an arc
+            strokeWidth: 0, // No pointer stroke
+            color: '#000000' // Pointer color, but it's not used
+        },
+        limitMax: false,     // Max value
+        limitMin: false,     // Min value
+        colorStart: colorStart,   // Dynamic start color
+        colorStop: colorStop,     // Dynamic end color
+        strokeColor: '#E0E0E0',  // Border color (grey color for the remaining part)
+        generateGradient: true,  // Enable gradient
+        highDpiSupport: true,     // High resolution support
+        staticZones: [
+            {strokeStyle: colorStart, min: 0, max: percentage},  // Gradual color based on percentage
+            {strokeStyle: '#E0E0E0', min: percentage, max: 100}    // Grey color for the remaining part
+        ],
+        staticLabels: {
+            font: "12px sans-serif",  // Specifies font
+            labels: [0, 50, 100],  // Print labels at these values
+            color: "#000000",  // Label text color
+            fractionDigits: 0  // Numerical precision. 0=round off
+        },
+        renderTicks: {
+            divisions: 5, // Major divisions
+            divWidth: 1.1,
+            divLength: 0.7,
+            divColor: '#333333',
+            subDivisions: 3, // Minor ticks
+            subLength: 0.5,
+            subWidth: 0.6,
+            subColor: '#666666'
+        }
+    };
+
+    var target = document.getElementById(elementId); // Your canvas element
+    var gauge = new Gauge(target).setOptions(opts); // Create the gauge
+    gauge.maxValue = 100; // Set max gauge value to 100
+    gauge.setMinValue(0);  // Set min value
+    gauge.animationSpeed = 32; // Set animation speed (32 is default)
+    gauge.set(percentage); // Set actual value
+    gauge.setTextField(document.getElementById('percentage' + elementId.slice(-1))); // Set text field for percentage
+    return gauge;
+}

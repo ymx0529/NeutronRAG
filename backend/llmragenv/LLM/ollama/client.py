@@ -1,8 +1,8 @@
 '''
 Author: lpz 1565561624@qq.com
 Date: 2024-09-17 08:50:26
-LastEditors: fzb0316 fzb0316@163.com
-LastEditTime: 2024-11-04 10:29:25
+LastEditors: lpz 1565561624@qq.com
+LastEditTime: 2025-02-18 16:27:10
 FilePath: /lipz/fzb_rag_demo/RAGWebUi_demo/llmragenv/LLM/ollama/client.py
 Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
@@ -45,6 +45,8 @@ class OllamaClient(LLMBase):
     def chat_with_ai_stream(self, prompt: str, history: List[List[str]] | None = None):
         
         return self.client.stream_complete(prompt)
+    
+    
 
     
 

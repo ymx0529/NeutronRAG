@@ -1,5 +1,10 @@
 import json
-
+rgb_result_path = "rgb"
+rgb_graph_generation = "rgb/graphrag/analysis_generation___merged.json"
+rgb_graph_retrieval = "rgb/graphrag/analysis_retrieval_merged.json"
+rgb_vector_generation = "rgb/vectorrag/analysis_generation___top5_2024-11-26_21-32-23.json"
+rgb_vector_retrieval = "rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
+rgb_hybrid_generation = "rgb/hybridrag/hybrid_result.json"
 
 # rgb_result_path = "/home/lipz/NeutronRAG/neutronrag/results/analysis/rgb"
 # rgb_graph_generation = "/home/lipz/NeutronRAG/neutronrag/results/analysis/rgb/graphrag/analysis_generation___merged.json"
@@ -254,6 +259,7 @@ def statistic_error_cause(generation_dataset, retrieval_dataset, mode):
     result_data = []
     # 遍历数据集进行统计
     for retrieval_data in retrieval_dataset:
+        print(retrieval_data)
         answers = flatten_answers(retrieval_data['answer'])
         retrieve_results = retrieval_data['retrieve_results']
 
@@ -287,7 +293,7 @@ def statistic_error_cause(generation_dataset, retrieval_dataset, mode):
             'correct_answer': correct_answer
         })
         # 保存到文件方便查看（可删除）
-        with open("rgb/result.json", 'w', encoding='utf-8') as f:
+        with open("/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/result.json", 'w', encoding='utf-8') as f:
             json.dump(result_data, f, ensure_ascii=False, indent=4)
 
         if retrieved:
@@ -358,20 +364,29 @@ def statistic_question(vector_dataset, graph_dataset, hybrid_dataset):
 
     return question_eval
 
-if __name__ == '__main__':
-    
-    # 数据集路径，需要替换一下
-    rgb_result_path = "rgb"
+
+def adviser():
     rgb_graph_generation = "rgb/graphrag/analysis_generation___merged.json"
     rgb_graph_retrieval = "rgb/graphrag/analysis_retrieval_merged.json"
     rgb_vector_generation = "rgb/vectorrag/analysis_generation___top5_2024-11-26_21-32-23.json"
     rgb_vector_retrieval = "rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
-    rgb_hybrid_generation = "rgb/hybridrag/hybrid_result.json"
-    statistic_graph_generation(rgb_graph_generation)
-    statistic_graph_retrieval(rgb_graph_retrieval)
-    statistic_vector_generation(rgb_vector_generation)
-    statistic_vector_retrieval(rgb_vector_retrieval)
-    statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
-    statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
 
-    question_eval = statistic_question(vector_dataset=rgb_vector_generation,graph_dataset=rgb_graph_generation,hybrid_dataset=rgb_graph_generation)
+    v_retrieve_error, v_lose_error, v_lose_correct =  statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
+    g_retrieve_error, g_lose_error, g_lose_correct = statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
+
+    return v_retrieve_error, v_lose_error, v_lose_correct,g_retrieve_error, g_lose_error, g_lose_correct,"这里是对用户的建议"
+
+
+if __name__ == '__main__':
+    
+    # 数据集路径，需要替换一下
+
+    # statistic_graph_generation(rgb_graph_generation)
+    # statistic_graph_retrieval(rgb_graph_retrieval)
+    # statistic_vector_generation(rgb_vector_generation)
+    # statistic_vector_retrieval(rgb_vector_retrieval)
+    # statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
+    # statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
+
+    # question_eval = statistic_question(vector_dataset=rgb_vector_generation,graph_dataset=rgb_graph_generation,hybrid_dataset=rgb_graph_generation)
+    print(adviser())

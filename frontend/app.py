@@ -5,6 +5,7 @@ from flask import Flask, Response, request, jsonify, render_template, session
 from zhipuai import ZhipuAI
 from user import User  # 假设你的 User 类定义在 user.py 中
 from llmragenv.llmrag_env import LLMRAGEnv
+from evaluator.simulate import statistic_error_cause
 
 app = Flask(__name__)
 app.secret_key = 'ac1e22dfb44b87ef38f5bf2cd1cb0c6f93bb0a67f1b2d8f7'  # 用于 flash 消息
@@ -19,6 +20,7 @@ def login():
 @app.route('/register')
 def register():
     return render_template('register.html')  # 注册页面
+
 @app.route('/analysis')
 def analysis():
     return render_template('analysis.html')
@@ -85,12 +87,9 @@ def find_left_arrow(s):
 
     return left_arrow_positions
     
-def find_dash_positions(s):
-    """
-    查找字符串中所有单独的 "-" 的位置
-    参数:
-        s: 字符串
-    """
+
+#获取所有的-的位置，但它不一定是关系的分隔符
+def get_all_dash(s):
     dash_positions = []
     i = 0
     while i < len(s):
@@ -105,12 +104,26 @@ def find_dash_positions(s):
 
 
 
+def find_dash_positions(s,all_dash):
+    dash_positions = []
+    
+
+    for i in all_dash:
+        if s[i-1] == " "  or s[i+1] == " ":
+            dash_positions.append(i)
+        
+
+    return dash_positions
+
+
+
 
 def split_relation(rel_seq):
     parts = []
+    all_dash = get_all_dash(rel_seq)
     right_arrows = find_right_arrow(rel_seq)
     left_arrows = find_left_arrow(rel_seq)
-    dash_positions = find_dash_positions(rel_seq)
+    dash_positions = find_dash_positions(rel_seq,all_dash)
 
     arrows_index = sorted(right_arrows+left_arrows)
 
@@ -135,7 +148,6 @@ def split_relation(rel_seq):
             if i == 0:
                 source = rel_seq[:dash_positions[0]].strip()
                 rel = rel_seq[dash_positions[0]+1:arrows_index[0]].strip()
-                print(rel_seq,rel)
                 dst = rel_seq[arrows_index[0]+2:min(dash_positions[1],arrows_index[1])].strip()
                 parts.append((source,rel,dst))
                 i+=1
@@ -143,7 +155,6 @@ def split_relation(rel_seq):
                 dst = rel_seq[arrows_index[-1]+2:].strip()
                 rel = rel_seq[dash_positions[-1]+1:arrows_index[-1]].strip()
                 source = rel_seq[max(dash_positions[i-1]+1,arrows_index[i-1]+2):dash_positions[-1]].strip()
-                print(rel_seq,source)
                 parts.append((source,rel,dst))
                 i+=1
 
@@ -178,7 +189,6 @@ def split_relation(rel_seq):
 
 
     return parts
-
 
 
 
@@ -321,6 +331,56 @@ def get_vector(item_id):
         return jsonify(filtered_data)  # 返回找到的数据
     else:
         return jsonify({'error': 'Item not found'}), 404
+
+
+
+
+
+@app.route('/get_suggestions', methods=['GET'])
+def adviser():
+    # 假设下面这些文件路径是正确的
+    # /home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_generation___merged.json
+    rgb_graph_generation = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_generation___merged.json"
+    rgb_graph_retrieval = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_retrieval_merged.json"
+    rgb_vector_generation = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_generation___top5_2024-11-26_21-32-23.json"
+    rgb_vector_retrieval = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
+
+    # 假设 statistic_error_cause 函数已经定义
+    v_retrieve_error, v_lose_error, v_lose_correct =  statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
+    g_retrieve_error, g_lose_error, g_lose_correct = statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
+
+    suggestions = {
+        "vector_retrieve_error": v_retrieve_error,
+        "vector_lose_error": v_lose_error,
+        "vector_lose_correct": v_lose_correct,
+        "graph_retrieve_error": g_retrieve_error,
+        "graph_lose_error": g_lose_error,
+        "graph_lose_correct": g_lose_correct,
+        "advice": "这里是对用户的建议"
+    }
+
+    print(suggestions)
+
+    # 返回 JSON 格式的数据
+    return jsonify(suggestions)
+
+
+
+
+@app.route('/get_accuracy', methods=['GET'])
+def get_accuracy():
+    # 模拟的准确度数据，实际可以从模型或数据库中获取
+    data = {
+        "vector_accuracy": 75,
+        "graph_accuracy": 80,
+        "hybrid_accuracy": 85
+    }
+    return jsonify(data)
+
+
+
+
+
 
 
 @app.route('/api/register', methods=['POST'])

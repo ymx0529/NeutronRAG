@@ -1,0 +1,158 @@
+[
+    {
+        "id": 83,
+        "question": "Who won the 2022 Tour de France?",
+        "answer": [
+            "Jonas Vingegaard"
+        ],
+        "vector_response": "Denmark's Jonas Vingegaard (Jumbo-Visma) won the yellow jersey as the overall winner of the 2022 Tour de France.",
+        "graph_response": "Jonas Vingegaard",
+        "hybrid_response": "Jonas Vingegaard",
+        "type": "GREEN"
+    },
+    {
+        "id": 142,
+        "question": "Which team will Kyle Busch join in 2023?",
+        "answer": [
+            "Richard Childress Racing"
+        ],
+        "vector_response": "Richard Childress Racing.",
+        "graph_response": "An RCR (Richard Childress Racing) team.",
+        "hybrid_response": "An RCR (Richard Childress Racing) team.",
+        "type": "YELLOW"
+    },
+    {
+        "id": 187,
+        "question": "Who is the president of the Prospect Park Alliance?",
+        "answer": [
+            "Morgan Monaco"
+        ],
+        "vector_response": "Morgan Monaco.",
+        "graph_response": "Morgan Monaco.",
+        "hybrid_response": "Morgan Monaco.",
+        "type": "GREEN"
+    },
+    {
+        "id": 110,
+        "question": "What is the premiere date of New Amsterdam Season 5?",
+        "answer": [
+            [
+                "September 20",
+                "Sep 20",
+                "Sep. 20",
+                "20 September",
+                "20 Sep",
+                "20 Sep.",
+                "Sept 20",
+                "Sept. 20",
+                "20 Sept",
+                "20 Sept."
+            ]
+        ],
+        "vector_response": "September 20, 2022.",
+        "graph_response": "The premiere date of New Amsterdam Season 5 is not explicitly mentioned in the provided context. However, it is mentioned that \"New amsterdam season 5 -Arrives later in-> 2023\" and also \"Its fifth season <-Will end with- New amsterdam -Premiered on-> September 20, 2022\".",
+        "hybrid_response": "The premiere date of New Amsterdam Season 5 is not explicitly mentioned in the provided context. However, it is mentioned that \"New amsterdam season 5 -Arrives later in-> 2023\" and also \"Its fifth season <-Will end with- New amsterdam -Premiered on-> September 20, 2022\".",
+        "type": "GREEN"
+    },
+    {
+        "id": 71,
+        "question": "When will Splatoon 3 be released?",
+        "answer": [
+            [
+                "September 9",
+                "Sep 9",
+                "Sep. 9",
+                "9 September",
+                "9 Sep",
+                "9 Sep.",
+                "Sept 9",
+                "Sept. 9",
+                "9 Sept",
+                "9 Sept."
+            ]
+        ],
+        "vector_response": "Splatoon 3 was officially released on September 9, 2022. It became available to play at midnight local time in all regions.",
+        "graph_response": "September 9, 2022",
+        "hybrid_response": "September 9, 2022",
+        "type": "GREEN"
+    },
+    {
+        "id": 101,
+        "question": "What is the date of the premiere of House of the Dragon?",
+        "answer": [
+            [
+                "August 21",
+                "Aug 21",
+                "Aug. 21",
+                "21 August",
+                "21 Aug",
+                "21 Aug."
+            ]
+        ],
+        "vector_response": "August 21, 2022",
+        "graph_response": "August 21, 2022",
+        "hybrid_response": "August 21, 2022",
+        "type": "GREEN"
+    },
+    {
+        "id": 229,
+        "question": "Who is the CEO of Yuga Labs?",
+        "answer": [
+            "Daniel Alegre"
+        ],
+        "vector_response": "Daniel Alegre",
+        "graph_response": "Daniel Alegre",
+        "hybrid_response": "Daniel Alegre",
+        "type": "GREEN"
+    },
+    {
+        "id": 276,
+        "question": "Who is the lead actress in Prima Facie?",
+        "answer": [
+            "Jodie Comer"
+        ],
+        "vector_response": "Jodie Comer.",
+        "graph_response": "Jodie Comer",
+        "hybrid_response": "Jodie Comer",
+        "type": "GREEN"
+    },
+    {
+        "id": 243,
+        "question": "When is the congressional hearing for TikTok CEO Shou Zi Chew?",
+        "answer": [
+            [
+                "March 23",
+                "Mar 23",
+                "Mar. 23",
+                "23 March",
+                "23 Mar",
+                "23 Mar."
+            ]
+        ],
+        "vector_response": "Thursday (no specific date mentioned in the query)",
+        "graph_response": "The congressional hearing for TikTok CEO Shou Zi Chew took place on Thursday, March 23, 2023.",
+        "hybrid_response": "The congressional hearing for TikTok CEO Shou Zi Chew took place on Thursday, March 23, 2023.",
+        "type": "RED"
+    },
+    {
+        "id": 139,
+        "question": "When does the iPhone 14 Plus release?",
+        "answer": [
+            [
+                "October 7",
+                "Oct 7",
+                "Oct. 7",
+                "October 7",
+                "7 October",
+                "7 Oct",
+                "7 Oct.",
+                "7 October"
+            ]
+        ],
+        "vector_response": "October 7, 2022",
+        "graph_response": "October 7, 2022",
+        "hybrid_response": "October 7, 2022",
+        "type": "GREEN"
+    }
+
+]
