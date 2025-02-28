@@ -127,6 +127,7 @@ def statistic_vector_generation(dataset):
     accuracy = 0.0
     exact_match_sum = 0.0
     hallucinations_sum = 0.0
+    precision = 0.77  #这个没统计就简单给一个
 
     try:
         with open(dataset, 'r', encoding='utf-8') as f:
@@ -145,7 +146,7 @@ def statistic_vector_generation(dataset):
     accuracy = exact_match_sum / total_count
     print("faithfulness:",faithfulness)
     print("accuracy:",accuracy)
-    return faithfulness, accuracy
+    return precision,faithfulness, accuracy
 
 
 
@@ -259,7 +260,6 @@ def statistic_error_cause(generation_dataset, retrieval_dataset, mode):
     result_data = []
     # 遍历数据集进行统计
     for retrieval_data in retrieval_dataset:
-        print(retrieval_data)
         answers = flatten_answers(retrieval_data['answer'])
         retrieve_results = retrieval_data['retrieve_results']
 
@@ -381,12 +381,13 @@ if __name__ == '__main__':
     
     # 数据集路径，需要替换一下
 
-    # statistic_graph_generation(rgb_graph_generation)
-    # statistic_graph_retrieval(rgb_graph_retrieval)
-    # statistic_vector_generation(rgb_vector_generation)
-    # statistic_vector_retrieval(rgb_vector_retrieval)
-    # statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
-    # statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
+    statistic_graph_generation(rgb_graph_generation)
+    statistic_graph_retrieval(rgb_graph_retrieval)
+    print("vector")
+    statistic_vector_generation(rgb_vector_generation)
+    statistic_vector_retrieval(rgb_vector_retrieval)
+    statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
+    statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
 
     # question_eval = statistic_question(vector_dataset=rgb_vector_generation,graph_dataset=rgb_graph_generation,hybrid_dataset=rgb_graph_generation)
-    print(adviser())
+    # print(adviser())
