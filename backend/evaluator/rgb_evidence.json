@@ -1,0 +1,6522 @@
+[
+    {
+        "id": 0,
+        "query": "When is the premiere of 'Carole King & James Taylor: Just Call Out My Name'?",
+        "answer": [
+            [
+                "January 2 2022",
+                "Jan 2, 2022",
+                "Jan. 2, 2022",
+                "January 2, 2022",
+                "2 January 2022",
+                "2 Jan, 2022",
+                "2 Jan., 2022",
+                "2 January, 2022"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Carole king & james taylor: just call out my name",
+                    "Premiered on",
+                    "January 2, 2022"
+                ],
+                "Carole king & james taylor: just call out my name -Premiered on-> January 2, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 1,
+        "query": "The genre of the drama \"Good Sam\" is what?",
+        "answer": [
+            "medical"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Good sam",
+                    "Is a",
+                    "Medical drama"
+                ],
+                "Good sam -Is a-> Medical drama"
+            ]
+        ]
+    },
+    {
+        "id": 2,
+        "query": "Who won the 2022 Citrus Bowl?",
+        "answer": [
+            "Kentucky"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Kentucky",
+                    "Won",
+                    "2022 vrbo citrus bowl"
+                ],
+                "2022 vrbo citrus bowl <-Won- Kentucky"
+            ]
+        ]
+    },
+    {
+        "id": 3,
+        "query": "What position did Jason Semore hold at Valdosta State before returning to Georgia Tech?",
+        "answer": [
+            "defensive coordinator"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Jason semore",
+                    "Held the position of",
+                    "Defensive coordinator"
+                ],
+                "Jason semore -Held the position of-> Defensive coordinator",
+                "Georgia tech <-Worked at- Jason semore -Held the position of-> Defensive coordinator"
+            ]
+        ]
+    },
+    {
+        "id": 4,
+        "query": "How many vehicles did Tesla deliver in 2021?",
+        "answer": [
+            [
+                "936,172",
+                "936172"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Tesla",
+                    "Delivered",
+                    "936,172 vehicles"
+                ],
+                "Tesla -Delivered-> 936,172 vehicles"
+            ]
+        ]
+    },
+    {
+        "id": 5,
+        "query": "Which company acquired ShowBiz Cinemas?",
+        "answer": [
+            "EVO Entertainment Group"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Showbiz cinemas",
+                    "Was_acquired_by",
+                    "Evo entertainment group"
+                ],
+                "Showbiz cinemas -Was_acquired_by-> Evo entertainment group"
+            ]
+        ]
+    },
+    {
+        "id": 6,
+        "query": "Where is the Super Bowl held in 2022?",
+        "answer": [
+            "SoFi Stadium"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Super bowl lvi",
+                    "Was played at",
+                    "Sofi stadium"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 7,
+        "query": "When will Truth Social launch on iOS?",
+        "answer": [
+            [
+                "February 21",
+                "Feb 21",
+                "Feb. 21",
+                "21 February",
+                "21 Feb",
+                "21 Feb."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Truth social",
+                    "Launch date is",
+                    "February 21st, 2022"
+                ],
+                "Truth social -Launch date is-> February 21st, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 8,
+        "query": "What won best drama at 79th Golden Globes?",
+        "answer": [
+            "The Power of the Dog"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The power of the dog",
+                    "Won",
+                    "Best motion picture – drama"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 9,
+        "query": "How much are GA Tech softball 2022 season tickets?",
+        "answer": [
+            "$100 per seat"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "Season tickets",
+                "Cost",
+                "$100 per seat"
+            ],
+            "Season tickets -Cost-> $100 per seat"
+        ]
+    },
+    {
+        "id": 10,
+        "query": "When does the 2022 Olympic Winter Games end?",
+        "answer": [
+            [
+                "February 20",
+                "Feb 20",
+                "Feb. 20",
+                "20 February",
+                "20 Feb",
+                "20 Feb."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "2022 winter olympics",
+                "Took_place_on",
+                "20 february 2022"
+            ],
+            "2022 winter olympics -Took_place_on-> 20 february 2022",
+            "2022 winter olympics -Took_place_on-> February 20, 2022"
+        ]
+    },
+    {
+        "id": 11,
+        "query": "Who won the Spanish Super Cup 2022?",
+        "answer": [
+            "Real Madrid"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Real madrid",
+                    "Won",
+                    "The final 2–0"
+                ],
+                "Real madrid -Won-> The final 2–0",
+                [
+                    "Real madrid",
+                    "Achieved",
+                    "Their 12th supercopa de españa title"
+                ],
+                "Their 12th supercopa de españa title <-Achieved- Real madrid"
+            ]
+        ]
+    },
+    {
+        "id": 12,
+        "query": "How much is Microsoft acquiring Activision Blizzard for?",
+        "answer": [
+            [
+                "$68.7 billion",
+                "$68.7bn"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Microsoft",
+                    "Total acquisition value",
+                    "$68.7 billion"
+                ],
+                "Activision blizzard <-Proposed to acquire- Microsoft -Total acquisition value-> $68.7 billion",
+                "Activision blizzard <-Acquired- Microsoft -Total acquisition value-> $68.7 billion",
+                "Activision blizzard <-Will acquire- Microsoft -Total acquisition value-> $68.7 billion",
+                "Activision blizzard <-Has an agreement with- Microsoft -Total acquisition value-> $68.7 billion",
+                "Activision blizzard <-Negotiated with- Microsoft -Total acquisition value-> $68.7 billion"
+            ]
+        ]
+    },
+    {
+        "id": 13,
+        "query": "What is the price for a 30-second spot during the Super Bowl 2022?",
+        "answer": [
+            "$6.5 million"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Super bowl 2022",
+                    "Had a commercial price of",
+                    "$6.5 million"
+                ],
+                "Super bowl 2022 -Had a commercial price of-> $6.5 million"
+            ]
+        ]
+    },
+    {
+        "id": 14,
+        "query": "When is the Sports Star of the Year Awards Show 2022?",
+        "answer": [
+            [
+                "May 26",
+                "May 26",
+                "May. 26",
+                "26 May",
+                "26 May",
+                "26 May."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "87th annual seattle sports star of the year awards show",
+                    "Occurred on",
+                    "May 26, 2022"
+                ],
+                "87th annual seattle sports star of the year awards show -Occurred on-> May 26, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 15,
+        "query": "Who are the recipients of the 2022 Ivan Allen Jr. Prize for Social Courage?",
+        "answer": [
+            "Lawrence Williams",
+            "Ralph Long Jr.",
+            "Ford Greene",
+            "Ronald Yancey"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ford greene",
+                    "Received",
+                    "2022 ivan allen jr. prize for social courage"
+                ],
+                "2022 ivan allen jr. prize for social courage <-Received- Ford greene"
+            ],
+            [
+                [
+                    "Ralph long jr.",
+                    "Received",
+                    "2022 ivan allen jr. prize for social courage"
+                ],
+                "2022 ivan allen jr. prize for social courage <-Received- Ralph long jr."
+            ],
+            [
+                [
+                    "Lawrence williams",
+                    "Received",
+                    "2022 ivan allen jr. prize for social courage"
+                ],
+                "2022 ivan allen jr. prize for social courage <-Received- Lawrence williams"
+            ],
+            [
+                [
+                    "Ronald yancey",
+                    "Received",
+                    "2022 ivan allen jr. prize for social courage"
+                ],
+                "2022 ivan allen jr. prize for social courage <-Received- Ronald yancey"
+            ]
+        ]
+    },
+    {
+        "id": 16,
+        "query": "What is the codename for Google's AR headset project?",
+        "answer": [
+            "Project Iris"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Project iris",
+                    "Is_the_codename_for",
+                    "An unreleased augmented reality headset"
+                ],
+                "An unreleased augmented reality headset <-Is_the_codename_for- Project iris",
+                "An unreleased augmented reality headset <-Is_the_codename_for- Project iris -Is_designed_and_developed_by-> Google"
+            ]
+        ]
+    },
+    {
+        "id": 17,
+        "query": "What is the name of Meta's AI supercomputer?",
+        "answer": [
+            [
+                "RSC",
+                "the AI Research SuperCluster"
+            ]
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Meta",
+                    "Unveiled",
+                    "Ai research supercluster"
+                ],
+                "Meta -Unveiled-> Ai research supercluster"
+            ]
+        ]
+    },
+    {
+        "id": 18,
+        "query": "When will American students start taking digital SAT exams?",
+        "answer": [
+            "2024"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "Us students",
+                "Will begin taking",
+                "Digital sat in spring 2024"
+            ],
+            "Us students -Will begin taking-> Digital sat in spring 2024"
+        ]
+    },
+    {
+        "id": 19,
+        "query": "When do the Paralympic Winter Games 2022 start?",
+        "answer": [
+            [
+                "March 4",
+                "Mar 4",
+                "Mar. 4",
+                "4 March",
+                "4 Mar",
+                "4 Mar."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2022 paralympic winter games",
+                    "Begin on",
+                    "March 4, 2022"
+                ],
+                "2022 paralympic winter games -Begin on-> March 4, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 20,
+        "query": "Super Bowl 2022 date",
+        "answer": [
+            [
+                "February 13",
+                "Feb 13",
+                "Feb. 13",
+                "13 February",
+                "13 Feb",
+                "13 Feb."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Super bowl",
+                    "Will take place on",
+                    "Sunday, feb. 13, 2022"
+                ],
+                "Super bowl lvi -Was played on-> February 13, 2022",
+                "Super bowl lvi -Is scheduled for-> February of 2022"
+            ]
+        ]
+    },
+    {
+        "id": 21,
+        "query": "Who won the 2022 Nobel Prize for chemistry?",
+        "answer": [
+            "Carolyn R. Bertozzi",
+            "Morten Meldal",
+            "K. Barry Sharpless"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Nobel prize in chemistry 2022",
+                    "Was_awarded_to",
+                    "Carolyn r. bertozzi"
+                ],
+                "Nobel prize in chemistry 2022 -Was_awarded_to-> Carolyn r. bertozzi"
+            ],
+            [
+                [
+                    "Nobel prize in chemistry 2022",
+                    "Was_awarded_to",
+                    "Morten meldal"
+                ],
+                "Nobel prize in chemistry 2022 -Was_awarded_to-> Morten meldal"
+            ],
+            [
+                [
+                    "Nobel prize in chemistry 2022",
+                    "Was_awarded_to",
+                    "K. barry sharpless"
+                ],
+                "Nobel prize in chemistry 2022 -Was_awarded_to-> K. barry sharpless"
+            ]
+        ]
+    },
+    {
+        "id": 22,
+        "query": "Who won the Super Bowl 2022?",
+        "answer": [
+            "Los Angeles Rams"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2022 super bowl",
+                    "Was won by",
+                    "Los angeles rams"
+                ],
+                "Super bowl lvi <-Won- 2021 los angeles rams"
+            ]
+        ]
+    },
+    {
+        "id": 23,
+        "query": "Who won women's 500m speed skating at the 2022 Winter Olympics?",
+        "answer": [
+            "Erin Jackson"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Erin jackson",
+                    "Won",
+                    "Women's 500m gold medal"
+                ],
+                "Women's 500m gold medal <-Won- Erin jackson",
+                "Erin jackson -Won-> Gold medal in the 500-meter final"
+            ]
+        ]
+    },
+    {
+        "id": 24,
+        "query": "When was Lost Ark game release on Steam?",
+        "answer": [
+            [
+                "February 11",
+                "Feb 11",
+                "Feb. 11",
+                "February 11",
+                "11 February",
+                "11 Feb",
+                "11 Feb.",
+                "11 February"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Lost ark",
+                    "Was_released_on",
+                    "February 11, 2022"
+                ],
+                "Lost ark -Was_released_on-> February 11, 2022",
+                "Lost ark -Was_released_in-> February 11"
+            ]
+        ]
+    },
+    {
+        "id": 25,
+        "query": "What medals did Jessie Diggins win in the Beijing 2022 Olympic Games?",
+        "answer": [
+            [
+                "silver",
+                "Silver",
+                "bronze",
+                "Bronze"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Jessie diggins",
+                    "Won",
+                    "Second medal at the 2022 beijing winter games"
+                ],
+                "Jessie diggins -Won-> Second medal at the 2022 beijing winter games",
+                [
+                    "Jessie diggins",
+                    "Took silver in",
+                    "30-kilometer freestyle race"
+                ],
+                "Jessie diggins -Took silver in-> 30-kilometer freestyle race"
+            ],
+            [
+                [
+                    "Jessie diggins",
+                    "Snagged bronze in",
+                    "Individual sprint"
+                ],
+                "Jessie diggins -Snagged bronze in-> Individual sprint"
+            ]
+        ]
+    },
+    {
+        "id": 26,
+        "query": "What is the genre of The Endgame (TV show)?",
+        "answer": [
+            "crime"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The endgame",
+                    "Is",
+                    "An american crime drama thriller television series"
+                ],
+                "The endgame -Is-> An american crime drama thriller television series"
+            ]
+        ]
+    },
+    {
+        "id": 27,
+        "query": "When did Russia invade Ukraine?",
+        "answer": [
+            [
+                "February 24",
+                "Feb 24",
+                "Feb. 24",
+                "24 February",
+                "24 Feb",
+                "24 Feb."
+            ]
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "24 february 2022",
+                    "Is the date of",
+                    "Russia's invasion of ukraine"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 28,
+        "query": "When was Elden Ring being released?",
+        "answer": [
+            [
+                "February 25",
+                "Feb 25",
+                "Feb. 25",
+                "25 February",
+                "25 Feb",
+                "25 Feb."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Elden ring",
+                    "Is_released_on",
+                    "February 25, 2022"
+                ],
+                "Elden ring -Is_released_on-> February 25, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 29,
+        "query": "Who did Iga Swiatek defeat to win the Qatar Open 2022?",
+        "answer": [
+            "Anett Kontaveit"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Iga świątek",
+                    "Smashed",
+                    "Anett kontaveit"
+                ],
+                [
+                    "Iga świątek",
+                    "Dominated",
+                    "Final against anett kontaveit"
+                ],
+                "Iga swiatek -Defeated-> Anett Kontaveit",
+                "Qatar totalenergies open -Was won by-> Iga świątek"
+            ]
+        ]
+    },
+    {
+        "id": 30,
+        "query": "Which country won the most medals at the 2022 Winter Olympics?",
+        "answer": [
+            "Norway"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Norway",
+                    "Stood_alone_atop",
+                    "The chart with the most total medals"
+                ],
+                [
+                    "Norway",
+                    "Won",
+                    "37 total medals"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 31,
+        "query": "Who won the Male Vocalist of the Year at the 2022 CMA ?",
+        "answer": [
+            "Chris Stapleton"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Chris stapleton",
+                    "Won",
+                    "The trophy for male vocalist of the year"
+                ],
+                "The trophy for male vocalist of the year <-Won- Chris stapleton",
+                [
+                    "Chris stapleton",
+                    "Won in",
+                    "2022"
+                ],
+                "Chris stapleton -Won in-> 2022",
+                [
+                    "Chris stapleton",
+                    "Marks",
+                    "The second consecutive year he won the male vocalist of the year trophy"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 32,
+        "query": "Who won the ACC Tournament in 2022?",
+        "answer": [
+            "Virginia Tech"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Virginia tech",
+                    "Won",
+                    "The title"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 33,
+        "query": "What chip does the iPhone 14 have?",
+        "answer": [
+            "A15"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Regular iphone 14",
+                    "Is using",
+                    "A15 processor"
+                ],
+                "A15 chip <-Features- Iphone 14",
+                "Iphone 14 -Features-> A15 chip"
+            ]
+        ]
+    },
+    {
+        "id": 34,
+        "query": "When is Google I/O 2022 scheduled to take place?",
+        "answer": [
+            "May 11",
+            "12"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Google i/o",
+                    "Is_scheduled_to_take_place_on",
+                    "May 11 and 12, 2022"
+                ],
+                "Google i/o -Is_scheduled_to_take_place_on-> May 11 and 12, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 35,
+        "query": "who will direct Irredeemable film?",
+        "answer": [
+            "Jeymes Samuel"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Jeymes samuel",
+                    "Is_directing",
+                    "Upcoming_film_adaptation_of_graphic_comics"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 36,
+        "query": "What is the name of China's rover on Mars?",
+        "answer": [
+            "Zhurong"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "China's first mars rover",
+                    "Has_been_named",
+                    "Zhurong"
+                ],
+                "China's first mars rover -Has_been_named-> Zhurong",
+                "Zhurong <-Has_been_named- China's first mars rover"
+            ]
+        ]
+    },
+    {
+        "id": 37,
+        "query": "Who is being honored with the 2022 Warrior Award?",
+        "answer": [
+            "Shad Gaspard"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Shad gaspard",
+                    "Was posthumously named",
+                    "The recipient of the 2022 warrior award"
+                ],
+                "The recipient of the 2022 warrior award <-Was posthumously named- Shad gaspard",
+                [
+                    "Shad’s bravery and selflessness",
+                    "Will be honored with",
+                    "The 2022 warrior award"
+                ],
+                "The 2022 warrior award <-Will be honored with- Shad’s bravery and selflessness"
+            ]
+        ]
+    },
+    {
+        "id": 38,
+        "query": "What is the weight of the Surface Laptop SE?",
+        "answer": [
+            [
+                "2.45",
+                "1,112.4"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Microsoft surface laptop se",
+                    "Has_weight",
+                    "2.45 lbs"
+                ],
+                "Microsoft surface laptop se -Has_weight-> 2.45 lbs"
+            ]
+        ]
+    },
+    {
+        "id": 39,
+        "query": "Who stars in The Lost City?",
+        "answer": [
+            "Sandra Bullock",
+            "Channing Tatum"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The lost city",
+                    "Features",
+                    "Sandra bullock"
+                ],
+                [
+                    "Sandra bullock",
+                    "Headlines",
+                    "The lost city"
+                ],
+                "The lost city -Features-> Sandra bullock"
+            ],
+            [
+                [
+                    "The lost city",
+                    "Features",
+                    "Channing tatum"
+                ],
+                [
+                    "Channing tatum",
+                    "Headlines",
+                    "The lost city"
+                ],
+                "The lost city -Features-> Channing tatum"
+            ]
+        ]
+    },
+    {
+        "id": 40,
+        "query": "What happened at the Academy Awards involving Will Smith and Chris Rock?",
+        "answer": [
+            "slapped"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "Will smith",
+                "Walked_on_stage_and_slapped",
+                "Chris rock"
+            ],
+            "Will smith -Slapped-> Chris rock",
+            "Will smith -Walked_on_stage_and_slapped-> Chris rock"
+        ]
+    },
+    {
+        "id": 41,
+        "query": "When did Apple M2 chip?",
+        "answer": [
+            [
+                "June 6",
+                "Jun 6",
+                "Jun. 6",
+                "6 June",
+                "6 Jun",
+                "6 Jun."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "M2 chip",
+                    "Was unveiled on",
+                    "June 6, 2022"
+                ],
+                "M2 chip -Was unveiled on-> June 6, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 42,
+        "query": "What film won the 2022 Academy Award for Best Picture?",
+        "answer": [
+            "CODA"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "Oscars 2022",
+                "Awarded",
+                "'coda' for best picture"
+            ],
+            "Oscars 2022 -Awarded-> 'coda' for best picture"
+        ]
+    },
+    {
+        "id": 43,
+        "query": "When will the 94th Academy Awards be held?",
+        "answer": [
+            [
+                "March 27",
+                "Mar 27",
+                "Mar. 27",
+                "27 March",
+                "27 Mar",
+                "27 Mar."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "94th annual academy awards",
+                    "Will be held on",
+                    "Sunday, march 27"
+                ],
+                "94th annual academy awards -Will be held on-> Sunday, march 27",
+                "94th academy awards ceremony -Took place on-> March 27, 2022",
+                "94th academy awards -Took_place_on-> March 27, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 44,
+        "query": "When was A House Between the Earth and the Moon published?",
+        "answer": [
+            [
+                "March 29",
+                "Mar 29",
+                "Mar. 29",
+                "29 March",
+                "29 Mar",
+                "29 Mar."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "A house between earth and the moon",
+                "Was first published on",
+                "March 29, 2022"
+            ],
+            "A house between earth and the moon -Was first published on-> March 29, 2022",
+            "A house between earth and the moon -Was first published on-> March 29"
+        ]
+    },
+    {
+        "id": 45,
+        "query": "Which alnum won the Album of the Year GRAMMYs 2022",
+        "answer": [
+            "We are"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Jon batiste",
+                    "Won for",
+                    "His latest lp we are"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 46,
+        "query": "When is the final of the 2022 FIFA World Cup?",
+        "answer": [
+            [
+                "December 18",
+                "Dec 18",
+                "Dec. 18",
+                "18 December",
+                "18 Dec",
+                "18 Dec."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The final",
+                    "Is set for",
+                    "Dec. 18, 2022"
+                ],
+                "The 2022 fifa world cup -Took place on-> Dec 18, 2022",
+                "World cup final -Is scheduled on-> Dec. 18"
+            ]
+        ]
+    },
+    {
+        "id": 47,
+        "query": "How many vehicles did Tesla deliver in the first quarter of 2022?",
+        "answer": [
+            "310,048"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Tesla",
+                    "Delivered",
+                    "310,048 electric vehicles"
+                ],
+                "Tesla -Delivered-> 310,048 electric vehicles",
+                [
+                    "310,048 electric vehicles",
+                    "Were delivered in",
+                    "The first quarter of 2022"
+                ],
+                "310,048 electric vehicles -Were delivered in-> The first quarter of 2022"
+            ]
+        ]
+    },
+    {
+        "id": 48,
+        "query": "Who acquired Twitter?",
+        "answer": [
+            "Elon Musk"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Elon musk",
+                    "Completed",
+                    "$44 billion acquisition of twitter"
+                ],
+                [
+                    "Twitter",
+                    "Was acquired by",
+                    "Elon musk"
+                ],
+                "Twitter -Was acquired by-> Elon musk"
+            ]
+        ]
+    },
+    {
+        "id": 49,
+        "query": "How much did Elon Musk bought Twitter?",
+        "answer": [
+            "44 billion"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Elon musk",
+                    "Incurred",
+                    "$44 billion"
+                ],
+                "Elon musk -Purchased-> Twitter for $44 billion",
+                "Elon musk -Purchased twitter for-> $44bn",
+                "Musk -Bought twitter for-> $44 billion"
+            ]
+        ]
+    },
+    {
+        "id": 50,
+        "query": "Who won the 2022 Masters Tournament?",
+        "answer": [
+            "Scottie Scheffler"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Scottie scheffler",
+                    "Won",
+                    "2022 masters"
+                ],
+                "2022 masters <-Won- Scottie scheffler",
+                "The 2022 masters champion <-Is- Scheffler"
+            ]
+        ]
+    },
+    {
+        "id": 51,
+        "query": "Who won the women's singles Australian Open 2022?",
+        "answer": [
+            "Ashleigh Barty"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ashleigh barty",
+                    "Won",
+                    "The women's singles tennis title"
+                ],
+                "Women's singles <-Won- Ashleigh barty",
+                "The women's singles tennis title <-Won- Ashleigh barty"
+            ]
+        ]
+    },
+    {
+        "id": 52,
+        "query": "Who won the women's singles Australian Open 2023?",
+        "answer": [
+            "Aryna Sabalenka"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Sabalenka",
+                    "Is",
+                    "The 2023 australian open champion"
+                ],
+                [
+                    "Sabalenka",
+                    "Is recognized as",
+                    "The women's singles champion at #ao2023"
+                ],
+                "Australian open women's singles title <-Won- Aryna sabalenka",
+                "The 2023 australian open champion <-Is- Sabalenka"
+            ]
+        ]
+    },
+    {
+        "id": 53,
+        "query": "Who won the men's singles Australian Open 2022?",
+        "answer": [
+            [
+                "Rafael Nadal",
+                "Nadal"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Rafael nadal",
+                    "Won",
+                    "Men's singles tennis title"
+                ],
+                "2022 australian open <-Won- Rafael nadal",
+                "Rafael nadal -Won-> Men's singles",
+                "Men's singles <-Won- Rafael nadal"
+            ]
+        ]
+    },
+    {
+        "id": 54,
+        "query": "Who won the men's singles Australian Open 2023?",
+        "answer": [
+            "Novak Djokovic"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2023 australian open",
+                    "Had",
+                    "Novak djokovic as the winner in the men’s singles category"
+                ],
+                "Novak djokovic -Won australian open in-> 2023",
+                "Men's singles tennis title <-Won- Novak djokovic"
+            ]
+        ]
+    },
+    {
+        "id": 55,
+        "query": "Who won the women's singles French Open 2022?",
+        "answer": [
+            "Iga Swiatek"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Iga swiatek",
+                    "Won",
+                    "French open 2022 women's singles final"
+                ],
+                "French open 2022 women's singles final <-Won- Iga swiatek",
+                "The 2022 french open champion <-Was- Iga świątek",
+                "Iga swiatek -Won-> 2022 french open women's singles final",
+                "French open in 2022 <-Won- Iga świątek",
+                "Iga świątek -Won-> The french open in 2022"
+            ]
+        ]
+    },
+    {
+        "id": 56,
+        "query": "Who won the women's singles French Open 2023?",
+        "answer": [
+            "Iga Swiatek"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Iga swiatek",
+                    "Won",
+                    "French open 2023 women's singles title"
+                ],
+                "French open 2023 women's singles title <-Won- Iga swiatek"
+            ]
+        ]
+    },
+    {
+        "id": 57,
+        "query": "Who is the runner-up in the women's singles at the 2023 French Open?",
+        "answer": [
+            "Karolina Muchova"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Iga swiatek",
+                    "Defeated",
+                    "Karolina muchova"
+                ],
+                "Iga swiatek -Beat-> Karolina muchova"
+            ]
+        ]
+    },
+    {
+        "id": 58,
+        "query": "Who won the men's singles French Open 2022?",
+        "answer": [
+            [
+                "Rafael Nadal",
+                "Nadal"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Rafael nadal",
+                    "Won",
+                    "Men's singles tennis title"
+                ],
+                [
+                    "Men's singles tennis title",
+                    "Was won at",
+                    "2022 french open"
+                ],
+                [
+                    "Rafael nadal",
+                    "Extended his record by",
+                    "Winning the men's singles tennis title"
+                ],
+                "Rafael nadal -Was-> The 2022 french open champion",
+                "Rafael nadal -Won-> Men's singles tennis title",
+                "Rafael nadal -Won-> Men's singles tennis title -Was won at-> 2022 french open"
+            ]
+        ]
+    },
+    {
+        "id": 59,
+        "query": "Who won the men's singles French Open 2023?",
+        "answer": [
+            "Novak Djokovic"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Novak djokovic",
+                    "Won",
+                    "Men's singles tennis title"
+                ],
+                [
+                    "Men's singles tennis title",
+                    "Was awarded at",
+                    "2023 french open"
+                ],
+                "His 23rd grand slam title at the 2023 french open <-Claimed- Novak djokovic",
+                "Novak djokovic -Won-> Men's singles tennis title"
+            ]
+        ]
+    },
+    {
+        "id": 60,
+        "query": "who the women's singles wimbledon 2022?",
+        "answer": [
+            "Elena Rybakina"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ladies' singles title",
+                    "Was_won_by",
+                    "Elena rybakina"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 61,
+        "query": "who the women's singles wimbledon 2023?",
+        "answer": [
+            [
+                "Marketa Vondrousova",
+                "Markéta Vondroušová"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Markéta vondroušová",
+                    "Won",
+                    "The ladies' singles tennis title"
+                ],
+                "The ladies' singles tennis title <-Won- Markéta vondroušová",
+                "Marketa vondrousova -Won-> Wimbledon"
+            ]
+        ]
+    },
+    {
+        "id": 62,
+        "query": "Who won the men's singles wimbledon 2022?",
+        "answer": [
+            "Novak Djokovic"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "2022 edition",
+                "Had as a winner",
+                "Novak djokovic"
+            ],
+            "Novak djokovic -Won wimbledon in-> 2022"
+        ]
+    },
+    {
+        "id": 63,
+        "query": "Who won the men's singles wimbledon 2023?",
+        "answer": [
+            "Carlos Alcaraz"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Carlos alcaraz",
+                    "Won",
+                    "The gentlemen's singles tennis title at the 2023 wimbledon championships"
+                ],
+                "The gentlemen's singles tennis title at the 2023 wimbledon championships <-Won- Carlos alcaraz"
+            ]
+        ]
+    },
+    {
+        "id": 64,
+        "query": "How many titles has Swiatek won in 2022 season?",
+        "answer": [
+            [
+                "eight",
+                "8"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Iga swiatek",
+                    "Claimed",
+                    "Her eighth title of the year in san diego"
+                ],
+                [
+                    "Iga swiatek",
+                    "Won",
+                    "Eight of nine finals played this season"
+                ],
+                "Iga świątek -Won-> Eight titles during the 2022 season"
+            ]
+        ]
+    },
+    {
+        "id": 65,
+        "query": "who the women's singles U.S. Open 2022?",
+        "answer": [
+            "Iga Swiatek"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Iga swiatek",
+                    "Won",
+                    "Women's title at the 2022 us open tennis grand slam"
+                ],
+                "2022 u.s. open <-Won- Iga świątek",
+                "2022 u.s. open <-Won- Iga świątek -Won the women's singles title-> On saturday"
+            ]
+        ]
+    },
+    {
+        "id": 66,
+        "query": "Who won the men's singles U.S. Open 2022?",
+        "answer": [
+            "Carlos Alcaraz"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Carlos alcaraz",
+                    "Won",
+                    "Men's singles tennis title"
+                ],
+                [
+                    "Carlos alcaraz",
+                    "Won the title at",
+                    "2022 us open"
+                ],
+                "2022 us open <-Won the title at- Carlos alcaraz -Won-> Men's singles final at the u.s. open",
+                "2022 us open <-Won the title at- Carlos alcaraz -Won-> Men's singles tennis title"
+            ]
+        ]
+    },
+    {
+        "id": 67,
+        "query": "Who is the new head coach of the Virginia Tech football team in 2022?",
+        "answer": [
+            "Brent Pry"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Brent pry",
+                    "Was named the new head coach of",
+                    "2022 virginia tech hokies football team"
+                ],
+                [
+                    "Brent pry",
+                    "Was the head coach of",
+                    "2022 virginia tech hokies football team"
+                ],
+                "Brent pry -Was named the new head coach of-> 2022 virginia tech hokies football team",
+                "Brent pry -Is_coach_of-> Virginia tech"
+            ]
+        ]
+    },
+    {
+        "id": 68,
+        "query": "Where is Consensus 2022 taking place?",
+        "answer": [
+            "Austin"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Consensus 2022",
+                    "Took place in",
+                    "Austin, texas"
+                ],
+                "Consensus 2022 -Took place in-> Austin, texas"
+            ]
+        ]
+    },
+    {
+        "id": 69,
+        "query": "When did the 148th Kentucky Derby take place?",
+        "answer": [
+            [
+                "May 7",
+                "May 7",
+                "May. 7",
+                "7 May",
+                "7 May",
+                "7 May."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2022 kentucky derby",
+                    "Took_place_on",
+                    "Saturday, may 7, 2022"
+                ],
+                "2022 kentucky derby -Took_place_on-> Saturday, may 7, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 70,
+        "query": "What was Tesla's revenue in Q1 2022?",
+        "answer": [
+            "18.76 billion"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Tesla",
+                    "Reported",
+                    "$18.76 billion in revenue"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 71,
+        "query": "When will Splatoon 3 be released?",
+        "answer": [
+            [
+                "September 9",
+                "Sep 9",
+                "Sep. 9",
+                "9 September",
+                "9 Sep",
+                "9 Sep.",
+                "Sept 9",
+                "Sept. 9",
+                "9 Sept",
+                "9 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "Splatoon 3",
+                "Was_released_on",
+                "September 9, 2022"
+            ],
+            "Splatoon 3 -Released_on-> September 9, 2022",
+            "Splatoon 3 -Was_released_on-> September 9, 2022"
+        ]
+    },
+    {
+        "id": 72,
+        "query": "Who acquired STX Entertainment?",
+        "answer": [
+            "Najafi Companies"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Stx entertainment",
+                    "Has_been_acquired_by",
+                    "Najafi companies"
+                ],
+                [
+                    "Najafi companies",
+                    "Acquired",
+                    "Stx entertainment"
+                ],
+                "Stx entertainment -Has_been_acquired_by-> Najafi companies",
+                "Stx entertainment <-Acquired- Najafi companies"
+            ]
+        ]
+    },
+    {
+        "id": 73,
+        "query": "When did Orrin G. Hatch pass away?",
+        "answer": [
+            [
+                "April 23 2022",
+                "Apr 23, 2022",
+                "Apr. 23, 2022",
+                "April 23, 2022",
+                "23 April 2022",
+                "23 Apr, 2022",
+                "23 Apr., 2022",
+                "23 April, 2022"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Orrin hatch",
+                    "Passed away on",
+                    "April 23, 2022"
+                ],
+                "Orrin hatch -Passed away on-> April 23, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 74,
+        "query": "Who was the new CEO of CNN?",
+        "answer": [
+            "Chris Licht"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Chris licht",
+                    "Was named",
+                    "Cnn's new chief executive"
+                ],
+                "Cnn's new chief executive <-Was named- Chris licht"
+            ]
+        ]
+    },
+    {
+        "id": 75,
+        "query": "Who won the French Presidential Election 2022?",
+        "answer": [
+            "Emmanuel Macron"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "France",
+                    "Chose",
+                    "Incumbent emmanuel macron"
+                ],
+                "Incumbent emmanuel macron <-Chose- France",
+                "French president <-Is- Emmanuel macron"
+            ]
+        ]
+    },
+    {
+        "id": 76,
+        "query": "What is the megapixel in main camera on the iPhone 14 Pro?",
+        "answer": [
+            "48"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Iphone 14 pro camera",
+                    "Has",
+                    "48 mp sensor"
+                ],
+                "Iphone 14 pro camera -Has-> 48 mp sensor",
+                "48-megapixel main camera <-Features- Iphone 14 pro"
+            ]
+        ]
+    },
+    {
+        "id": 77,
+        "query": "How much does it cost to rent a tool kit for Apple device repairs?",
+        "answer": [
+            "49"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Rental kit",
+                    "Costs",
+                    "$49"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 78,
+        "query": "Where will the 2022 Met Gala take place?",
+        "answer": [
+            "Metropolitan Museum of Art"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Met gala",
+                    "Will take place at",
+                    "Metropolitan museum of art"
+                ],
+                "Met gala -Will take place at-> Metropolitan museum of art",
+                "Metropolitan museum of art <-Will take place at- Met gala"
+            ]
+        ]
+    },
+    {
+        "id": 79,
+        "query": "Who won the Champions League in the 2022-2023 season?",
+        "answer": [
+            "Manchester City"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Manchester city",
+                    "Won",
+                    "2022/23 uefa champions league"
+                ],
+                "2022/23 uefa champions league <-Won- Manchester city",
+                "The uefa champions league <-Has won- Manchester city"
+            ]
+        ]
+    },
+    {
+        "id": 80,
+        "query": "Which teams are playing in the 2021-22 NBA Finals?",
+        "answer": [
+            "Golden State Warriors",
+            "Boston Celtics"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Golden state warriors",
+                    "Won",
+                    "2021–22 nba finals"
+                ],
+                "2021 nba finals -Includes-> Game 6 -Was won by-> Golden state warriors"
+            ],
+            [
+                [
+                    "Golden state warriors",
+                    "Defeated",
+                    "Boston celtics"
+                ],
+                "The nba finals <-Gained control of- Boston"
+            ]
+        ]
+    },
+    {
+        "id": 81,
+        "query": "What is the prize money for the Squid Game-inspired reality competition?",
+        "answer": [
+            "4.56 million"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "456 players",
+                    "Will compete to win",
+                    "$4.56 million"
+                ],
+                [
+                    "456 players",
+                    "Will compete to win",
+                    "The life-changing reward of $4.56 million"
+                ],
+                "Squid game: the challenge -Will have-> $4.56m cash prize",
+                "Squid game -Is coming to life in-> Squid game: the challenge -Will have-> $4.56m cash prize"
+            ]
+        ]
+    },
+    {
+        "id": 82,
+        "query": "When was Overwatch 2 released?",
+        "answer": [
+            [
+                "October 4 2022",
+                "Oct 4, 2022",
+                "Oct. 4, 2022",
+                "October 4, 2022",
+                "4 October 2022",
+                "4 Oct, 2022",
+                "4 Oct., 2022",
+                "4 October, 2022"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Overwatch 2",
+                    "Was_released_on",
+                    "October 4, 2022"
+                ],
+                "Overwatch 2 -Was_released_on-> October 4, 2022",
+                "Overwatch 2 -Has release date-> October 4, 2022",
+                "Overwatch 2 -Is releasing on-> October 4, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 83,
+        "query": "Who won the 2022 Tour de France?",
+        "answer": [
+            "Jonas Vingegaard"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Jonas vingegaard",
+                    "Is",
+                    "The overall winner of the 2022 tour de france"
+                ],
+                "The overall winner of the 2022 tour de france <-Is- Jonas vingegaard"
+            ]
+        ]
+    },
+    {
+        "id": 84,
+        "query": "How much was Apple's revenue in Q3? 2022",
+        "answer": [
+            [
+                "83 billion",
+                "83.0 billion"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Apple",
+                    "Reported revenue of",
+                    "$83.0 billion"
+                ],
+                "Apple -Reported revenue of-> $83.0 billion"
+            ]
+        ]
+    },
+    {
+        "id": 85,
+        "query": "Who won the 2022 Atlanta Open?",
+        "answer": [
+            "Alex de Minaur"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Alex de minaur",
+                    "Won",
+                    "The singles title at the 2022 atlanta open"
+                ],
+                "The singles title at the 2022 atlanta open <-Won- Alex de minaur"
+            ]
+        ]
+    },
+    {
+        "id": 86,
+        "query": "What was the revenue of AWS in Q2 2022?",
+        "answer": [
+            "19.7 billion"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Amazon web services (aws)",
+                    "Achieved",
+                    "$19.7 billion in revenue"
+                ],
+                "Amazon web services (aws) -Achieved-> $19.7 billion in revenue",
+                "$19.74 billion in revenue for the second quarter of 2022 <-Reported earnings of- Amazon"
+            ]
+        ]
+    },
+    {
+        "id": 87,
+        "query": "when was xenoblade chronicles 3 released?",
+        "answer": [
+            [
+                "July 29",
+                "Jul 29",
+                "Jul. 29",
+                "29 July",
+                "29 Jul",
+                "29 Jul."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Xenoblade chronicles 3",
+                    "Has_release_date",
+                    "July 29, 2022"
+                ],
+                [
+                    "Xenoblade chronicles 3",
+                    "Has_release_date",
+                    "July 29, 2022"
+                ],
+                "Xenoblade chronicles 3 -Has_release_date-> July 29, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 88,
+        "query": "What is the name of the horse in the movie \"Nope\"?",
+        "answer": [
+            "Ghost"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ghost",
+                    "Gallops_away_saying",
+                    "Nope"
+                ],
+                [
+                    "Ghost",
+                    "Is_one_of",
+                    "The family's veteran equine actors"
+                ],
+                "Ghost -Is_one_of-> The_family’s_veteran_equine_actors",
+                "Nope <-Gallops_away_saying- Ghost"
+            ]
+        ]
+    },
+    {
+        "id": 89,
+        "query": "When did Neal Lemlein pass away?",
+        "answer": [
+            [
+                "July 22 2022",
+                "Jul 22, 2022",
+                "Jul. 22, 2022",
+                "July 22, 2022",
+                "22 July 2022",
+                "22 Jul, 2022",
+                "22 Jul., 2022",
+                "22 July, 2022"
+            ]
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Neal",
+                    "Died on",
+                    "July 22, 2022"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 90,
+        "query": "Who is the lead actor in the film Carter?",
+        "answer": [
+            "Joo Won"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Joo won",
+                    "Plays",
+                    "Carter lee"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 91,
+        "query": "When was BlenderBot 3 released?",
+        "answer": [
+            [
+                "August 5",
+                "Aug 5",
+                "Aug. 5",
+                "5 August",
+                "5 Aug",
+                "5 Aug."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Blenderbot 3",
+                    "Was_released_on",
+                    "August 5, 2022"
+                ],
+                "Blenderbot 3 -Was_released_on-> August 5, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 92,
+        "query": "which company invented BlenderBot 3?",
+        "answer": [
+            "Meta"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Meta’s ai research labs",
+                    "Created",
+                    "A new state-of-the-art chatbot"
+                ],
+                [
+                    "A new state-of-the-art chatbot",
+                    "Is called",
+                    "Blenderbot 3"
+                ],
+                "Blenderbot 3 -Was_released_by-> Meta",
+                "Meta -Released-> Blenderbot 3",
+                "Blenderbot 3 <-Released- Meta"
+            ]
+        ]
+    },
+    {
+        "id": 93,
+        "query": "When was ChatGPT released?",
+        "answer": [
+            [
+                "November 30 2022",
+                "Nov 30, 2022",
+                "Nov. 30, 2022",
+                "November 30, 2022",
+                "30 November 2022",
+                "30 Nov, 2022",
+                "30 Nov., 2022",
+                "30 November, 2022"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Chatgpt",
+                    "Was launched on",
+                    "November 30, 2022"
+                ],
+                "Chatgpt -Was launched on-> November 30, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 94,
+        "query": "When was GPT4 released?",
+        "answer": [
+            [
+                "March 14 2023",
+                "Mar 14, 2023",
+                "Mar. 14, 2023",
+                "March 14, 2023",
+                "14 March 2023",
+                "14 Mar, 2023",
+                "14 Mar., 2023",
+                "14 March, 2023"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "March 14, 2023",
+                    "Is the date of",
+                    "Openai's release of gpt-4"
+                ],
+                "Openai's release of gpt-4 <-Is the date of- March 14, 2023",
+                "Gpt-4 -Was released on-> March 14, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 95,
+        "query": "How much did Amazon agree to pay to acquire iRobot?",
+        "answer": [
+            "1.7 billion"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Transaction",
+                    "Is valued at approximately",
+                    "$1.7 billion"
+                ],
+                "Irobot -Was acquired for approximately-> $1.7 billion"
+            ]
+        ]
+    },
+    {
+        "id": 96,
+        "query": "What is the location of the Major League Baseball Field of Dreams Game 2022?",
+        "answer": [
+            "Dyersville, Iowa"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Major league baseball",
+                    "Is coming back to",
+                    "Dyersville, iowa"
+                ],
+                "Major league baseball -Is coming back to-> Dyersville, iowa"
+            ]
+        ]
+    },
+    {
+        "id": 97,
+        "query": "When did Microsoft release Windows 11 22H2?",
+        "answer": [
+            [
+                "September 20",
+                "Sep 20",
+                "Sep. 20",
+                "20 September",
+                "20 Sep",
+                "20 Sep.",
+                "Sept 20",
+                "Sept. 20",
+                "20 Sept",
+                "20 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Windows 11 version 22h2",
+                    "Will_release_on",
+                    "September 20, 2022"
+                ],
+                [
+                    "Windows 11 version 22h2",
+                    "Is_expected_to_launch_on",
+                    "Tuesday, september 20, 2022"
+                ],
+                "Windows 11 version 22h2 -Will_release_on-> September 20, 2022",
+                "Windows 11 version 22h2 -Is_expected_to_launch_on-> Tuesday, september 20, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 98,
+        "query": "When did AMD unveil Ryzen 7000 processors?",
+        "answer": [
+            [
+                "August 29",
+                "Aug 29",
+                "Aug. 29",
+                "29 August",
+                "29 Aug",
+                "29 Aug."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ryzen 7000 desktop cpus",
+                    "Will be unveiled on",
+                    "August 29th"
+                ],
+                "Ryzen 7000 desktop cpus -Will be unveiled on-> August 29th"
+            ]
+        ]
+    },
+    {
+        "id": 99,
+        "query": "Who won the U.S. all-around title at the U.S. Gymnastics Nationals 2022?",
+        "answer": [
+            "Konnor McClain"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Konnor mcclain",
+                    "Won",
+                    "First u.s. gymnastics national championship"
+                ],
+                "2022 u.s. gymnastics championships -Occurred on-> August 21, 2022 <-Achieved victory on- Konnor mcclain"
+            ]
+        ]
+    },
+    {
+        "id": 100,
+        "query": "What is the new price of Tesla's Full-Self Driving (FSD) software?",
+        "answer": [
+            "$15,000"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Full-self driving (fsd) software",
+                    "Was priced at",
+                    "$15,000"
+                ],
+                "Full-self driving (fsd) software -Was priced at-> $15,000"
+            ]
+        ]
+    },
+    {
+        "id": 101,
+        "query": "What is the date of the premiere of House of the Dragon?",
+        "answer": [
+            [
+                "August 21",
+                "Aug 21",
+                "Aug. 21",
+                "21 August",
+                "21 Aug",
+                "21 Aug."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "House of the dragon",
+                    "Will begin on",
+                    "August 21, 2022"
+                ],
+                "House of the dragon -Will begin on-> August 21, 2022",
+                "House of the dragon -Premiered on-> August 21, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 102,
+        "query": "When is the release date for Sony's PlayStation VR2 headset?",
+        "answer": [
+            [
+                "February 22",
+                "Feb 22",
+                "Feb. 22",
+                "22 February",
+                "22 Feb",
+                "22 Feb."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ps vr2 headset",
+                    "Will be released on",
+                    "February 22, 2023"
+                ],
+                "Ps vr2 headset -Will be released on-> February 22, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 103,
+        "query": "What is the new venture launched by Tiger Woods and Rory McIlroy?",
+        "answer": [
+            "TMRW Sports"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "A new business venture",
+                    "Is_named",
+                    "Tmrw sports"
+                ],
+                "Rory mcilroy -Has-> A new business venture -Is_named-> Tmrw sports",
+                "Tiger woods -Has-> A new business venture -Is_named-> Tmrw sports"
+            ]
+        ]
+    },
+    {
+        "id": 104,
+        "query": "Which company recently acquired Super.tech?",
+        "answer": [
+            "ColdQuanta"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Super.tech",
+                    "Has_been_acquired_by",
+                    "Coldquanta"
+                ],
+                "Super.tech -Has_been_acquired_by-> Coldquanta"
+            ]
+        ]
+    },
+    {
+        "id": 105,
+        "query": "Who is the Heisman Trophy winner in 2022?",
+        "answer": [
+            "Caleb Williams"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Caleb williams",
+                    "Won",
+                    "2022 heisman trophy"
+                ],
+                "2022 heisman trophy <-Won- Caleb williams"
+            ]
+        ]
+    },
+    {
+        "id": 106,
+        "query": "When does The Amazing Race Season 34 premiere?",
+        "answer": [
+            [
+                "September 21",
+                "Sep 21",
+                "Sep. 21",
+                "21 September",
+                "21 Sep",
+                "21 Sep.",
+                "Sept 21",
+                "Sept. 21",
+                "21 Sept",
+                "21 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Amazing race 34",
+                    "Premiered on",
+                    "September 21, 2022"
+                ],
+                "Amazing race 34 -Premiered on-> September 21, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 107,
+        "query": "Who is the chairman of Toulouse and under whose ownership are they currently?",
+        "answer": [
+            "Damien Comolli"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Damien comolli",
+                    "Was replaced in the role of president by",
+                    "Olivier sadran"
+                ],
+                "Damien comolli <-Was replaced in the role of president by- Olivier sadran"
+            ]
+        ]
+    },
+    {
+        "id": 108,
+        "query": "When will the TGL (Tech-Infused Golf League) season start?",
+        "answer": [
+            [
+                "January 2024",
+                "Jan 2024",
+                "Jan. 2024",
+                "January, 2024",
+                "Jan, 2024",
+                "Jan., 2024"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Tgl",
+                    "Will_be_held_in",
+                    "January 2024"
+                ],
+                "A tech-infused golf league <-Is- Tgl -Will_be_held_in-> January 2024",
+                "A tech-infused golf league <-Is_called- Tgl -Will_be_held_in-> January 2024",
+                "A tech-infused golf league <-Is described as- Tgl -Will_be_held_in-> January 2024"
+            ]
+        ]
+    },
+    {
+        "id": 109,
+        "query": "Who is the director of BioShock movie?",
+        "answer": [
+            "Francis Lawrence"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Francis lawrence",
+                    "Will direct",
+                    "The bioshock film adaptation"
+                ],
+                [
+                    "Bioshock",
+                    "Will be directed by",
+                    "Francis lawrence"
+                ],
+                "Bioshock -Will be directed by-> Francis lawrence",
+                "Bioshock movie -Found its-> Director <-Is- Frank marshall"
+            ]
+        ]
+    },
+    {
+        "id": 110,
+        "query": "What is the premiere date of New Amsterdam Season 5?",
+        "answer": [
+            [
+                "September 20",
+                "Sep 20",
+                "Sep. 20",
+                "20 September",
+                "20 Sep",
+                "20 Sep.",
+                "Sept 20",
+                "Sept. 20",
+                "20 Sept",
+                "20 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "New amsterdam",
+                    "Premiered on",
+                    "September 20, 2022"
+                ],
+                "New amsterdam -Premiered on-> September 20, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 111,
+        "query": "Who won the World Cup Final in 2022?",
+        "answer": [
+            "Argentina"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Argentina",
+                    "Is",
+                    "The world champions"
+                ],
+                "The qatar 2022 final <-Won on penalties in- Argentina",
+                "Fifa world cup <-Is the current holders of- Argentina",
+                "Fifa world cup <-Is the current holders of- Argentina -Won the final against-> France",
+                "2022 fifa world cup <-Claimed victory in- Argentina -Won the final against-> France"
+            ]
+        ]
+    },
+    {
+        "id": 112,
+        "query": "Who is the chief meteorologist for KPLR-TV?",
+        "answer": [
+            "John Fuller"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "John fuller",
+                    "Is",
+                    "The chief meteorologist for kplr-tv"
+                ],
+                "The chief meteorologist for kplr-tv <-Is- John fuller"
+            ]
+        ]
+    },
+    {
+        "id": 113,
+        "query": "Who is the new head of development at Riff Raff Entertainment?",
+        "answer": [
+            "Katie Sinclair"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Katie sinclair",
+                    "Has_been_named",
+                    "The_new_head_of_development"
+                ],
+                "The_new_head_of_development <-Has_been_named- Katie sinclair"
+            ]
+        ]
+    },
+    {
+        "id": 114,
+        "query": "How much money did Texas Tech pay Marlene Stollings in the settlement?",
+        "answer": [
+            [
+                "740,000",
+                "740K"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Marlene stollings",
+                    "Received",
+                    "$740,000"
+                ],
+                "Marlene stollings -Received-> $740,000",
+                "Texas tech <-Reached a settlement with- Marlene stollings -Received-> $740,000"
+            ]
+        ]
+    },
+    {
+        "id": 115,
+        "query": "Who acquired a stake in FromSoftware?",
+        "answer": [
+            "Sony",
+            "Tencent"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Sony",
+                    "Acquired",
+                    "30 percent stake of fromsoftware"
+                ],
+                [
+                    "Tencent",
+                    "Acquired",
+                    "30 percent stake of fromsoftware"
+                ],
+                [
+                    "Sony and tencent",
+                    "Purchased",
+                    "Significant shares in fromsoftware"
+                ],
+                "Fromsoftware -Is_owned_by-> Kadokawa corporation -Announced-> The acquisition of shares by sony and tencent"
+            ]
+        ]
+    },
+    {
+        "id": 116,
+        "query": "Who is the new Coach for The Voice Season 22?",
+        "answer": [
+            "Camila Cabello"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The voice season 22",
+                    "Has_coaches",
+                    "Camila cabello"
+                ],
+                [
+                    "Camila cabello",
+                    "Joined",
+                    "The voice season 22"
+                ],
+                "The voice season 22 -Has_coaches-> Camila cabello",
+                "The voice season 22 <-Joined- Camila cabello"
+            ]
+        ]
+    },
+    {
+        "id": 117,
+        "query": "What was the unemployment rate in August 2022 in U.S.?",
+        "answer": [
+            [
+                "3.7%",
+                "3.7 percent"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Seasonally_adjusted_u.s._unemployment_rate_in_august_2022",
+                    "Was",
+                    "3.7%"
+                ],
+                "3.7% <-Was- Seasonally_adjusted_u.s._unemployment_rate_in_august_2022"
+            ]
+        ]
+    },
+    {
+        "id": 118,
+        "query": "Who did Serena Williams lose to in her last match at the U.S. Open?",
+        "answer": [
+            "Ajla Tomljanovic"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Serena williams",
+                    "Lost to",
+                    "Ajla tomljanovic"
+                ],
+                "Serena williams -Lost to-> Ajla tomljanovic"
+            ]
+        ]
+    },
+    {
+        "id": 119,
+        "query": "How many people were injured in the shuttle van accident on Palisades Interstate Parkway?",
+        "answer": [
+            [
+                "Eight",
+                "8"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Shuttle van crash",
+                    "Caused",
+                    "Eight hospitalizations"
+                ],
+                "Shuttle van crash -Caused-> Eight hospitalizations"
+            ]
+        ]
+    },
+    {
+        "id": 120,
+        "query": "Who is the head coach of Virginia Tech football?",
+        "answer": [
+            "Brent Pry"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Brent pry",
+                    "Has been named",
+                    "New head football coach at virginia tech"
+                ],
+                "Virginia tech <-Is_coach_of- Brent pry -Has been named-> New head football coach at virginia tech",
+                "Brent pry -Is_coach_of-> Virginia tech"
+            ]
+        ]
+    },
+    {
+        "id": 121,
+        "query": "How did Tanya Pardazi die?",
+        "answer": [
+            [
+                "sky diving accident",
+                "skydiving accident"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Pardazi",
+                    "Died_in",
+                    "A skydiving accident"
+                ],
+                "Pardazi -Died_in-> A skydiving accident"
+            ]
+        ]
+    },
+    {
+        "id": 122,
+        "query": "Who was named interim coach for Nebraska's 2022 season?",
+        "answer": [
+            "Mickey Joseph"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Mickey joseph",
+                    "Is appointed as",
+                    "Nebraska interim head coach"
+                ],
+                [
+                    "Mickey joseph",
+                    "Is interim head coach for",
+                    "The remainder of the 2022 season"
+                ],
+                "Nebraska interim head coach <-Is appointed as- Mickey joseph",
+                "Mickey joseph -Is interim head coach for-> The remainder of the 2022 season",
+                "Mickey joseph -Is appointed as-> Nebraska interim head coach"
+            ]
+        ]
+    },
+    {
+        "id": 123,
+        "query": "What is the release date of Jackie Evancho's album Carousel of Time?",
+        "answer": [
+            [
+                "September 9",
+                "Sep 9",
+                "Sep. 9",
+                "9 September",
+                "9 Sep",
+                "9 Sep.",
+                "Sept 9",
+                "Sept. 9",
+                "9 Sept",
+                "9 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "September 9",
+                    "Is the release date of",
+                    "Carousel of time"
+                ],
+                "Carousel of time <-Is the release date of- September 9"
+            ]
+        ]
+    },
+    {
+        "id": 124,
+        "query": "Which companies are part of MATANA?",
+        "answer": [
+            "Microsoft",
+            "Apple",
+            "Tesla",
+            "Alphabet",
+            "Nvidia",
+            "Amazon"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Matana group",
+                    "Includes",
+                    "Microsoft"
+                ]
+            ],
+            [
+                [
+                    "Matana group",
+                    "Includes",
+                    "Apple"
+                ],
+                "Apple <-Includes- Matana group"
+            ],
+            [
+                [
+                    "Matana group",
+                    "Includes",
+                    "Tesla"
+                ]
+            ],
+            [
+                [
+                    "Matana group",
+                    "Includes",
+                    "Alphabet"
+                ]
+            ],
+            [
+                [
+                    "Matana group",
+                    "Includes",
+                    "Nvidia"
+                ]
+            ],
+            [
+                [
+                    "Matana group",
+                    "Includes",
+                    "Amazon.com"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 125,
+        "query": "Which animated series won the Emmy Award for Best Animated Program?",
+        "answer": [
+            "Arcane"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Arcane",
+                    "Won",
+                    "The emmy for best animated program"
+                ],
+                "The emmy for best animated program <-Won- Arcane"
+            ]
+        ]
+    },
+    {
+        "id": 126,
+        "query": "How many teams will be included in the expanded College Football Playoff?",
+        "answer": [
+            "12"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "College football playoff",
+                    "Will_expand_to",
+                    "A 12-team event"
+                ],
+                "College football playoff -Will_expand_to-> A 12-team event"
+            ]
+        ]
+    },
+    {
+        "id": 127,
+        "query": "Which team will host nation Qatar play against in the opening match of the 2022 World Cup?",
+        "answer": [
+            "Ecuador"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Qatar 2022",
+                    "Will host",
+                    "Ecuador"
+                ],
+                "Tournament's opening match <-Became- Qatar vs ecuador"
+            ]
+        ]
+    },
+    {
+        "id": 128,
+        "query": "Where did Leonard Francis escape from?",
+        "answer": [
+            "San Diego"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Leonard francis",
+                    "Is_located_in",
+                    "Torrey highlands community"
+                ],
+                [
+                    "Torrey highlands community",
+                    "Is_part_of",
+                    "San diego"
+                ],
+                "Leonard francis -Escaped_from-> His home",
+                "Fat leonard <-Is_known_as- Leonard francis -Escaped_from-> His home",
+                "Leonard francis -Is_located_in-> Torrey highlands community -Is_part_of-> San diego",
+                "Fat leonard <-Is_known_as- Leonard francis -Is_located_in-> Torrey highlands community"
+            ]
+        ]
+    },
+    {
+        "id": 129,
+        "query": "When does the 2022 NFL Football Season begin?",
+        "answer": [
+            [
+                "September 8",
+                "Sep 8",
+                "Sep. 8",
+                "8 September",
+                "8 Sep",
+                "8 Sep.",
+                "Sept 8",
+                "Sept. 8",
+                "8 Sept",
+                "8 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2022 nfl season",
+                    "Began on",
+                    "September 8, 2022"
+                ],
+                "2022 nfl season -Began on-> September 8, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 130,
+        "query": "When did Meta Connect take place?",
+        "answer": [
+            [
+                "October 11",
+                "Oct 11",
+                "Oct. 11",
+                "11 October",
+                "11 Oct",
+                "11 Oct."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Meta connect",
+                    "Will take place on",
+                    "Oct. 11, 2022"
+                ],
+                "Meta connect -Will take place on-> Oct. 11, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 131,
+        "query": "How much is the fine that Meta is facing for failing to safeguard children's information on Instagram?",
+        "answer": [
+            "405 million euros"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Meta",
+                    "Is_facing_fine_of",
+                    "405 million euros"
+                ],
+                "Meta -Is_facing_fine_of-> 405 million euros"
+            ]
+        ]
+    },
+    {
+        "id": 132,
+        "query": "When was Gotham Knights released?",
+        "answer": [
+            [
+                "October 21",
+                "Oct 21",
+                "Oct. 21",
+                "21 October",
+                "21 Oct",
+                "21 Oct."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Gotham knights",
+                    "Released_on",
+                    "October 21, 2022"
+                ],
+                "Gotham knights -Released_on-> October 21, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 133,
+        "query": "How did Bernard Shaw die?",
+        "answer": [
+            "pneumonia"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Bernard shaw",
+                    "Died from",
+                    "Pneumonia"
+                ],
+                "Bernard shaw -Died from-> Pneumonia"
+            ]
+        ]
+    },
+    {
+        "id": 134,
+        "query": "When did Queen Elizabeth II die?",
+        "answer": [
+            [
+                "September 8",
+                "Sep 8",
+                "Sep. 8",
+                "8 September",
+                "8 Sep",
+                "8 Sep.",
+                "Sept 8",
+                "Sept. 8",
+                "8 Sept",
+                "8 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Queen elizabeth ii",
+                    "Died",
+                    "September 8, 2022"
+                ],
+                "Queen elizabeth -Died on-> September 8, 2022",
+                "Queen elizabeth ii -Died-> September 8, 2022",
+                "Queen elizabeth ii -Died in-> September 2022"
+            ]
+        ]
+    },
+    {
+        "id": 135,
+        "query": "Where did Queen Elizabeth II die?",
+        "answer": [
+            "Balmoral"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Elizabeth ii",
+                    "Died at",
+                    "Balmoral castle"
+                ],
+                "Elizabeth ii -Died at-> Balmoral castle",
+                "Queen elizabeth ii -Died at-> Balmoral castle"
+            ]
+        ]
+    },
+    {
+        "id": 136,
+        "query": "who did Alcaraz beat in U.S. Open 2022 Men's Semifinals?",
+        "answer": [
+            "Frances Tiafoe"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Carlos alcaraz",
+                    "Won quarter-final round against",
+                    "Frances tiafoe"
+                ],
+                "Frances tiafoe -Was defeated by-> Alcaraz in the semifinals at the u.s. open"
+            ]
+        ]
+    },
+    {
+        "id": 137,
+        "query": "when did king charles iii get crowned?",
+        "answer": [
+            [
+                "May 6 2023",
+                "May 6, 2023",
+                "May. 6, 2023",
+                "May 6, 2023",
+                "6 May 2023",
+                "6 May, 2023",
+                "6 May., 2023",
+                "6 May, 2023"
+            ]
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Charles iii",
+                    "Was officially crowned in",
+                    "A ceremony at westminster abbey"
+                ],
+                [
+                    "Ceremony",
+                    "Took place on",
+                    "May 6, 2023"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 138,
+        "query": "What is Trace Adkins' role in \"Monarch\"?",
+        "answer": [
+            "Albie Roman"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Trace adkins",
+                    "Will portray",
+                    "Albie roman"
+                ],
+                [
+                    "Trace adkins",
+                    "Is in a leading role",
+                    "Monarch"
+                ],
+                "Trace adkins -Is in a leading role-> Monarch -Will portray-> Albie roman",
+                "Trace adkins -Will portray-> Albie roman"
+            ]
+        ]
+    },
+    {
+        "id": 139,
+        "query": "When does the iPhone 14 Plus release?",
+        "answer": [
+            [
+                "October 7",
+                "Oct 7",
+                "Oct. 7",
+                "October 7",
+                "7 October",
+                "7 Oct",
+                "7 Oct.",
+                "7 October"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Iphone 14 plus",
+                    "Was made available on",
+                    "October 7, 2022"
+                ],
+                "Iphone 14 plus -Was made available on-> October 7, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 141,
+        "query": "What is the new product at Chick-fil-A in fall 2022?",
+        "answer": [
+            "Autumn Spice Milkshake"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Autumn spice milkshake",
+                    "Is_the_first_new",
+                    "Product of chick-fil-a"
+                ],
+                "Product of chick-fil-a <-Is_the_first_new- Autumn spice milkshake"
+            ]
+        ]
+    },
+    {
+        "id": 142,
+        "query": "Which team will Kyle Busch join in 2023?",
+        "answer": [
+            "Richard Childress Racing"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Kyle busch",
+                    "Will drive for",
+                    "Richard childress racing"
+                ],
+                [
+                    "Richard childress racing",
+                    "Announced",
+                    "Kyle busch will drive for the organization"
+                ],
+                "Kyle busch -Will drive for-> Richard childress racing",
+                "Richard childress racing -Announced-> Kyle busch will drive for the organization"
+            ]
+        ]
+    },
+    {
+        "id": 143,
+        "query": "What is men's year-end No 1 in tennis in 2022?",
+        "answer": [
+            "Carlos Alcaraz"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Carlos alcaraz",
+                    "Is",
+                    "The youngest year-end no. 1 in atp rankings"
+                ],
+                "2022 at no. 1 <-Is likely to end- Alcaraz"
+            ]
+        ]
+    },
+    {
+        "id": 144,
+        "query": "Who was playing Lex Luthor in Titans?",
+        "answer": [
+            "Titus Welliver"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Titus welliver",
+                    "Is set to play",
+                    "Lex luthor"
+                ],
+                "Lex luthor <-Is set to play- Titus welliver",
+                "Lex luthor <-Is set to play- Titus welliver"
+            ]
+        ]
+    },
+    {
+        "id": 145,
+        "query": "What is Columbia University's QS ranking in 2023?",
+        "answer": [
+            "22"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Columbia university",
+                    "Qs ranking in 2023",
+                    "22nd"
+                ],
+                "Columbia university -Qs ranking in 2023-> 22nd"
+            ]
+        ]
+    },
+    {
+        "id": 146,
+        "query": "Who was the first Asian man to win Lead Actor in a Drama Series?",
+        "answer": [
+            "Lee Jung-jae"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Lee jung-jae",
+                    "Is the first asian man to win",
+                    "The emmy for outstanding lead actor in a drama series"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 147,
+        "query": "How much did Google acquire Mandiant for?",
+        "answer": [
+            "5.4 billion"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Google",
+                    "Will_pay",
+                    "$5.4 billion"
+                ],
+                "Google -Will_pay-> $5.4 billion"
+            ]
+        ]
+    },
+    {
+        "id": 148,
+        "query": "What was the inflation rate in the U.S. in August 2022?",
+        "answer": [
+            "8.3%"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Inflation rate",
+                    "Was up at",
+                    "An annualized 8.3% rate in august"
+                ],
+                "Inflation rate -Was up at-> An annualized 8.3% rate in august"
+            ]
+        ]
+    },
+    {
+        "id": 149,
+        "query": "Who is receiving the 39th Walter Cronkite Award for Excellence in Journalism?",
+        "answer": [
+            "Gayle King"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Gayle king",
+                    "Has been selected as",
+                    "Recipient of 39th walter cronkite award for excellence in journalism"
+                ],
+                "Recipient of 39th walter cronkite award for excellence in journalism <-Has been selected as- Gayle king"
+            ]
+        ]
+    },
+    {
+        "id": 150,
+        "query": "What is the name of the sequel to The Legend of Zelda: Breath of the Wild?",
+        "answer": [
+            "Tears of the Kingdom"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The forthcoming breath of the wild sequel",
+                    "Is named",
+                    "The legend of zelda: tears of the kingdom"
+                ],
+                "The legend of zelda: tears of the kingdom <-Is named- The forthcoming breath of the wild sequel",
+                "The legend of zelda: tears of the kingdom -Is a sequel to-> The legend of zelda: breath of the wild",
+                "The legend of zelda: tears of the kingdom <-Has title- Sequel to the legend of zelda: breath of the wild"
+            ]
+        ]
+    },
+    {
+        "id": 151,
+        "query": "when was The Legend of Zelda: Tears of the Kingdom released?",
+        "answer": [
+            [
+                "May 12 2023",
+                "May 12, 2023",
+                "May. 12, 2023",
+                "May 12, 2023",
+                "12 May 2023",
+                "12 May, 2023",
+                "12 May., 2023",
+                "12 May, 2023"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The legend of zelda: tears of the kingdom",
+                    "Was released on",
+                    "May 12, 2023"
+                ],
+                "The legend of zelda: tears of the kingdom -Was released on-> May 12, 2023",
+                "Tears of the kingdom -Was released on-> May 12, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 152,
+        "query": "When was Hocus Pocus 2 released on Disney+?",
+        "answer": [
+            [
+                "September 30",
+                "Sep 30",
+                "Sep. 30",
+                "30 September",
+                "30 Sep",
+                "30 Sep.",
+                "Sept 30",
+                "Sept. 30",
+                "30 Sept",
+                "30 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Hocus pocus 2",
+                    "Premiered_on",
+                    "September 30, 2022"
+                ],
+                "Hocus pocus 2 -Premiered_on-> September 30, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 153,
+        "query": "When is ACL 2023 taking place?",
+        "answer": [
+            [
+                "July 9",
+                "Jul 9",
+                "Jul. 9",
+                "9 July",
+                "9 Jul",
+                "9 Jul."
+            ]
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "61st annual meeting of the association for computational linguistics (acl'23)",
+                    "Will take place from",
+                    "July 9th to july 14th, 2023"
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "id": 154,
+        "query": "Where is ACL 2023 taking place?",
+        "answer": [
+            "Toronto"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Acl 2023",
+                    "Is an event",
+                    "Taking place in toronto"
+                ],
+                "Acl 2023 -Is an event-> Taking place in toronto",
+                "Acl 2023 -Will be held in-> Toronto, canada",
+                "Toronto, canada <-Will take place in- 61st annual meeting of the association for computational linguistics (acl'23)"
+            ]
+        ]
+    },
+    {
+        "id": 155,
+        "query": "When is EMNLP 2023 taking place?",
+        "answer": [
+            [
+                "December 6",
+                "Dec 6",
+                "Dec. 6",
+                "6 December",
+                "6 Dec",
+                "6 Dec."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Emnlp 2023",
+                    "Will occur from",
+                    "Dec 6th, 2023"
+                ],
+                "Emnlp 2023 -Will occur from-> Dec 6th, 2023",
+                "Emnlp 2023 -Occurs_from-> Dec 6th, 2023",
+                "Emnlp 2023 -Will take place from-> Dec 6th, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 156,
+        "query": "Where is EMNLP 2023 taking place?",
+        "answer": [
+            "Singapore"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Emnlp 2023",
+                    "Takes_place_in",
+                    "Singapore"
+                ],
+                "Emnlp 2023 -Takes_place_in-> Singapore",
+                "Emnlp 2023 -Will take place in-> Singapore"
+            ]
+        ]
+    },
+    {
+        "id": 157,
+        "query": "What is the starting price for Virginia Tech 2023 football season tickets?",
+        "answer": [
+            "$350"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2023 season tickets",
+                    "Start at",
+                    "$350 per ticket"
+                ],
+                "2023 season tickets -Start at-> $350 per ticket"
+            ]
+        ]
+    },
+    {
+        "id": 158,
+        "query": "What is the date of the Wine OFF the Fox benefit concert?",
+        "answer": [
+            [
+                "October 22",
+                "Oct 22",
+                "Oct. 22",
+                "22 October",
+                "22 Oct",
+                "22 Oct."
+            ]
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Wine off the fox",
+                    "Will take place on",
+                    "Saturday, october 22, 2022"
+                ],
+                "Wine off the fox -Will take place on-> Saturday, october 22, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 159,
+        "query": "When is the funeral of Queen Elizabeth II?",
+        "answer": [
+            [
+                "September 19",
+                "Sep 19",
+                "Sep. 19",
+                "19 September",
+                "19 Sep",
+                "19 Sep.",
+                "Sept 19",
+                "Sept. 19",
+                "19 Sept",
+                "19 Sept."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Queen's state funeral",
+                    "Was held on",
+                    "September 19"
+                ],
+                "Queen elizabeth ii's state funeral -Is on-> September 19, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 160,
+        "query": "Where did Queen Elizabeth II's state funeral take place?",
+        "answer": [
+            "Westminster Abbey"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "State funeral of queen elizabeth ii",
+                    "Will take place at",
+                    "Westminster abbey"
+                ],
+                "State funeral of queen elizabeth ii -Will take place at-> Westminster abbey"
+            ]
+        ]
+    },
+    {
+        "id": 161,
+        "query": "Who were the top two contestants in the America's Got Talent Season 17 finale?",
+        "answer": [
+            "Mayyas",
+            "Kristy Sellars"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Top two contestants",
+                    "Were",
+                    "Both female dance acts"
+                ],
+                [
+                    "Mayyas",
+                    "Won",
+                    "Agt’s $1 million prize"
+                ],
+                [
+                    "Kristy sellars",
+                    "Placed",
+                    "Second"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 162,
+        "query": "When is MotorCity Cage Night XII?",
+        "answer": [
+            [
+                "November 18",
+                "Nov 18",
+                "Nov. 18",
+                "18 November",
+                "18 Nov",
+                "18 Nov."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Motorcity cage night xii",
+                    "Is on",
+                    "Friday, november 18, 2022"
+                ],
+                "Motorcity cage night xii -Is on-> Friday, november 18, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 163,
+        "query": "How many people died in the mid-air collision in Boulder County?",
+        "answer": [
+            [
+                "Three",
+                "3"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Midair collision",
+                    "Resulted in the death of",
+                    "At least three people"
+                ],
+                "Midair collision -Resulted in the death of-> At least three people"
+            ]
+        ]
+    },
+    {
+        "id": 164,
+        "query": "Who is Italy's first female prime minister?",
+        "answer": [
+            "Giorgia Meloni"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Giorgia meloni",
+                    "Was sworn in as",
+                    "Italy's first female prime minister"
+                ],
+                "Italy's first female prime minister <-Was sworn in as- Giorgia meloni",
+                "Giorgia meloni -Was sworn in as-> Italy's first female prime minister",
+                "Meloni -Is discussed as-> The first woman to become prime minister of italy"
+            ]
+        ]
+    },
+    {
+        "id": 165,
+        "query": "What caused Ben Davies to be unavailable for Wales in the upcoming Nations League matches?",
+        "answer": [
+            "Knee",
+            "injury"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Antonio conte",
+                    "Revealed",
+                    "Ben davies played with a knee problem"
+                ],
+                [
+                    "Ben davies",
+                    "Had an injury in",
+                    "His knee"
+                ],
+                [
+                    "Ben davies",
+                    "Played with",
+                    "A knee injury during the match against sporting lisbon"
+                ],
+                "Ben davies -Had an injury in-> His knee",
+                "Ben davies -Played with-> A knee injury during the match against sporting lisbon"
+            ]
+        ]
+    },
+    {
+        "id": 166,
+        "query": "Who won the WNBA Finals 2022?",
+        "answer": [
+            "Aces"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Aces",
+                    "Won",
+                    "Wnba finals"
+                ],
+                "Wnba finals <-Won- Aces"
+            ]
+        ]
+    },
+    {
+        "id": 167,
+        "query": "When did the Golden Globe Awards 2023 take place?",
+        "answer": [
+            [
+                "January 10",
+                "Jan 10",
+                "Jan. 10",
+                "10 January",
+                "10 Jan",
+                "10 Jan."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The ceremony",
+                    "Was held on",
+                    "January 10, 2023"
+                ],
+                "Golden globes -Are awarded during-> 79th annual golden globe awards -Occurred on-> January 10, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 168,
+        "query": "What is the release date of the Pixel Watch?",
+        "answer": [
+            [
+                "October 13",
+                "Oct 13",
+                "Oct. 13",
+                "13 October",
+                "13 Oct",
+                "13 Oct."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Pixel watch",
+                    "Release date",
+                    "October 13, 2022"
+                ],
+                "October 13, 2022 <-Release date- Pixel watch",
+                "Google pixel watch -Started_selling_on-> October 13, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 169,
+        "query": "Who was honored with a Lifetime Professional Achievement Award at the Seton Hall's Center for Sports Media Gala?",
+        "answer": [
+            "Robin Roberts"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Robin roberts",
+                    "Will be honored with",
+                    "Lifetime professional achievement award"
+                ],
+                "Lifetime professional achievement award <-Will be honored with- Robin roberts"
+            ]
+        ]
+    },
+    {
+        "id": 170,
+        "query": "Who performed at the Super Bowl LVII Halftime Show?",
+        "answer": [
+            "Rihanna"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Super bowl lvii halftime show",
+                    "Featured",
+                    "Rihanna"
+                ],
+                [
+                    "Rihanna",
+                    "Is the headline performer of",
+                    "Super bowl lvii halftime show"
+                ],
+                "Halftime show headlined by rihanna -Peaked at-> 118.7 million viewers"
+            ]
+        ]
+    },
+    {
+        "id": 171,
+        "query": "when did Shinzo Abe die?",
+        "answer": [
+            [
+                "July 8 2022",
+                "Jul 8, 2022",
+                "Jul. 8, 2022",
+                "July 8, 2022",
+                "8 July 2022",
+                "8 Jul, 2022",
+                "8 Jul., 2022",
+                "8 July, 2022"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Date of death",
+                    "Is",
+                    "July 8, 2022"
+                ],
+                "Shinzo abe -Died on-> July 8, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 172,
+        "query": "who killed Shinzo Abe?",
+        "answer": [
+            "Tetsuya Yamagami"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Tetsuya yamagami",
+                    "Shot",
+                    "Former prime minister shinzo abe"
+                ],
+                [
+                    "Tetsuya yamagami",
+                    "Allegedly killed",
+                    "Shinzo abe"
+                ],
+                "Former prime minister shinzo abe <-Shot- Tetsuya yamagami",
+                "Tetsuya yamagami -Allegedly killed-> Shinzo abe"
+            ]
+        ]
+    },
+    {
+        "id": 173,
+        "query": "when was the State funeral of Shinzo Abe",
+        "answer": [
+            [
+                "September 27 2022",
+                "Sep 27, 2022",
+                "Sep. 27, 2022",
+                "September 27, 2022",
+                "27 September 2022",
+                "27 Sep, 2022",
+                "27 Sep., 2022",
+                "27 September, 2022",
+                "Sept 27, 2022",
+                "Sept. 27, 2022",
+                "27 Sept, 2022",
+                "27 Sept., 2022"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "State funeral",
+                    "Took place on",
+                    "September 27, 2022"
+                ],
+                "State funeral -Took place on-> September 27, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 174,
+        "query": "What is the title of House of the Dragon's sixth episode?",
+        "answer": [
+            "The Princess and the Queen"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Episode 6",
+                    "Is titled",
+                    "The princess and the queen"
+                ],
+                "Episode 6 -Is titled-> The princess and the queen"
+            ]
+        ]
+    },
+    {
+        "id": 175,
+        "query": "Who has acquired Times Square Grand Slam?",
+        "answer": [
+            "EVO Entertainment Group"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Evo entertainment group",
+                    "Acquired",
+                    "Times square grand slam"
+                ],
+                "Times square grand slam <-Acquired- Evo entertainment group"
+            ]
+        ]
+    },
+    {
+        "id": 176,
+        "query": "When is the premiere date of Derry Girls Season 3?",
+        "answer": [
+            [
+                "October 7",
+                "Oct 7",
+                "Oct. 7",
+                "7 October",
+                "7 Oct",
+                "7 Oct."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The tweet",
+                    "Says",
+                    "Final season of derry girls arrives october 7 on netflix (outside the uk & ireland)"
+                ],
+                "Final season of derry girls arrives october 7 on netflix (outside the uk & ireland) <-Says- The tweet"
+            ]
+        ]
+    },
+    {
+        "id": 177,
+        "query": "Who was awarded the 2022 Nobel Prize for Physiology and Medicine?",
+        "answer": [
+            [
+                "Svante Pääbo",
+                "Svante Paabo"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Nobel prize in physiology or medicine 2022",
+                    "Was awarded to",
+                    "Svante pääbo"
+                ],
+                "Nobel prize in physiology or medicine 2022 -Was awarded to-> Svante pääbo",
+                "Nobel prize in physiology or medicine 2022 -Was_awarded_to-> Svante pääbo"
+            ]
+        ]
+    },
+    {
+        "id": 178,
+        "query": "who was awarded the 2022 nobel prize in literature?",
+        "answer": [
+            "Annie Ernaux"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Nobel prize in literature",
+                    "Awarded to",
+                    "Annie ernaux"
+                ],
+                "Nobel prize in literature -Awarded to-> Annie ernaux"
+            ]
+        ]
+    },
+    {
+        "id": 179,
+        "query": "Who is the new CEO of Fox Entertainment?",
+        "answer": [
+            "Rob Wade"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Fox entertainment",
+                    "Has a new ceo",
+                    "Rob wade"
+                ],
+                "Fox entertainment -Has a new ceo-> Rob wade"
+            ]
+        ]
+    },
+    {
+        "id": 180,
+        "query": "Who won the Japanese Grand Prix 2022?",
+        "answer": [
+            "Max Verstappen"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Max verstappen",
+                    "Won",
+                    "F1 grand prix of japan"
+                ],
+                [
+                    "Max verstappen",
+                    "Celebrates after",
+                    "Winning the f1 grand prix of japan"
+                ],
+                "F1 grand prix of japan <-Won- Max verstappen",
+                "Max verstappen -Celebrates after-> Winning the f1 grand prix of japan"
+            ]
+        ]
+    },
+    {
+        "id": 181,
+        "query": "who played Adrianna Tomaz in Black Adam?",
+        "answer": [
+            "Sarah Shahi"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Adrianna tomaz",
+                    "Was played by",
+                    "Sarah shahi"
+                ],
+                "Adrianna tomaz -Was played by-> Sarah shahi"
+            ]
+        ]
+    },
+    {
+        "id": 182,
+        "query": "Who stars as Dr. Ben Seong in the Quantum Leap revival?",
+        "answer": [
+            "Raymond Lee"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Raymond lee",
+                    "Stars in",
+                    "Nbc's 'quantum leap' revival"
+                ],
+                [
+                    "Raymond lee",
+                    "Plays",
+                    "Dr. ben seong"
+                ],
+                "Dr. ben seong <-Plays- Raymond lee -Stars in-> Nbc's 'quantum leap' revival",
+                "Nbc's 'quantum leap' revival <-Stars in- Raymond lee -Plays-> Dr. ben seong"
+            ]
+        ]
+    },
+    {
+        "id": 183,
+        "query": "What is the price of RTX 4090 GPU?",
+        "answer": [
+            [
+                "$1599",
+                "$1,599"
+            ]
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Nvidia geforce rtx 4090",
+                    "Has_starting_price_of",
+                    "$1,599"
+                ],
+                "Nvidia geforce rtx 4090 -Has_starting_price_of-> $1,599"
+            ]
+        ]
+    },
+    {
+        "id": 184,
+        "query": "What is the release date of Sweetwater?",
+        "answer": [
+            [
+                "April 14 2023",
+                "Apr 14, 2023",
+                "Apr. 14, 2023",
+                "April 14, 2023",
+                "14 April 2023",
+                "14 Apr, 2023",
+                "14 Apr., 2023",
+                "14 April, 2023"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Sweetwater",
+                    "Was released on",
+                    "Friday, april 14, 2023"
+                ],
+                "Sweetwater -Was released on-> Friday, april 14, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 185,
+        "query": "When did the Google Pixel Watch start sell?",
+        "answer": [
+            [
+                "October 13",
+                "Oct 13",
+                "Oct. 13",
+                "13 October",
+                "13 Oct",
+                "13 Oct."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Google pixel watch",
+                    "Started_selling_on",
+                    "October 13, 2022"
+                ],
+                "Google pixel watch -Started_selling_on-> October 13, 2022",
+                "Pixel watch -Release date-> October 13, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 186,
+        "query": "Who is the recipient of the 2022 Tom Hanks Caregiver Champion Award?",
+        "answer": [
+            "Savannah Guthrie"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Savannah guthrie",
+                    "Has_been_named",
+                    "2022 tom hanks caregiver champion award recipient"
+                ],
+                "2022 tom hanks caregiver champion award recipient <-Has_been_named- Savannah guthrie",
+                "2022 tom hanks caregiver champion award -Recognizes-> Support of savannah guthrie"
+            ]
+        ]
+    },
+    {
+        "id": 187,
+        "query": "Who is the president of the Prospect Park Alliance?",
+        "answer": [
+            "Morgan Monaco"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Morgan monaco",
+                    "Is",
+                    "President of prospect park alliance"
+                ],
+                [
+                    "Prospect park alliance",
+                    "Appointed",
+                    "Morgan monaco"
+                ],
+                "President of prospect park alliance <-Is- Morgan monaco",
+                "Morgan monaco -Is-> Prospect park administrator"
+            ]
+        ]
+    },
+    {
+        "id": 188,
+        "query": "What gaming software development studio did Riot Games acquire?",
+        "answer": [
+            "Wargaming Sydney"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Riot games",
+                    "Announced",
+                    "Its acquisition of wargaming sydney"
+                ],
+                "Riot games -Announced-> Its acquisition of wargaming sydney"
+            ]
+        ]
+    },
+    {
+        "id": 189,
+        "query": "Who is the new CEO of Yahoo?",
+        "answer": [
+            "Jim Lanzone"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Jim lanzone",
+                    "Became",
+                    "Yahoo’s new chief executive officer"
+                ],
+                [
+                    "Jim lanzone",
+                    "Will be",
+                    "Yahoo’s new ceo as of september 27"
+                ],
+                "Yahoo’s new chief executive officer <-Became- Jim lanzone",
+                "Yahoo’s new ceo as of september 27 <-Will be- Jim lanzone",
+                "Jim lanzone -Became-> Yahoo’s new chief executive officer"
+            ]
+        ]
+    },
+    {
+        "id": 190,
+        "query": "What is the subscriber growth of Netflix in Q3 2022?",
+        "answer": [
+            "2.41 million"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Netflix",
+                    "Added",
+                    "2.41 million net subscribers"
+                ],
+                "Netflix -Added-> 2.41 million net subscribers"
+            ]
+        ]
+    },
+    {
+        "id": 191,
+        "query": "What is the title of Chicago P.D. Season 10, Episode 4?",
+        "answer": [
+            "Dónde Vives"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Dónde vives",
+                    "Is_episode_of",
+                    "Chicago p.d."
+                ],
+                "Dónde vives -Is_episode_of-> Chicago p.d.",
+                [
+                    "Dónde vives",
+                    "Is_in",
+                    "Season 10"
+                ],
+                "Season 10 <-Is_in- Dónde vives",
+                [
+                    "Dónde vives",
+                    "Is_episode",
+                    "4"
+                ],
+                "Season 10 <-Is_in- Dónde vives -Is_episode-> 4"
+            ]
+        ]
+    },
+    {
+        "id": 192,
+        "query": "How much does the YouTube Premium family plan cost now?",
+        "answer": [
+            "22.99 per month"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Youtube premium",
+                    "Family plan costs",
+                    "$22.99 per month"
+                ],
+                "Youtube premium -Family plan costs-> $22.99 per month"
+            ]
+        ]
+    },
+    {
+        "id": 193,
+        "query": "What is the release date of God of War Ragnarok?",
+        "answer": [
+            [
+                "November 9",
+                "Nov 9",
+                "Nov. 9",
+                "9 November",
+                "9 Nov",
+                "9 Nov."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "God of war: ragnarök",
+                    "Was released worldwide on",
+                    "November 9, 2022"
+                ],
+                "God of war: ragnarök -Was released worldwide on-> November 9, 2022",
+                "God of war: ragnarök -Release date is-> November 9"
+            ]
+        ]
+    },
+    {
+        "id": 194,
+        "query": "Who voices Batman in Batwheels?",
+        "answer": [
+            "Ethan Hawke"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ethan hawke",
+                    "Voiced",
+                    "Batman"
+                ],
+                "Batman <-Voiced- Ethan hawke"
+            ]
+        ]
+    },
+    {
+        "id": 195,
+        "query": "Who is the new prime minister of the United Kingdom?",
+        "answer": [
+            "Rishi Sunak"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Rishi sunak",
+                    "Is",
+                    "The uk's new prime minister"
+                ],
+                "The uk's new prime minister <-Is- Rishi sunak",
+                "Rishi sunak -Became-> Prime minister of the united kingdom"
+            ]
+        ]
+    },
+    {
+        "id": 196,
+        "query": "when did rishi sunak became prime minister of uk?",
+        "answer": [
+            [
+                "October 25 2022",
+                "Oct 25, 2022",
+                "Oct. 25, 2022",
+                "October 25, 2022",
+                "25 October 2022",
+                "25 Oct, 2022",
+                "25 Oct., 2022",
+                "25 October, 2022"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Rishi sunak",
+                    "Took office on",
+                    "October 25, 2022"
+                ],
+                "Rishi sunak -Took office on-> October 25, 2022"
+            ]
+        ]
+    },
+    {
+        "id": 197,
+        "query": "How much does the Netflix Basic with Ads subscription cost?",
+        "answer": [
+            "6.99"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Netflix basic with ads",
+                    "Costs",
+                    "$6.99 per month"
+                ],
+                "Netflix basic with ads -Costs-> $6.99 per month"
+            ]
+        ]
+    },
+    {
+        "id": 198,
+        "query": "When does season 5 of The Crown premiere?",
+        "answer": [
+            [
+                "November 9",
+                "Nov 9",
+                "Nov. 9",
+                "9 November",
+                "9 Nov",
+                "9 Nov."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The crown season 5",
+                    "Will premiere on",
+                    "November 9, 2022"
+                ],
+                "Season 5 -Premieres on-> Nov. 9"
+            ]
+        ]
+    },
+    {
+        "id": 199,
+        "query": "Where does The White Lotus Season 2 take place",
+        "answer": [
+            "Sicily"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The white lotus",
+                    "Moves_location_to",
+                    "Sicily"
+                ],
+                "The white lotus: sicily -Won-> 80th annual ceremony -Featured-> Winners from the world of tv and film"
+            ]
+        ]
+    },
+    {
+        "id": 200,
+        "query": "Who won the Arizona Senatorial Election 2022?",
+        "answer": [
+            "Mark Kelly"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Mark kelly",
+                    "Won",
+                    "The race for arizona senate"
+                ],
+                "The race for arizona senate <-Won- Mark kelly"
+            ],
+            [
+                "",
+                "The race for arizona senate <-Won- Mark kelly -Won-> Reelection bid in arizona"
+            ],
+            [
+                "",
+                "The race for arizona senate <-Won- Mark kelly -Is a member of-> The democratic party"
+            ]
+        ]
+    },
+    {
+        "id": 201,
+        "query": "which party controls the house after 2022 midterm elections?",
+        "answer": [
+            "Republican "
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Republicans",
+                    "Officially gained control of",
+                    "The 2023 u.s. house"
+                ],
+                [
+                    "Republicans",
+                    "Achieved",
+                    "222 wins in this fall’s election"
+                ],
+                "The balance of power in the house -Currently stands at-> 211 republicans and 203 democrats"
+            ]
+        ]
+    },
+    {
+        "id": 202,
+        "query": "Who won the U.S. Senate race in Nevada in the 2022 midterm elections?",
+        "answer": [
+            "Catherine Cortez Masto"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Catherine cortez masto",
+                    "Won",
+                    "U.s. senate seat in nevada"
+                ],
+                "U.s. senate seat in nevada <-Won- Catherine cortez masto",
+                "The election in nevada <-Won- Senator cortez masto"
+            ]
+        ]
+    },
+    {
+        "id": 203,
+        "query": "Who directed Lullaby?",
+        "answer": [
+            "John R. Leonetti"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Lullaby (2022)",
+                    "Was directed by",
+                    "John r. leonetti"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 204,
+        "query": "Who is the Doctor's new companion in Doctor Who?",
+        "answer": [
+            "Millie Gibson"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Bbc",
+                    "Announced",
+                    "Millie gibson has been cast as ruby sunday"
+                ],
+                [
+                    "Ruby sunday",
+                    "Is the",
+                    "New companion of the doctor"
+                ],
+                "New companion of the doctor <-Is the- Ruby sunday <-Is cast as- Millie gibson"
+            ]
+        ]
+    },
+    {
+        "id": 205,
+        "query": "Who designed Naomi Biden's wedding dress?",
+        "answer": [
+            "Ralph Lauren"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Naomi biden",
+                    "Wore",
+                    "Ralph lauren at her south lawn wedding ceremony"
+                ],
+                "Naomi biden -Wore-> Ralph lauren at her south lawn wedding ceremony"
+            ]
+        ]
+    },
+    {
+        "id": 206,
+        "query": "What grouping is France in World Cup 2022?",
+        "answer": [
+            "Group D"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Group d of 2022 fifa world cup",
+                    "Consisted of",
+                    "Reigning world champions france"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 207,
+        "query": "What grouping is U.S. in World Cup 2022?",
+        "answer": [
+            "Group B"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "United states men's soccer team",
+                    "Has been drawn in",
+                    "Group b"
+                ],
+                "2022 world cup <-Is part of- Group b <-Has been drawn in- United states men's soccer team",
+                "United states men's soccer team -Has been drawn in-> Group b"
+            ]
+        ]
+    },
+    {
+        "id": 208,
+        "query": "What grouping is Argentina in World Cup 2022?",
+        "answer": [
+            "Group C"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Group c of the 2022 fifa world cup",
+                    "Consisted of",
+                    "Argentina"
+                ],
+                "Argentina <-Consisted of- Group c of the 2022 fifa world cup"
+            ]
+        ]
+    },
+    {
+        "id": 209,
+        "query": "What is the title of the new season of \"Criminal Minds\"?",
+        "answer": [
+            "Evolution"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The 10-episode quasi-16th season",
+                    "Is titled",
+                    "Criminal minds: evolution"
+                ],
+                "Criminal minds: evolution <-Is titled- The 10-episode quasi-16th season"
+            ]
+        ]
+    },
+    {
+        "id": 210,
+        "query": "Who is Nebraska's new head football coach?",
+        "answer": [
+            "Matt Rhule"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Matt rhule",
+                    "Will be",
+                    "Nebraska's 31st head football coach"
+                ],
+                "Nebraska's thirty-first head coach <-Was named- Matt rhule",
+                "Nebraska's 31st head football coach <-Will be- Matt rhule"
+            ]
+        ]
+    },
+    {
+        "id": 211,
+        "query": "Who is the TikTok text-to-speech voice?",
+        "answer": [
+            "Kat Callaghan"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Kat callaghan",
+                    "Revealed",
+                    "Her role as tiktok's text-to-speech voice"
+                ],
+                [
+                    "Kat callaghan",
+                    "Is one of",
+                    "The most popular text-to-speech voices on tiktok"
+                ],
+                "The most popular text-to-speech voices on tiktok <-Is one of- Kat callaghan",
+                "The text-to-speech speaker <-Is- Callaghan",
+                "Kat callaghan -Revealed-> Her role as tiktok's text-to-speech voice"
+            ]
+        ]
+    },
+    {
+        "id": 212,
+        "query": "What is Merriam-Webster's 2022 Word of the Year?",
+        "answer": [
+            "gaslighting"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Gaslighting",
+                    "Is",
+                    "The top word of the list for 2022"
+                ],
+                "Words of the year for 2022 <-Released- Merriam-webster"
+            ]
+        ]
+    },
+    {
+        "id": 213,
+        "query": "Where is SM Entertainment setting up its Southeast Asian headquarters?",
+        "answer": [
+            "Singapore"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Southeast asian headquarters",
+                    "Is located in",
+                    "Singapore"
+                ],
+                "Southeast asian headquarters -Is located in-> Singapore"
+            ]
+        ]
+    },
+    {
+        "id": 214,
+        "query": "What was the unemployment rate in November 2022?",
+        "answer": [
+            "3.7%"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Unemployment rate",
+                    "Is",
+                    "3.7 percent in november 2022"
+                ],
+                [
+                    "Unemployment rate",
+                    "Is unchanged",
+                    "3.7 percent in november 2022"
+                ],
+                "Unemployment rate -Is-> 3.7 percent in november 2022",
+                "Unemployment rate -Is unchanged-> 3.7 percent in november 2022"
+            ]
+        ]
+    },
+    {
+        "id": 215,
+        "query": "Who did the USA play in the round of 16 at 2022 FIFA World Cup?",
+        "answer": [
+            "Netherlands"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Usa",
+                    "Will face",
+                    "Netherlands"
+                ],
+                "Netherlands -Will face-> The u.s. in the round of 16"
+            ]
+        ]
+    },
+    {
+        "id": 216,
+        "query": "Who is Argentina's semi opponent?",
+        "answer": [
+            "Croatia"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Argentina",
+                    "Beat",
+                    "Croatia"
+                ],
+                "World cup 2022 semi-finals <-Is a possible competitor in- Argentina -Could face-> Potential opponents in the semi-finals",
+                "World cup 2022 semi-finals <-Is a possible competitor in- Argentina -Could face-> Croatia",
+                "Potential opponents in the semi-finals <-Could face- Argentina -Defeated-> Croatia"
+            ]
+        ]
+    },
+    {
+        "id": 217,
+        "query": "Who won the election in Georgia?",
+        "answer": [
+            "Brian Kemp"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Brian kemp",
+                    "Wins",
+                    "Georgia governor reelection bid"
+                ],
+                "Brian kemp -Wins-> Georgia governor reelection bid"
+            ]
+        ]
+    },
+    {
+        "id": 218,
+        "query": "Who is starring Barbie in the movie \"Barbie\"?",
+        "answer": [
+            "Margot Robbie"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Margot robbie",
+                    "Was officially cast as",
+                    "Barbie"
+                ],
+                "Barbie <-Was officially cast as- Margot robbie",
+                "Barbie <-Is playing- Robbie"
+            ]
+        ]
+    },
+    {
+        "id": 219,
+        "query": "Who is the captain of the USA soccer team in the FIFA Men's World Cup 2022?",
+        "answer": [
+            "Tyler Adams"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Tyler adams",
+                    "Will captain",
+                    "Us men's national team"
+                ],
+                "Us men's national team <-Will captain- Tyler adams"
+            ]
+        ]
+    },
+    {
+        "id": 220,
+        "query": "Which company won Yahoo Finance's 2022 \"Company of the Year\" Award?",
+        "answer": [
+            "Costco"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2022 company of the year",
+                    "Is",
+                    "Costco"
+                ],
+                "2022 company of the year -Is-> Costco"
+            ]
+        ]
+    },
+    {
+        "id": 221,
+        "query": "How much money will President Joe Biden put into the union pension plan?",
+        "answer": [
+            "36 billion"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Joe biden's administration",
+                    "Is_providing",
+                    "Nearly $36 billion"
+                ],
+                [
+                    "$36 billion",
+                    "Is_for",
+                    "A financially troubled union pension plan"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 222,
+        "query": "Who won the Maxwell Award 2022 in college football?",
+        "answer": [
+            "Caleb Williams"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "Caleb williams",
+                "Won",
+                "2022 maxwell award"
+            ],
+            "2022 maxwell award <-Won- Caleb williams"
+        ]
+    },
+    {
+        "id": 223,
+        "query": "Who is Africa's first World Cup semi-finalists",
+        "answer": [
+            "Morocco"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Morocco",
+                    "Reached",
+                    "The first african team to make the semi-finals of the world cup"
+                ],
+                "The first african team to make the semi-finals of the world cup <-Reached- Morocco"
+            ]
+        ]
+    },
+    {
+        "id": 224,
+        "query": "Who is the 2022 CNN Hero of the Year?",
+        "answer": [
+            "Nelly Cheboi"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Nelly cheboi",
+                    "Is_recognized_as",
+                    "Cnn's 2022 hero of the year"
+                ],
+                "Cnn's 2022 hero of the year <-Is_recognized_as- Nelly cheboi"
+            ]
+        ]
+    },
+    {
+        "id": 225,
+        "query": "When is the championship game of the Patriot League Men’s Lacrosse Championship 2023?",
+        "answer": [
+            [
+                "May 7",
+                "May 7",
+                "May. 7",
+                "7 May",
+                "7 May",
+                "7 May."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Patriot league championship game",
+                    "Takes place on",
+                    "May 7, 2023"
+                ],
+                "Patriot league championship game -Takes place on-> May 7, 2023",
+                "Championship game -Took place on-> May 07, 2023 -Is a date for-> Men's lacrosse"
+            ]
+        ]
+    },
+    {
+        "id": 226,
+        "query": "Who will be receiving the Mark Twain Prize for American Humor in 2023?",
+        "answer": [
+            "Adam Sandler"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "24th mark twain prize for american humor",
+                    "Is awarded to",
+                    "Adam sandler"
+                ],
+                "24th mark twain prize for american humor -Is awarded to-> Adam sandler",
+                "Mark twain prize for american humor <-Is recipient of- Sandler"
+            ]
+        ]
+    },
+    {
+        "id": 227,
+        "query": "Who is the new president of the NCAA?",
+        "answer": [
+            "Charlie Baker"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ncaa",
+                    "Announced",
+                    "Charlie baker as the next president"
+                ],
+                [
+                    "Charlie baker",
+                    "Will serve as",
+                    "The next ncaa president"
+                ],
+                "The next ncaa president <-Will serve as- Charlie baker"
+            ]
+        ]
+    },
+    {
+        "id": 228,
+        "query": "who is the ceo of twitter?",
+        "answer": [
+            "Linda Yaccarino"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Linda yaccarino",
+                    "Officially took over",
+                    "The ceo role at twitter"
+                ],
+                "The ceo role at twitter <-Officially took over- Linda yaccarino",
+                "New ceo for x/twitter <-Was named as- Yaccarino"
+            ]
+        ]
+    },
+    {
+        "id": 229,
+        "query": "Who is the CEO of Yuga Labs?",
+        "answer": [
+            "Daniel Alegre"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Daniel alegre",
+                    "Has been named",
+                    "New ceo of yuga labs"
+                ],
+                "New ceo of yuga labs <-Has been named- Daniel alegre"
+            ]
+        ]
+    },
+    {
+        "id": 230,
+        "query": "How much did Avatar: The Way of Water earn in its debut weekend at U.S.?",
+        "answer": [
+            "134 million"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Avatar: the way of water",
+                    "Collected",
+                    "$134 million"
+                ],
+                "Avatar: the way of water -Collected-> $134 million"
+            ]
+        ]
+    },
+    {
+        "id": 231,
+        "query": "When was the Final Fantasy Pixel Remaster Series be released on Nintendo Switch?",
+        "answer": [
+            [
+                "April 19 2023",
+                "Apr 19, 2023",
+                "Apr. 19, 2023",
+                "April 19, 2023",
+                "19 April 2023",
+                "19 Apr, 2023",
+                "19 Apr., 2023",
+                "19 April, 2023"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Final fantasy pixel remaster series",
+                    "Launch date is",
+                    "April 19, 2023"
+                ],
+                "Final fantasy pixel remaster series -Launch date is-> April 19, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 232,
+        "query": "What movie won the Oscar for Best Animated Film in 2023?",
+        "answer": [
+            "Guillermo del Toro's Pinocchio"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Guillermo del toro's pinocchio",
+                    "Won",
+                    "Best animated feature"
+                ],
+                "Best animated feature <-Won- Guillermo del toro's pinocchio"
+            ]
+        ]
+    },
+    {
+        "id": 233,
+        "query": "Who discovered asteroid 2022 YG?",
+        "answer": [
+            "Gennadiy Borisov"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2022 yg",
+                    "Was_spotted_by",
+                    "Gennadiy borisov"
+                ],
+                "2022 yg -Was_spotted_by-> Gennadiy borisov"
+            ]
+        ]
+    },
+    {
+        "id": 234,
+        "query": "Which team won the Peach Bowl 2022?",
+        "answer": [
+            "Georgia"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Georgia",
+                    "Won with a score of 42-41",
+                    "Ohio state"
+                ],
+                "The cfp semifinal (peach bowl) <-Led oklahoma in- Lsu -Lost to-> Georgia"
+            ]
+        ]
+    },
+    {
+        "id": 235,
+        "query": "Which team won the 2023 Desert Hockey Classic?",
+        "answer": [
+            "Michigan Tech"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Desert hockey classic",
+                    "Was won by",
+                    "No. 16 michigan tech"
+                ],
+                "Desert hockey classic -Was won by-> No. 16 michigan tech"
+            ]
+        ]
+    },
+    {
+        "id": 236,
+        "query": "What is the price of Microsoft 365 Basic per month?",
+        "answer": [
+            "$1.99"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Microsoft 365 basic",
+                    "Is_priced_at",
+                    "$1.99 per month"
+                ],
+                "Microsoft 365 basic -Is_priced_at-> $1.99 per month"
+            ]
+        ]
+    },
+    {
+        "id": 237,
+        "query": "When did Calvin Edgar Fox pass away?",
+        "answer": [
+            [
+                "January 18 2023",
+                "Jan 18, 2023",
+                "Jan. 18, 2023",
+                "January 18, 2023",
+                "18 January 2023",
+                "18 Jan, 2023",
+                "18 Jan., 2023",
+                "18 January, 2023"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Calvin edgar fox",
+                    "Passed away on",
+                    "January 18, 2023"
+                ],
+                "Calvin edgar fox -Passed away on-> January 18, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 238,
+        "query": "When will Rebel Moon be released on Netflix?",
+        "answer": [
+            [
+                "December 22",
+                "Dec 22",
+                "Dec. 22",
+                "22 December",
+                "22 Dec",
+                "22 Dec."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Rebel moon",
+                    "Premiere date is",
+                    "December 22, 2023"
+                ],
+                "Rebel moon -Premiere date is-> December 22, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 239,
+        "query": "When does Scream VI release?",
+        "answer": [
+            [
+                "March 10",
+                "Mar 10",
+                "Mar. 10",
+                "10 March",
+                "10 Mar",
+                "10 Mar."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Scream vi",
+                    "Will now arrive in cinemas at",
+                    "March 10, 2023"
+                ],
+                "Scream vi -Will now arrive in cinemas at-> March 10, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 240,
+        "query": "What was the annual GDP growth rate of the U.S. economy in 2022?",
+        "answer": [
+            "2.1"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "United states real gdp",
+                    "Increased by",
+                    "2.1 percent compared to 2021"
+                ],
+                "Gdp growth -In 2022 was-> 3.1"
+            ]
+        ]
+    },
+    {
+        "id": 241,
+        "query": "Who will be playing the role of Billy Batson in Shazam! Fury of the Gods?",
+        "answer": [
+            "Zachary Levi"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Zachary levi",
+                    "Played the role of",
+                    "Grown-up superhero alter ego of billy batson"
+                ],
+                "Zachary levi -Played the role of-> Grown-up superhero alter ego of billy batson"
+            ]
+        ]
+    },
+    {
+        "id": 242,
+        "query": "Who was the runner-up of the 2022 World Cup?",
+        "answer": [
+            "France"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Argentina",
+                    "Won the final against",
+                    "France"
+                ],
+                "2022 world cup in qatar <-Is preparing for- France <-Won the final against- Argentina"
+            ]
+        ]
+    },
+    {
+        "id": 243,
+        "query": "When is the congressional hearing for TikTok CEO Shou Zi Chew?",
+        "answer": [
+            [
+                "March 23",
+                "Mar 23",
+                "Mar. 23",
+                "23 March",
+                "23 Mar",
+                "23 Mar."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Mar 23, 2023",
+                    "Is the date of",
+                    "The congressional hearing"
+                ],
+                "The congressional hearing <-Is the date of- Mar 23, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 244,
+        "query": "When will the final season of The Blacklist premiere?",
+        "answer": [
+            [
+                "February 26",
+                "Feb 26",
+                "Feb. 26",
+                "26 February",
+                "26 Feb",
+                "26 Feb."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "The blacklist",
+                    "Will_begin_on",
+                    "February 26, 2023"
+                ],
+                "The blacklist -Will_begin_on-> February 26, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 245,
+        "query": "What is the title of the AI-generated episode of Seinfeld?",
+        "answer": [
+            "Nothing, Forever"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Ai-generated episode of seinfeld",
+                    "Is called",
+                    "Nothing, forever"
+                ],
+                "Ai-generated episode of seinfeld -Is called-> Nothing, forever"
+            ]
+        ]
+    },
+    {
+        "id": 246,
+        "query": "What is the voucher amount per student in the Students First Act?",
+        "answer": [
+            [
+                "7,598",
+                "7598"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "$7,598",
+                    "Is_the_voucher_amount_projected_per_student_in",
+                    "Students first act"
+                ],
+                "Students first act <-Is_the_voucher_amount_projected_per_student_in- $7,598"
+            ]
+        ]
+    },
+    {
+        "id": 247,
+        "query": "Who won the Best R&B Album at the 2023 Grammys?",
+        "answer": [
+            "Robert Glasper"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Robert glasper",
+                    "Accepted",
+                    "Grammy for best r&b album"
+                ],
+                "Grammy for best r&b album <-Accepted- Robert glasper"
+            ]
+        ]
+    },
+    {
+        "id": 248,
+        "query": "What is Google's new AI chatbot called?",
+        "answer": [
+            "Bard"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Google",
+                    "Released",
+                    "A chatbot called bard"
+                ],
+                "Google -Released-> A chatbot called bard",
+                "Bard -Is categorized as-> An a.i. chatbot",
+                "Bard -Is-> Google's answer to openai's chatgpt"
+            ]
+        ]
+    },
+    {
+        "id": 249,
+        "query": "who founded midjourney?",
+        "answer": [
+            "David Holz"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "David holz",
+                    "Founded",
+                    "Midjourney"
+                ],
+                "Midjourney <-Founded- David holz"
+            ]
+        ]
+    },
+    {
+        "id": 250,
+        "query": "What technology has Microsoft incorporated into the new Bing?",
+        "answer": [
+            "GPT"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Microsoft",
+                    "Is fusing",
+                    "Chatgpt-like technology into its search engine bing"
+                ],
+                [
+                    "New bing",
+                    "Is built with technology from",
+                    "Chatgpt-maker openai"
+                ],
+                "Microsoft -Is fusing-> Chatgpt-like technology into its search engine bing"
+            ]
+        ]
+    },
+    {
+        "id": 251,
+        "query": "Who is the new CEO of Pinterest?",
+        "answer": [
+            "Bill Ready"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Bill ready",
+                    "Is",
+                    "New ceo of pinterest"
+                ],
+                "Bill ready -Is-> New ceo of pinterest"
+            ]
+        ]
+    },
+    {
+        "id": 252,
+        "query": "What is the release date for Pikmin 4 on Nintendo Switch?",
+        "answer": [
+            [
+                "July 21",
+                "Jul 21",
+                "Jul. 21",
+                "21 July",
+                "21 Jul",
+                "21 Jul."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Pikmin 4",
+                    "Release_date",
+                    "Friday, july 21, 2023"
+                ],
+                "Pikmin 4 -Release_date-> Friday, july 21, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 253,
+        "query": "How many employees did Meta lay off in November?",
+        "answer": [
+            [
+                "11,000",
+                "11000"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Meta",
+                    "Laid off",
+                    "More than 11,000 people"
+                ],
+                "Meta -Laid off-> More than 11,000 people",
+                "Meta -Laid off-> 11,000 workers in november"
+            ]
+        ]
+    },
+    {
+        "id": 254,
+        "query": "What company acquired iRobot?",
+        "answer": [
+            "Amazon"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Irobot",
+                    "Was acquired by",
+                    "Amazon"
+                ],
+                [
+                    "Amazon",
+                    "Announced an agreement to acquire",
+                    "Irobot"
+                ],
+                "Amazon -Acquired-> Irobot",
+                "Amazon -Announced an agreement to acquire-> Irobot",
+                "Amazon -Announced-> Acquisition agreement",
+                "The proposed acquisition of irobot <-Made statements regarding- Amazon"
+            ]
+        ]
+    },
+    {
+        "id": 255,
+        "query": "Which team won Super Bowl LVII?",
+        "answer": [
+            "Kansas City Chiefs"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Kansas city chiefs",
+                    "Defeated",
+                    "Philadelphia eagles"
+                ],
+                "Kansas city chiefs <-Defeated- Philadelphia eagles",
+                "Super bowl lvii champion <-Were the eventual- Kansas city chiefs"
+            ]
+        ]
+    },
+    {
+        "id": 256,
+        "query": "How much did SM Entertainment's revenue grow in 2022?",
+        "answer": [
+            "18.7%"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Sm entertainment",
+                    "Experienced revenue growth of",
+                    "18.7%"
+                ],
+                "Sm entertainment -Experienced revenue growth of-> 18.7%"
+            ]
+        ]
+    },
+    {
+        "id": 257,
+        "query": "who trained LLaMA?",
+        "answer": [
+            "Meta"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Llama",
+                    "Was released by",
+                    "Meta ai"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 258,
+        "query": "Which movie won Best Picture at the 95th Academy Awards Ceremony?",
+        "answer": [
+            "Everything Everywhere All at Once"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Everything everywhere all at once",
+                    "Won the oscar for",
+                    "Best picture"
+                ],
+                "Best picture oscar <-Won- Everything everywhere all at once",
+                "Best picture <-Won- Everything everywhere all at once"
+            ]
+        ]
+    },
+    {
+        "id": 259,
+        "query": "Who won Best Director at the 95th Academy Awards Ceremony?",
+        "answer": [
+            "Daniel Scheinert",
+            "Daniel Kwan"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Daniel kwan",
+                    "Won best director for",
+                    "Everything everywhere all at once"
+                ],
+                "Best director oscar <-Won- Daniel kwan",
+                "95th academy awards <-Was awarded during- Everything everywhere all at once -Won best director for- Daniel scheinert",
+                "95th academy awards <-Was awarded during- Everything everywhere all at once -Won best director for- Daniel kwan"
+            ]
+        ]
+    },
+    {
+        "id": 260,
+        "query": "Who won Best Actor at the 95th Academy Awards Ceremony?",
+        "answer": [
+            "Brendan Fraser"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Brendan fraser",
+                    "Accepted",
+                    "Oscar for best actor"
+                ],
+                "Oscar for best actor <-Accepted- Brendan fraser",
+                "The academy award for best actor <-Won- Brendan fraser",
+                "Brendan fraser -Won-> Academy award for best actor"
+            ]
+        ]
+    },
+    {
+        "id": 261,
+        "query": "Who won Best Actress at the 95th Academy Awards Ceremony?",
+        "answer": [
+            "Michelle Yeoh"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Michelle yeoh",
+                    "Accepted",
+                    "The oscar for best actress"
+                ],
+                "Best actress <-Won- Michelle yeoh",
+                "The oscar for best actress <-Accepted- Michelle yeoh"
+            ]
+        ]
+    },
+    {
+        "id": 262,
+        "query": "Which movie won Best International Feature Film at the 95th Academy Awards Ceremony?",
+        "answer": [
+            "All Quiet on the Western Front"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "All quiet on the western front",
+                    "Won",
+                    "Best international feature film"
+                ],
+                "Best international feature <-Won- All quiet on the western front"
+            ]
+        ]
+    },
+    {
+        "id": 263,
+        "query": "How much is the new monthly price for YouTube TV?",
+        "answer": [
+            "$72.99"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Youtube tv subscription",
+                    "Price",
+                    "$72.99 per month"
+                ],
+                [
+                    "Monthly cost",
+                    "Changed from",
+                    "$64.99/mo to $72.99/mo"
+                ],
+                "Youtube tv subscription -Price-> $72.99 per month",
+                "Youtube tv -Costs-> $72.99/mo for 1 membership"
+            ]
+        ]
+    },
+    {
+        "id": 264,
+        "query": "Who won The Voice Season 23?",
+        "answer": [
+            "Gina Miles"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Gina miles",
+                    "Won",
+                    "Season 23"
+                ],
+                "Season 23 <-Won- Gina miles"
+            ]
+        ]
+    },
+    {
+        "id": 265,
+        "query": "Who is the CEO of Hasbro?",
+        "answer": [
+            "Chris Cocks"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Chris cocks",
+                    "Will be",
+                    "The new ceo of hasbro"
+                ],
+                "The new ceo of hasbro <-Will be- Chris cocks"
+            ]
+        ]
+    },
+    {
+        "id": 266,
+        "query": "Which network received the most nominations for the 2023 Sports Emmy Awards?",
+        "answer": [
+            "ESPN"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Espn",
+                    "Received",
+                    "The most nominations"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 267,
+        "query": "Who is the Chairman of NBCUniversal Telemundo Enterprises?",
+        "answer": [
+            "Beau Ferrari"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Beau ferrari",
+                    "Was promoted to",
+                    "Chairman of nbcuniversal telemundo enterprises"
+                ],
+                "Chairman of nbcuniversal telemundo enterprises <-Was promoted to- Beau ferrari"
+            ]
+        ]
+    },
+    {
+        "id": 268,
+        "query": "What is the name of Elon Musk's new AI company?",
+        "answer": [
+            [
+                "X.AI",
+                "xAI"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "New artificial intelligence company",
+                    "Is called",
+                    "Xai"
+                ],
+                "Elon musk -Created-> Artificial intelligence company called x.ai",
+                "Artificial intelligence company called x.ai <-Created- Elon musk"
+            ]
+        ]
+    },
+    {
+        "id": 269,
+        "query": "Who won the Virginia Tech spring game 2023?",
+        "answer": [
+            "maroon"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Team maroon",
+                    "Won",
+                    "The contest"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 270,
+        "query": "Who was named the 2023 National Teacher of the Year?",
+        "answer": [
+            "Rebecka Peterson"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Rebecka peterson",
+                    "Was named",
+                    "2023 national teacher of the year"
+                ],
+                "2023 national teacher of the year <-Was named- Rebecka peterson"
+            ]
+        ]
+    },
+    {
+        "id": 271,
+        "query": "When does the 2023 Douglas County Fair & Rodeo start?",
+        "answer": [
+            [
+                "July 28",
+                "Jul 28",
+                "Jul. 28",
+                "28 July",
+                "28 Jul",
+                "28 Jul."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Douglas county fair & rodeo",
+                    "Runs from",
+                    "July 28"
+                ],
+                "Douglas county fair & rodeo -Runs from-> July 28"
+            ]
+        ]
+    },
+    {
+        "id": 272,
+        "query": "Where are Apple's first two stores in India?",
+        "answer": [
+            "Mumbai",
+            "New Delhi"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Apple's first official retail store",
+                    "Is located in",
+                    "Mumbai"
+                ],
+                "Apple's first official retail store -Is located in-> Mumbai"
+            ],
+            [
+                [
+                    "Apple's second official retail store",
+                    "Is located in",
+                    "New delhi"
+                ],
+                "Apple's second official retail store -Is located in-> New delhi"
+            ]
+        ]
+    },
+    {
+        "id": 273,
+        "query": "where is 2023 CAA World Congress of Sports?",
+        "answer": [
+            "JW Marriott Los Angeles"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2023 edition of caa world congress of sports",
+                    "Will be held at",
+                    "Jw marriott los angeles l.a. live, los angeles"
+                ],
+                "2023 edition of caa world congress of sports -Will be held at-> Jw marriott los angeles l.a. live, los angeles"
+            ]
+        ]
+    },
+    {
+        "id": 274,
+        "query": "What was Sundar Pichai's total compensation in 2022?",
+        "answer": [
+            "226 million"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Sundar pichai",
+                    "Received total compensation of",
+                    "$226 million"
+                ],
+                "2022 <-Received compensation in- Sundar pichai -Received total compensation of-> $226 million"
+            ]
+        ]
+    },
+    {
+        "id": 275,
+        "query": "When is the Google I/O conference 2023?",
+        "answer": [
+            [
+                "May 10",
+                "May 10",
+                "May. 10",
+                "10 May",
+                "10 May",
+                "10 May."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Google i/o 2023",
+                    "Will take place on",
+                    "May 10, 2023"
+                ],
+                "Google i/o 2023 -Will take place on-> May 10, 2023",
+                "Google i/o 2023 -Is_happening_on-> May 10",
+                "Google i/o 2023 -Will take place on-> Wednesday, may 10, 2023",
+                "Google i/o developer conference -Took place on-> May 10, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 276,
+        "query": "Who is the lead actress in Prima Facie?",
+        "answer": [
+            "Jodie Comer"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                "Prima facie <-Made her stage debut in- Jodie comer"
+            ]
+        ]
+    },
+    {
+        "id": 277,
+        "query": "What is the name of the AI dating tool Coyne Lloyd used?",
+        "answer": [
+            "Rizz"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Coyne lloyd",
+                    "Used",
+                    "Rizz"
+                ],
+                "A new ai digital dating assistant <-Is- Rizz"
+            ]
+        ]
+    },
+    {
+        "id": 278,
+        "query": "Who is the new sporting director of U.S. Soccer?",
+        "answer": [
+            "Matt Crocker"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Matt crocker",
+                    "Is appointed as",
+                    "The federation's new sporting director"
+                ],
+                [
+                    "U.s. soccer",
+                    "Announced",
+                    "The hiring of matt crocker"
+                ],
+                "U.s. soccer -Announced-> The hiring of matt crocker"
+            ]
+        ]
+    },
+    {
+        "id": 279,
+        "query": "Which team won the 2023 Big 12 Championships in women's golf?",
+        "answer": [
+            "Oklahoma State"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Oklahoma state women's golf",
+                    "Won_at",
+                    "Big 12 championships"
+                ],
+                "Big 12 championships <-Won_at- Oklahoma state women's golf"
+            ]
+        ]
+    },
+    {
+        "id": 280,
+        "query": "Who is the main character in Jedi: Survivor?",
+        "answer": [
+            "Cal Kestis"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Cal kestis",
+                    "Is the playable protagonist of",
+                    "The star wars jedi game series"
+                ],
+                "Jedi padawan <-Is a former- Cal kestis"
+            ]
+        ]
+    },
+    {
+        "id": 281,
+        "query": "Who is the director of \"Polite Society\"?",
+        "answer": [
+            "Nida Manzoor"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Nida manzoor",
+                    "Is the director of",
+                    "Polite society"
+                ],
+                "Polite society <-Is the director of- Nida manzoor"
+            ]
+        ]
+    },
+    {
+        "id": 282,
+        "query": "When did Grand Crew Season 2 end?",
+        "answer": [
+            [
+                "April 28",
+                "Apr 28",
+                "Apr. 28",
+                "28 April",
+                "28 Apr",
+                "28 Apr."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Grand crew season 2",
+                    "Aired_on",
+                    "Friday, april 28, 2023"
+                ],
+                "Grand crew season 2 -Aired_on-> Friday, april 28, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 283,
+        "query": "Who hosted the 2023 White House Correspondents' Dinner?",
+        "answer": [
+            "Roy Wood Jr."
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2023 white house correspondents' dinner",
+                    "Hosted_by",
+                    "Roy wood jr."
+                ],
+                "2023 correspondents' dinner <-Hosted- Roy wood, jr.",
+                "2023 correspondents' dinner -Had as host-> Roy wood, jr."
+            ]
+        ]
+    },
+    {
+        "id": 284,
+        "query": "Which city will host The World Games 2025?",
+        "answer": [
+            "Chengdu"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Chengdu",
+                    "Will_be",
+                    "The host city for the world games 2025"
+                ],
+                [
+                    "The world games 2025",
+                    "Will_take_place_in",
+                    "Chengdu"
+                ],
+                "The host city for the world games 2025 <-Will_be- Chengdu",
+                "Chengdu <-Will_take_place_in- The world games 2025"
+            ]
+        ]
+    },
+    {
+        "id": 285,
+        "query": "Who is the new CEO of TCW Group?",
+        "answer": [
+            "Katie Koch"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Katie koch",
+                    "Is",
+                    "The next chief executive officer"
+                ],
+                "Katie koch -Is-> The next chief executive officer",
+                [
+                    "Tcw group",
+                    "Hired",
+                    "Katie koch"
+                ],
+                "Tcw group -Hired-> Katie koch",
+                "President and chief executive officer of tcw <-Is- Katie"
+            ]
+        ]
+    },
+    {
+        "id": 286,
+        "query": "When was Pixel Fold announced?",
+        "answer": [
+            [
+                "May 10",
+                "May 10",
+                "May. 10",
+                "10 May",
+                "10 May",
+                "10 May."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Google i/o developer conference",
+                    "Took place on",
+                    "May 10, 2023"
+                ],
+                "Google pixel fold -Is_confirmed_to_be_announced-> On may 10"
+            ]
+        ]
+    },
+    {
+        "id": 287,
+        "query": "What is the name of Google's foldable smartphone?",
+        "answer": [
+            "Pixel Fold"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Google",
+                    "Unveiled",
+                    "Pixel fold"
+                ],
+                "A foldable smartphone <-Is classified as- Pixel fold",
+                "Pixel fold -Is google’s first-> Foldable device",
+                "Pixel fold -Is_google's_first-> Foldable smartphone",
+                "Pixel fold -Is classified as-> A foldable smartphone",
+                "Pixel fold -Is google's first-> Foldable phone"
+            ]
+        ]
+    },
+    {
+        "id": 288,
+        "query": "How many jobs were created in April 2023?",
+        "answer": [
+            [
+                "253,000",
+                "253000"
+            ]
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Employers",
+                    "Added",
+                    "253,000 jobs in april"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 289,
+        "query": "When is the end date for the federal PHE for COVID-19?",
+        "answer": [
+            [
+                "May 11",
+                "May 11",
+                "May. 11",
+                "11 May",
+                "11 May",
+                "11 May."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Public health emergency",
+                    "Expired_at",
+                    "The end of the day on may 11, 2023"
+                ],
+                "Public health emergency -Expired_at-> The end of the day on may 11, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 290,
+        "query": "What is the name of Microsoft's ai assistant in office?",
+        "answer": [
+            "Copilot"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Copilot",
+                    "Is",
+                    "A modern ai assistant"
+                ],
+                "A modern ai assistant <-Is- Copilot"
+            ]
+        ]
+    },
+    {
+        "id": 291,
+        "query": "What is the name of Google's AI image editing tool?",
+        "answer": [
+            "Magic Editor"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Google",
+                    "Introduced",
+                    "Magic editor"
+                ],
+                "A new experimental editing experience in google photos <-Is- Magic editor"
+            ]
+        ]
+    },
+    {
+        "id": 292,
+        "query": "when is chatgpt app for ios launched?",
+        "answer": [
+            [
+                "May 18",
+                "May 18",
+                "May. 18",
+                "18 May",
+                "18 May",
+                "18 May."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Chatgpt",
+                    "Launched",
+                    "Chatgpt app for ios on may 18, 2023"
+                ],
+                "Chatgpt -Launched-> Chatgpt app for ios on may 18, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 293,
+        "query": "What is the date of the 2023 NBA Draft?",
+        "answer": [
+            [
+                "June 22",
+                "Jun 22",
+                "Jun. 22",
+                "22 June",
+                "22 Jun",
+                "22 Jun."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "2023 nba draft",
+                    "Will take place on",
+                    "Thursday, june 22"
+                ],
+                "2023 nba draft -Will take place on-> Thursday, june 22"
+            ]
+        ]
+    },
+    {
+        "id": 294,
+        "query": "What is the price of the Apple Vision Pro headset?",
+        "answer": [
+            [
+                "$3,499",
+                "$3499"
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Apple vision pro",
+                    "Costs",
+                    "$3,499"
+                ],
+                "Apple vision pro -Costs-> $3,499"
+            ]
+        ]
+    },
+    {
+        "id": 295,
+        "query": "What is the name of Apple's headset?",
+        "answer": [
+            "Vision Pro"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Vision pro",
+                    "Is referred to as",
+                    "A headset"
+                ],
+                "Apple's new ar headset <-Is- Apple vision pro"
+            ]
+        ]
+    },
+    {
+        "id": 296,
+        "query": "Who is the CEO of Maven?",
+        "answer": [
+            "Kate Ryder"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Kate ryder",
+                    "Is",
+                    "The founder and ceo of maven"
+                ],
+                "The founder and ceo of maven <-Is- Kate ryder"
+            ]
+        ]
+    },
+    {
+        "id": 297,
+        "query": "Who won the U.S. Open golf tournament 2023?",
+        "answer": [
+            "Wyndham Clark"
+        ],
+        "is_true": false,
+        "merged_triplets": [
+            [
+                [
+                    "Wyndham clark",
+                    "Won",
+                    "His first career u.s. open and major championship"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": 298,
+        "query": "What is the start date of Prime Day 2023?",
+        "answer": [
+            [
+                "July 11",
+                "Jul 11",
+                "Jul. 11",
+                "11 July",
+                "11 Jul",
+                "11 Jul."
+            ]
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Amazon prime day event",
+                    "Will kick off on",
+                    "July 11, 2023 at 3 a.m. edt"
+                ],
+                "Amazon prime day event -Will kick off on-> July 11, 2023",
+                "Amazon prime day event -Will run through-> July 12, 2023"
+            ]
+        ]
+    },
+    {
+        "id": 299,
+        "query": "Who was the MVP of Super Bowl 2022?",
+        "answer": [
+            "Cooper Kupp"
+        ],
+        "is_true": true,
+        "merged_triplets": [
+            [
+                [
+                    "Super bowl lv",
+                    "Has mvp",
+                    "Cooper kupp"
+                ],
+                "Cooper kupp <-Has mvp- Super bowl lv"
+            ]
+        ]
+    }
+]
