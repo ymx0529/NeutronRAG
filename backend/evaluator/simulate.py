@@ -5,6 +5,36 @@ rgb_graph_retrieval = "rgb/graphrag/analysis_retrieval_merged.json"
 rgb_vector_generation = "rgb/vectorrag/analysis_generation___top5_2024-11-26_21-32-23.json"
 rgb_vector_retrieval = "rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
 rgb_hybrid_generation = "rgb/hybridrag/hybrid_result.json"
+rgb_hybrid_retrieval = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/hybridrag/hybrid_retrieval.json" 
+
+
+def construct_hybrid_retrieval(vector_retrieval = rgb_vector_retrieval,graph_retrieval = rgb_graph_retrieval):
+    output_path = "rgb/hybridrag/hybrid_retrieval.json"
+    with open(vector_retrieval, 'r', encoding='utf-8') as f:
+        vector = json.load(f)
+    with open(graph_retrieval, 'r', encoding='utf-8') as f:
+        graph = json.load(f)
+    hybrid_results = []
+    
+    for v_item,g_item in zip(vector,graph):
+        retrieve_results = {
+            "vector_result": v_item.get("retrieve_results"),  # 从向量检索结果中获取retrieve_results
+            "graph_result": g_item.get("retrieve_results")    # 从图检索结果中获取retrieve_results
+        }
+        combined_item = v_item.copy()  # 先复制v_item，避免修改原始数据
+        combined_item["retrieve_results"] = retrieve_results  # 添加新的retrieve_results字段
+        
+        # 将合并后的项添加到结果列表中
+        hybrid_results.append(combined_item)
+
+    output_path = "rgb/hybridrag/hybrid_retrieval.json"
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(hybrid_results, f, ensure_ascii=False, indent=4)
+
+    print(f"Hybrid retrieval results saved to {output_path}")
+
+
+
 
 # rgb_result_path = "/home/lipz/NeutronRAG/neutronrag/results/analysis/rgb"
 # rgb_graph_generation = "/home/lipz/NeutronRAG/neutronrag/results/analysis/rgb/graphrag/analysis_generation___merged.json"
@@ -278,7 +308,21 @@ def statistic_error_cause(generation_dataset, retrieval_dataset, mode):
                 for answer in answers
             )
         elif mode == "hybrid":
-            print("Not implemented yet")
+            # hybrid 模式同时检查 vector 和 graph 的检索结果
+            retrieved = any(
+                # 检查在 vector_result 中是否找到了答案
+                any(
+                    answer.lower() in result['node_text'].lower() for result in retrieve_results['vector_result']
+                ) or 
+                # 检查在 graph_result 中是否找到了答案
+                any(
+                    any(
+                        answer.lower() in value.lower() for value in values
+                    )
+                    for key, values in retrieve_results['graph_result'].items()
+                )
+                for answer in answers
+            )
 
         generation_data = next((item for item in generation_dataset if item['id'] == retrieval_data['id']), None)
         assert generation_data is not None, f"Cannot find the generation data for id {retrieval_data['id']}"
@@ -364,6 +408,77 @@ def statistic_question(vector_dataset, graph_dataset, hybrid_dataset):
 
     return question_eval
 
+#目前的图中顶点太多，只保留与evidence相关的
+def evidence_pruning(evidence_path = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb_evidence.json", graph_path = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_retrieval_merged.json"):
+    # 读取 evidence 数据
+    with open(evidence_path, 'r') as file:
+        evidence = json.load(file)
+    
+    # 读取 graph 数据
+    with open(graph_path, 'r') as file:
+        graph_data = json.load(file)
+
+    for e in evidence:
+        # 提取出 evidence 中的实体
+        entity = []
+        evidence_triples = e["merged_triplets"]
+        
+        # 遍历 evidence 中的每个三元组，获取实体
+        for t in evidence_triples:
+            for i in t:
+                if len(i) == 3:
+                    entity.append(i[0])  # 实体的第一个元素
+                    entity.append(i[2])  # 实体的第三个元素
+        
+        print(entity)
+
+        # 遍历 graph_data 查找匹配的条目
+        for g in graph_data:
+            if g["id"] == e["id"]:
+                print("id:",g["id"])
+                # 获取 retrieval_result
+                retrieval_result = g["retrieve_results"]
+                if len(entity) > 0:
+
+                    # 只保留包含 entity 中元素的条目
+                    for key, value in retrieval_result.items():
+                        # 过滤每个条目，保留那些包含 entity 中所有实体的条目
+                        fully_matched_results = [
+                            result for result in value
+                            if all(entity_item.lower() in result.lower() for entity_item in entity)
+                        ]
+                        
+                        # 如果有完全匹配的结果，保留这些结果
+                        if fully_matched_results:
+                            filtered_results = fully_matched_results
+                        else:
+                            # 如果没有完全匹配的结果，只保留最多5个包含至少一个实体的结果
+                            filtered_results = [
+                                result for result in value
+                                if any(entity_item.lower() in result.lower() for entity_item in entity)
+                            ][:5]  # 只保留最多5个
+                        retrieval_result[key] = filtered_results
+                        # 如果过滤后的结果为空，删除该 key
+                        # if not filtered_results:
+                        #     del retrieval_result[key]
+                        # else:
+                        #     # 否则更新该条目的检索结果
+                        #     retrieval_result[key] = filtered_results
+
+                    # 更新 graph_data 中的检索结果
+                    g["retrieval_result"] = retrieval_result
+
+    # 处理完后可以选择将更新后的 graph_data 保存到文件中
+    with open(graph_path, 'w', encoding='utf-8') as outfile:
+        json.dump(graph_data, outfile, ensure_ascii=False, indent=4)
+
+    print(f"Evidence pruning completed and results saved to {graph_path}")
+
+
+
+
+
+
 
 def adviser():
     rgb_graph_generation = "rgb/graphrag/analysis_generation___merged.json"
@@ -381,13 +496,19 @@ if __name__ == '__main__':
     
     # 数据集路径，需要替换一下
 
-    statistic_graph_generation(rgb_graph_generation)
-    statistic_graph_retrieval(rgb_graph_retrieval)
+    # statistic_graph_generation(rgb_graph_generation)
+    # statistic_graph_retrieval(rgb_graph_retrieval)
+    # print("vector")
+    # statistic_vector_generation(rgb_vector_generation)
+    # statistic_vector_retrieval(rgb_vector_retrieval)
     print("vector")
-    statistic_vector_generation(rgb_vector_generation)
-    statistic_vector_retrieval(rgb_vector_retrieval)
     statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
+    print("graph")
     statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
+    print("hybrid")
+    statistic_error_cause(rgb_hybrid_generation, rgb_hybrid_retrieval, "hybrid")
 
     # question_eval = statistic_question(vector_dataset=rgb_vector_generation,graph_dataset=rgb_graph_generation,hybrid_dataset=rgb_graph_generation)
     # print(adviser())
+    evidence_pruning()
+    # construct_hybrid_retrieval()
