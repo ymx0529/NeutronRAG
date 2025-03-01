@@ -568,7 +568,9 @@ document.getElementById('readButton').addEventListener('click', function() {
                                             selector: 'node',
                                             style: {
                                                 'background-color': 'data(color)',  // 使用节点的颜色
-                                                'label': 'data(label)'  // 显示节点的标签
+                                                'label': 'data(label)',  // 显示节点的标签
+                                                'width': 50,  // 可选：设置节点的大小
+                                                'height': 50  // 可选：设置节点的大小
                                             }
                                         },
                                         {
@@ -578,7 +580,27 @@ document.getElementById('readButton').addEventListener('click', function() {
                                                 'target-arrow-color': 'data(color)',  // 设置箭头的颜色
                                                 'curve-style': 'bezier',  // 设置边的曲线样式
                                                 'target-arrow-shape': 'triangle',  // 设置箭头的形状
-                                                'label': 'data(label)'  // 显示边的标签
+                                                'label': 'data(label)',  // 显示边的标签
+                                                'width': 2  // 可选：设置边的宽度
+                                            }
+                                        },
+                                        // 为高亮节点和边定义样式
+                                        {
+                                            selector: '.highlighted-node',
+                                            style: {
+                                                'background-color': '#FF5733',  // 高亮节点的背景颜色
+                                                'border-color': '#FF5733',  // 高亮节点的边框颜色
+                                                'border-width': 3 , // 边框宽度
+                                                'width': 80,  // 可选：设置节点的大小
+                                                'height': 80  // 可选：设置节点的大小
+                                            }
+                                        },
+                                        {
+                                            selector: '.highlighted-edge',
+                                            style: {
+                                                'line-color': '#FF5733',  // 高亮边的颜色
+                                                'target-arrow-color': '#FF5733',  // 高亮边的箭头颜色
+                                                'width': 3  // 边宽度
                                             }
                                         }
                                     ],
@@ -595,11 +617,22 @@ document.getElementById('readButton').addEventListener('click', function() {
                                 cy.add(graphData.nodes);  // 添加节点
                                 cy.add(graphData.edges);  // 添加边
                             
+                                // 添加高亮节点和边
+                                graphData['highlighted-node'].forEach(node => {
+                                    const highlightedNode = cy.getElementById(node.data.id);
+                                    highlightedNode.addClass('highlighted-node');
+                                });
+                            
+                                graphData['highlighted-edge'].forEach(edge => {
+                                    const highlightedEdge = cy.getElementById(edge.data.id);
+                                    highlightedEdge.addClass('highlighted-edge');
+                                });
+                            
                                 // 重新布局
                                 cy.layout({ name: 'cose' }).run();  // 运行布局算法，使图形按合理的位置显示
                             })
                             .catch(error => {
-                                console.error('Error fetching graph data:', error);
+                                console.error('Error:', error);
                             });
                         }
                     });

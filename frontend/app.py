@@ -29,7 +29,7 @@ def analysis():
 
 VECTOR_FILE_PATH = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json'
 GRAPH_FILE_PATH = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_retrieval_merged.json'
-
+EVIDENCE_FILE_PATH = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb_evidence.json"
 # [
     # {
     #     "id": 83,
@@ -213,7 +213,7 @@ def convert_to_triples(retrieve_results):
     return list(triples)
             
 
-def triples_to_json(triples):
+def triples_to_json(triples,evdience_entity,evdience_path):
 
     colors = [
         "#FFB3BA", "#FFDFBA", "#FFFFBA", "#BAFFC9", "#BAE1FF",
@@ -229,7 +229,7 @@ def triples_to_json(triples):
         "#BAFFC9", "#BAE1FF", "#FFC3A0", "#FF9AA2", "#FFDAC1"
     ]
 
-    json_result = {'edges': [], 'nodes': []}
+    json_result = {'edges': [], 'nodes': [],'highlighted-edge':[],'highlighted-node':[]}
     node_set = set()  # 用于追踪已经添加的节点
 
     import random
@@ -241,7 +241,8 @@ def triples_to_json(triples):
         destination = triple[2]
 
         # 添加边
-        json_result['edges'].append({
+        if relationship in evdience_path:
+            json_result['highlighted-edge'].append({
             'data': {
                 'label': relationship,
                 'source': source,
@@ -249,41 +250,113 @@ def triples_to_json(triples):
                 'color': colors[random.randint(0,54)] # 可以根据需要自定义颜色
             }
         })
+            json_result['edges'].append({
+                'data': {
+                    'label': relationship,
+                    'source': source,
+                    'target': destination,
+                    'color': colors[random.randint(0,54)] # 可以根据需要自定义颜色
+                }
+            })
+        else:
+
+            json_result['edges'].append({
+                'data': {
+                    'label': relationship,
+                    'source': source,
+                    'target': destination,
+                    'color': colors[random.randint(0,54)] # 可以根据需要自定义颜色
+                }
+            })
 
         # 添加源节点和目标节点（避免重复）
-        if source not in node_set:
-            json_result['nodes'].append({
+        if source in evdience_entity and source not in node_set:
+            json_result['highlighted-node'].append({
                 'data': {
                     'id': source,
                     'label': source,
                     'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
                 }
             })
-            node_set.add(source)
-
-        if destination not in node_set:
             json_result['nodes'].append({
+                    'data': {
+                        'id': source,
+                        'label': source,
+                        'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                    }
+                })
+            node_set.add(source)
+        else:
+            if source not in node_set:
+                json_result['nodes'].append({
+                    'data': {
+                        'id': source,
+                        'label': source,
+                        'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                    }
+                })
+                node_set.add(source)
+            
+        if destination in evdience_entity and destination not in node_set:
+            json_result['highlighted-node'].append({
                 'data': {
                     'id': destination,
                     'label': destination,
                     'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
                 }
             })
+            json_result['nodes'].append({
+                    'data': {
+                        'id': destination,
+                        'label': destination,
+                        'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                    }
+                })
             node_set.add(destination)
+        else:    
+            if destination not in node_set:
+                json_result['nodes'].append({
+                    'data': {
+                        'id': destination,
+                        'label': destination,
+                        'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                    }
+                })
+                node_set.add(destination)
 
     return json_result
 
 
+def get_evidence(file_path,item_id):
+    with open(file_path, 'r') as file:
+        data = json.load(file)  # 加载 JSON 数据
+            # 通过 item_id 查找对应的元素
+        e = next((item for item in data if item.get('id') == int(item_id)), None)
 
+        entity = []
+        path = []
+        evidence_triples = e["merged_triplets"]
+        
+        # 遍历 evidence 中的每个三元组，获取实体
+        for t in evidence_triples:
+            for i in t:
+                if len(i) == 3:
+                    entity.append(i[0])  # 实体的第一个元素
+                    path.append(i[1])
+                    entity.append(i[2])  # 实体的第三个元素
+        
+    return entity,path
+    
 
 @app.route('/get-graph/<item_id>', methods=['GET'])
 def get_graph(item_id):
     # 获取与 item_id 相关的 graph 数据
     filtered_data = load_and_filter_data(GRAPH_FILE_PATH, item_id)
+    evidence_entity,evidence_path = get_evidence(EVIDENCE_FILE_PATH,item_id)
     if filtered_data:
         # 转换 retrieve_results 为三元组
         filtered_data = convert_to_triples(filtered_data['retrieve_results'])
-        json_result = triples_to_json(filtered_data)
+        json_result = triples_to_json(filtered_data,evidence_entity,evidence_path)
         print("============================================")
         print(json_result)
         print("============================================")
