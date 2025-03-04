@@ -3,318 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>仪表盘示例 - 使用 gauge.js</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.3.5/gauge.min.js"></script> <!-- 引入gauge.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- 引入 Chart.js datalabels 插件 -->
-    <script src="../static/js/demo.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            width: 100%;
-            padding: 20px;
-        }
-
-        /* 四个仪表盘的容器 */
-        .panel-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .gauge-title {
-            font-size: 30px; /* Set the font size for the title */
-            font-weight: bold; /* Make the title bold */
-            text-align: center; /* Center align the title */
-            margin-bottom: 10px; /* Add space between the title and the gauge */
-            color: #333; /* Set title color */
-        }
-
-        .gauge-wrapper {
-            background-color: #fff; /* White background */
-            padding: 20px;
-            border-radius: 12px; /* Slightly rounded corners */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer and more subtle shadow */
-            width: 260px; /* Increased size for a better look */
-            height: 260px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 20px;
-            transition: transform 0.3s ease-in-out; /* Smooth hover effect */
-        }
-
-        .gauge-wrapper:hover {
-            transform: scale(1.05); /* Slightly enlarge the gauge on hover */
-        }
-
-        .gauge-container {
-            width: 240px;
-            height: 240px;
-            position: relative;
-        }
-
-        .gauge-container canvas {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .gauge-container .percentage {
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 36px; /* Increased font size for better readability */
-            font-weight: bold;
-            color: #333;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Text shadow for better visibility */
-        }
-
-        /* 饼图和雷达图的布局 */
-        .chart-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .chart-box {
-            width: 15%;
-            position: relative;
-        }
-
-        /* 最下面四个雷达图的布局 */
-        .radar-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-
-        .radar-box {
-            width: 28%;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="../static/css/analysis.css">
+    <title>RAG 评估仪表盘</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gauge.js/1.3.5/gauge.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="../static/js/analysis.js"></script>
 </head>
 <body>
     <div class="container">
-        <!-- 四个仪表盘展示 -->
-        <div class="panel-container">
-            <div class="gauge-wrapper">
-                <div class="gauge-container">
-                    <div class="gauge-title">VectorRAG Accuracy</div>
-                    <canvas id="gauge1"></canvas>
-                    <div class="percentage" id="vector_percentage">75%</div>
+        <!-- Metric Area -->
+        <div class="metric-area">
+            <h2 class="metric-area-title">Metric Area</h2>
+            <h3 class="metric-area-subtitle">Accuracy</h3> <!-- Accuracy 子标题 -->
+            <!-- Accuracy 仪表盘展示 -->
+            <div class="panel-container">
+                <div class="gauge-wrapper">
+                    <div class="gauge-container">
+                        <div class="gauge-title">GraphRAG</div>
+                        <canvas id="gauge1"></canvas>
+                        <div class="percentage" id="percentagegauge1"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="gauge-wrapper">
-                <div class="gauge-container">
-                    <div class="gauge-title">GraphRAG Accuracy</div>
-                    <canvas id="gauge2"></canvas>
-                    <div class="percentage" id="graph_percentage">80%</div>
+                <div class="gauge-wrapper">
+                    <div class="gauge-container">
+                        <div class="gauge-title">VectorRAG</div>
+                        <canvas id="gauge2"></canvas>
+                        <div class="percentage" id="percentagegauge2"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="gauge-wrapper">
-                <div class="gauge-container">
-                    <div class="gauge-title">HybridRAG Accuracy</div>
-                    <canvas id="gauge3"></canvas>
-                    <div class="percentage" id="hybrid_percentage3">85%</div>
+                <div class="gauge-wrapper">
+                    <div class="gauge-container">
+                        <div class="gauge-title">HybridRAG</div>
+                        <canvas id="gauge3"></canvas>
+                        <div class="percentage" id="percentagegauge3"></div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- 饼图部分 -->
-        <div class="chart-container">
-            <div class="pie-title">Error Statistics</div>
-            <div class="chart-box">
-                <canvas id="pieChart1"></canvas>
-            </div>
-            <div class="chart-box">
-                <canvas id="pieChart2"></canvas>
-            </div>
-            <div class="chart-box">
-                <canvas id="pieChart3"></canvas>
-            </div>
-            <div class="chart-box" style="width: 20%;">
-                <canvas id="largePie"></canvas>
+
+        <!-- Error Statistic -->
+        <div class="metric-area">
+            <h3 class="metric-area-subtitle">Error Statistic</h3> <!-- Error Statistic 子标题 -->
+            <!-- 饼图部分 -->
+            <div class="chart-container">
+                <div class="chart-box">
+                    <h3 class="chart-box-title">VectorRAG</h3>
+                    <canvas id="pieChart1"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3 class="chart-box-title">GraphRAG</h3>
+                    <canvas id="pieChart2"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3 class="chart-box-title">HybridRAG</h3>
+                    <canvas id="pieChart3"></canvas>
+                </div>
             </div>
         </div>
 
-        <!-- 雷达图部分 -->
-        <div class="radar-container">
-            <div class="radar-box">
-                <canvas id="radarChart1"></canvas>
-            </div>
-            <div class="radar-box">
-                <canvas id="radarChart2"></canvas>
-            </div>
-            <div class="radar-box">
-                <canvas id="radarChart3"></canvas>
-            </div>
-            <div class="radar-box">
-                <canvas id="radarChart4"></canvas>
+
+        <!-- Evaluation Metric -->
+        <div class="metric-area">
+            <h3 class="metric-area-subtitle">Evaluation Metric</h3> <!-- Evaluation Metric 子标题 -->
+            <!-- 雷达图部分 -->
+            <div class="radar-container">
+                <div class="radar-box">
+                    <h3 class="radar-box-title">VectorRAG</h3>  <!-- 移除 "Precision" -->
+                    <canvas id="radarChart1"></canvas>
+                </div>
+                <div class="radar-box">
+                    <h3 class="radar-box-title">GraphRAG</h3>  <!-- 移除 "Precision" -->
+                    <canvas id="radarChart2"></canvas>
+                </div>
+                <div class="radar-box">
+                    <h3 class="radar-box-title">HybridRAG</h3>  <!-- 移除 "Precision" -->
+                    <canvas id="radarChart3"></canvas>
+                </div>
             </div>
         </div>
     </div>
-
-    <script>
-        // 创建仪表盘的函数
-    function createGauge(elementId, percentage, color) {
-    // 设置不同颜色的渐变色
-    let colorStart, colorStop;
-    switch (color) {
-        case 'blue':
-            colorStart = '#A6C8FF'; // Light blue
-            colorStop = '#1E4B8B';  // Dark blue
-            break;
-        case 'green':
-            colorStart = '#A6FFB3'; // Light green
-            colorStop = '#28B64D';  // Dark green
-            break;
-        case 'purple':
-            colorStart = '#D3A6FF'; // Light purple
-            colorStop = '#6A2E8C';  // Dark purple
-            break;
-        case 'yellow':
-            colorStart = '#FFFFA6'; // Light yellow
-            colorStop = '#FFD700';  // Dark yellow
-            break;
-        default:
-            colorStart = '#A6C8FF'; // Default to light blue
-            colorStop = '#1E4B8B';  // Default to dark blue
-    }
-
-    var opts = {
-        angle: 0.15, // The span of the gauge arc (this is a half-circle)
-        lineWidth: 0.4, // The line thickness
-        radiusScale: 1, // Relative radius
-        pointer: {
-            length: 0, // No pointer, because you just want an arc
-            strokeWidth: 0, // No pointer stroke
-            color: '#000000' // Pointer color, but it's not used
-        },
-        limitMax: false,     // Max value
-        limitMin: false,     // Min value
-        colorStart: colorStart,   // Dynamic start color
-        colorStop: colorStop,     // Dynamic end color
-        strokeColor: '#E0E0E0',  // Border color (grey color for the remaining part)
-        generateGradient: true,  // Enable gradient
-        highDpiSupport: true,     // High resolution support
-        staticZones: [
-            {strokeStyle: colorStart, min: 0, max: percentage},  // Gradual color based on percentage
-            {strokeStyle: '#E0E0E0', min: percentage, max: 100}    // Grey color for the remaining part
-        ],
-        staticLabels: {
-            font: "12px sans-serif",  // Specifies font
-            labels: [0, 50, 100],  // Print labels at these values
-            color: "#000000",  // Label text color
-            fractionDigits: 0  // Numerical precision. 0=round off
-        },
-        renderTicks: {
-            divisions: 5, // Major divisions
-            divWidth: 1.1,
-            divLength: 0.7,
-            divColor: '#333333',
-            subDivisions: 3, // Minor ticks
-            subLength: 0.5,
-            subWidth: 0.6,
-            subColor: '#666666'
-        }
-    };
-
-    var target = document.getElementById(elementId); // Your canvas element
-    var gauge = new Gauge(target).setOptions(opts); // Create the gauge
-    gauge.maxValue = 100; // Set max gauge value to 100
-    gauge.setMinValue(0);  // Set min value
-    gauge.animationSpeed = 32; // Set animation speed (32 is default)
-    gauge.set(percentage); // Set actual value
-    gauge.setTextField(document.getElementById('percentage' + elementId.slice(-1))); // Set text field for percentage
-    return gauge;
-}
-
-// 创建四个仪表盘，分别传递不同的颜色
-const gauge1 = createGauge('gauge1', 75, 'blue');
-const gauge2 = createGauge('gauge2', 80, 'green');
-const gauge3 = createGauge('gauge3', 60, 'purple');
-
-
-
-
-
-        // 饼图部分
-        function createPieChart(ctx, data) {
-            return new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    datasets: [{
-                        data: data,
-                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
-                    }],
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        datalabels: {
-                            formatter: function(value, context) {
-                                return value + '%'; // Show percentage on each section
-                            },
-                            color: '#fff',
-                            font: {
-                                weight: 'bold',
-                                size: 16
-                            },
-                            anchor: 'center', // 文字居中显示
-                            align: 'center'   // 文字居中显示
-                        }
-                    }
-                },
-                plugins: [ChartDataLabels]
-                
-            });
-        }
-
-        createPieChart(document.getElementById('pieChart1').getContext('2d'), [10, 20, 30, 40]);
-        createPieChart(document.getElementById('pieChart2').getContext('2d'), [15, 25, 35, 25]);
-        createPieChart(document.getElementById('pieChart3').getContext('2d'), [5, 50, 25, 20]);
-        createPieChart(document.getElementById('largePie').getContext('2d'), [10, 30, 20, 40]);
-
-        // 雷达图部分
-        function createRadarChart(ctx, labels, data) {
-            return new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: '评估指标',
-                        data: data,
-                        backgroundColor: 'rgba(34, 202, 236, 0.2)',
-                        borderColor: 'rgba(34, 202, 236, 1)',
-                        borderWidth: 2
-                    }]
-                },
-                options: {
-                    scale: {
-                        ticks: {
-                            beginAtZero: true,
-                            max: 10,
-                            stepSize: 1
-                        }
-                    }
-                }
-            });
-        }
-
-        createRadarChart(document.getElementById('radarChart1').getContext('2d'), ['指标1', '指标2', '指标3', '指标4', '指标5'], [6, 7, 8, 5, 6]);
-        createRadarChart(document.getElementById('radarChart2').getContext('2d'), ['指标1', '指标2', '指标3', '指标4', '指标5'], [5, 6, 7, 6, 5]);
-        createRadarChart(document.getElementById('radarChart3').getContext('2d'), ['指标1', '指标2', '指标3', '指标4', '指标5'], [7, 8, 6, 5, 7]);
-        createRadarChart(document.getElementById('radarChart4').getContext('2d'), ['指标1', '指标2', '指标3', '指标4', '指标5'], [6, 7, 8, 5, 6]);
-
-    </script>
+    <script src="../static/js/analysis.js"></script>
 </body>
 </html>

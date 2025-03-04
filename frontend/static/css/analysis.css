@@ -1,8 +1,7 @@
-
 .analysis-section {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 /* 返回按钮样式 */
@@ -23,36 +22,75 @@
     background-color: #e0e0e0;
 }
 
+.metric-area {
+    margin-bottom: 25px; /* 略微增加 Metric Area 底部外边距 */
+}
+
+.metric-area-title {
+    font-size: 26px; /* 略微减小 Metric Area 大标题字体 */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* 减小 Metric Area 大标题下外边距 */
+    text-align: center;
+}
+
+.metric-area-subtitle {
+    font-size: 18px; /* 设置 Metric Area 子标题字体大小 */
+    font-weight: bold;
+    color: #333;
+    text-align: left; /* 子标题左对齐 */
+    margin-top: 20px; /* 增加子标题上外边距，与 Metric Area 大标题拉开距离 */
+    margin-bottom: 10px; /* 子标题下外边距 */
+}
+.metric-area > h3.metric-area-subtitle:first-of-type {
+    margin-top: 0; /* 移除第一个子标题的顶部外边距，使其更靠近 Metric Area 大标题 */
+}
+
+
+/* 仪表盘样式 */
 .panel-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
+.gauge-title {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px; /* 显著增加 margin-bottom，向上移动标题 */
+    color: #333;
+}
+
 .gauge-wrapper {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    width: 250px;
-    height: 250px;
+    background-color: rgba(255, 255, 255, 0.85); /* 略微透明的白色背景 */
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04); /* Even more subtle shadow */
+    width: 240px; /* Slightly reduced width */
+    height: 160px; /* Slightly reduced height */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
-    transform: none;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gauge-wrapper:hover {
+    transform: scale(1.05);
 }
 
 .gauge-container {
-    width: 220px;
-    height: 220px;
+    width: 210px; /* Reduced gauge-container width */
+    height: 170px; /* Reduced gauge-container height */
     position: relative;
 }
 
 .gauge-container canvas {
     position: absolute;
-    top: 0;
+    top: 20%;
     left: 0;
     width: 100% !important;
     height: 100% !important;
@@ -60,48 +98,95 @@
 
 .gauge-container .percentage {
     position: absolute;
-    top: 50%;
+    top: 70%; /* 略微下移百分比数值 */
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 32px; /* Slightly smaller percentage font */
+    font-weight: 400; /* Even lighter font-weight for percentage */
     color: #333;
     white-space: normal;
 }
 
 
+/* 饼图样式 */
 .chart-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
+.pie-title {
+    width: 100%;
+    text-align: left;
+    font-size: 18px; /* 进一步减小饼图区域标题字体 */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px; /* 略微减小饼图区域标题下外边距 */
+}
+
 .chart-box {
-    flex: 1 1 300px;
-    min-width: 0;
-    margin: 10px;
+    background-color: #fff;
+    padding: 12px; /* 进一步减少内边距 */
+    border-radius: 6px; /* 进一步减少圆角程度 */
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06); /* 更 subtle 的阴影 */
+    width: 340px; /* 调整饼图白框宽度，更细长 */
+    height: 230px; /* 调整饼图白框高度，更细长 */
+    margin: 0;
     position: relative;
+}
+
+.chart-box-title {
+    position: absolute;
+    top: -8px; /* 微调饼图标题位置 */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px; /* 进一步减小饼图图表标题字体 */
+    font-weight: bold;
+    color: #333;
 }
 
 .chart-box canvas {
     width: 100% !important;
     height: 100% !important;
+    position: absolute; /* 添加绝对定位 */
+    top: 10%; /* 尝试将 top 设置为 10%  (可以调整这个百分比值) */
+    left: 0; /*  保持 left: 0，让饼图水平方向占据整个白框 */
 }
-
-/* 最下面四个雷达图的布局 */
+.chartjs-legend {
+    margin-top: 30px; /* 增加图例的上外边距，使其向下移动 */
+}
+/* 雷达图样式 */
 .radar-container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
     flex-wrap: wrap;
 }
 
 .radar-box {
-    flex: 1 1 300px;
-    min-width: 0;
-    margin: 10px;
+    background-color: #fff;
+    padding: 12px; /* 进一步减少内边距 */
+    border-radius: 6px; /* 进一步减少圆角程度 */
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06); /* 更 subtle 的阴影 */
+    width: 260px; /* 调整雷达图白框宽度，更细长 */
+    height: 250px; /* 调整雷达图白框高度，更细长 */
+    margin: 0;
     position: relative;
+}
+
+.radar-box-title {
+    position: absolute;
+    top: -13px; /* 微调雷达图标题位置 */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px; /* 进一步减小雷达图图表标题字体 */
+    font-weight: bold;
+    color: #333;
 }
 
 .radar-box canvas {
