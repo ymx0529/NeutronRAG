@@ -2,13 +2,15 @@ import json
 import re
 import time
 from flask import Flask, Response, request, jsonify, render_template, session
+from flask_cors import CORS  # Import CORS
 from zhipuai import ZhipuAI
 from user import User  # 假设你的 User 类定义在 user.py 中
 from llmragenv.llmrag_env import LLMRAGEnv
-from evaluator.simulate import statistic_error_cause
+from evaluator import simulate  # Import simulate module
 
 app = Flask(__name__)
 app.secret_key = 'ac1e22dfb44b87ef38f5bf2cd1cb0c6f93bb0a67f1b2d8f7'  # 用于 flash 消息
+CORS(app) # Enable CORS for all routes - important for frontend to access backend from different origins
 
 
 @app.route('/')
@@ -29,7 +31,11 @@ def analysis():
 
 VECTOR_FILE_PATH = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json'
 GRAPH_FILE_PATH = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_retrieval_merged.json'
+EVIDENCE_FILE_PATH = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb_evidence.json"
 
+
+# [Rest of your functions: load_and_filter_data, find_right_arrow, find_left_arrow, get_all_dash, find_dash_positions, split_relation, convert_to_triples, triples_to_json, get_evidence, get_graph, read_file, get_vector, adviser, web_chat, test_chat, get_username, logout, register_user, login_user remain the same]
+# ... (Paste all your functions here: load_and_filter_data, find_right_arrow, find_left_arrow, get_all_dash, find_dash_positions, split_relation, convert_to_triples, triples_to_json, get_evidence, get_graph, read_file, get_vector, adviser, web_chat, test_chat, get_username, logout, register_user, login_user) ...
 # [
     # {
     #     "id": 83,
@@ -213,7 +219,7 @@ def convert_to_triples(retrieve_results):
     return list(triples)
             
 
-def triples_to_json(triples):
+def triples_to_json(triples,evdience_entity,evdience_path):
 
     colors = [
         "#FFB3BA", "#FFDFBA", "#FFFFBA", "#BAFFC9", "#BAE1FF",
@@ -229,7 +235,7 @@ def triples_to_json(triples):
         "#BAFFC9", "#BAE1FF", "#FFC3A0", "#FF9AA2", "#FFDAC1"
     ]
 
-    json_result = {'edges': [], 'nodes': []}
+    json_result = {'edges': [], 'nodes': [],'highlighted-edge':[],'highlighted-node':[]}
     node_set = set()  # 用于追踪已经添加的节点
 
     import random
@@ -241,7 +247,8 @@ def triples_to_json(triples):
         destination = triple[2]
 
         # 添加边
-        json_result['edges'].append({
+        if relationship in evdience_path:
+            json_result['highlighted-edge'].append({
             'data': {
                 'label': relationship,
                 'source': source,
@@ -249,46 +256,118 @@ def triples_to_json(triples):
                 'color': colors[random.randint(0,54)] # 可以根据需要自定义颜色
             }
         })
+            json_result['edges'].append({
+                'data': {
+                    'label': relationship,
+                    'source': source,
+                    'target': destination,
+                    'color': colors[random.randint(0,54)] # 可以根据需要自定义颜色
+                }
+            })
+        else:
+
+            json_result['edges'].append({
+                'data': {
+                    'label': relationship,
+                    'source': source,
+                    'target': destination,
+                    'color': colors[random.randint(0,54)] # 可以根据需要自定义颜色
+                }
+            })
 
         # 添加源节点和目标节点（避免重复）
-        if source not in node_set:
-            json_result['nodes'].append({
+        if source in evdience_entity and source not in node_set:
+            json_result['highlighted-node'].append({
                 'data': {
                     'id': source,
                     'label': source,
                     'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
                 }
             })
-            node_set.add(source)
-
-        if destination not in node_set:
             json_result['nodes'].append({
+                    'data': {
+                        'id': source,
+                        'label': source,
+                        'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                    }
+                })
+            node_set.add(source)
+        else:
+            if source not in node_set:
+                json_result['nodes'].append({
+                    'data': {
+                        'id': source,
+                        'label': source,
+                        'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                    }
+                })
+                node_set.add(source)
+            
+        if destination in evdience_entity and destination not in node_set:
+            json_result['highlighted-node'].append({
                 'data': {
                     'id': destination,
                     'label': destination,
                     'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
                 }
             })
+            json_result['nodes'].append({
+                    'data': {
+                        'id': destination,
+                        'label': destination,
+                        'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                    }
+                })
             node_set.add(destination)
+        else:    
+            if destination not in node_set:
+                json_result['nodes'].append({
+                    'data': {
+                        'id': destination,
+                        'label': destination,
+                        'color': colors[random.randint(0,54)]  # 可以根据需要自定义颜色
+                    }
+                })
+                node_set.add(destination)
 
     return json_result
 
 
+def get_evidence(file_path,item_id):
+    with open(file_path, 'r') as file:
+        data = json.load(file)  # 加载 JSON 数据
+            # 通过 item_id 查找对应的元素
+        e = next((item for item in data if item.get('id') == int(item_id)), None)
 
+        entity = []
+        path = []
+        evidence_triples = e["merged_triplets"]
+        
+        # 遍历 evidence 中的每个三元组，获取实体
+        for t in evidence_triples:
+            for i in t:
+                if len(i) == 3:
+                    entity.append(i[0])  # 实体的第一个元素
+                    path.append(i[1])
+                    entity.append(i[2])  # 实体的第三个元素
+        
+    return entity,path
+    
 
 @app.route('/get-graph/<item_id>', methods=['GET'])
 def get_graph(item_id):
     # 获取与 item_id 相关的 graph 数据
     filtered_data = load_and_filter_data(GRAPH_FILE_PATH, item_id)
+    evidence_entity,evidence_path = get_evidence(EVIDENCE_FILE_PATH,item_id)
     if filtered_data:
         # 转换 retrieve_results 为三元组
         filtered_data = convert_to_triples(filtered_data['retrieve_results'])
-        json_result = triples_to_json(filtered_data)
+        json_result = triples_to_json(filtered_data,evidence_entity,evidence_path)
         print("============================================")
         print(json_result)
         print("============================================")
 
-        return json_result  # 返回找到的数据
+        return jsonify(json_result)  # 返回找到的数据
     else:
         return jsonify({'error': 'Item not found'}), 404
 
@@ -308,7 +387,7 @@ def read_file():
         # 例如，如果你只想返回某些字段，可以在这里做处理
         result = []
         for item in data:
-            # 假设你想返回 id, question, answer 和 response 字段
+            # 假设你想返回 id, question, answer 和 response 字段 
             result.append({
                 'id': item.get('id'),
                 'question': item.get('question'),
@@ -378,9 +457,43 @@ def get_accuracy():
     return jsonify(data)
 
 
+@app.route('/api/analysis_data', methods=['GET'])  # New API endpoint for analysis data
+def get_analysis_data():
+    # Get accuracy data from simulate.py functions
+    graph_gen_faithfulness, graph_gen_accuracy = simulate.statistic_graph_generation(simulate.rgb_graph_generation)
+    graph_ret_recall, graph_ret_relevance = simulate.statistic_graph_retrieval(simulate.rgb_graph_retrieval)
+    vector_gen_precision, vector_gen_faithfulness, vector_gen_accuracy = simulate.statistic_vector_generation(simulate.rgb_vector_generation)
+    vector_ret_precision, vector_ret_relevance, vector_ret_recall = simulate.statistic_vector_retrieval(simulate.rgb_vector_retrieval)
 
+    # Simulate Error Statistics data (replace with your actual error stats logic later)
+    error_stats_vectorrag = {'None Result': 37.7, 'Lack Information': 14.2, 'Noisy': 7.1, 'Other': 41.0}
+    error_stats_graphrag = {'None Result': 69.4, 'Lack Information': 8.3, 'Noisy': 5.6, 'Other': 16.7}
+    error_stats_hybridrag = {'None Result': 36.8, 'Lack Information': 9.1, 'Noisy': 9.1, 'Other': 45.0}
 
+    # Simulate Evaluation Metrics data (replace with your actual eval metrics logic later)
+    eval_metrics_vectorrag = {'precision': vector_ret_precision, 'relevance': vector_ret_relevance, 'recall': vector_ret_recall, 'faithfulness': vector_gen_faithfulness, 'accuracy': vector_gen_accuracy}
+    eval_metrics_graphrag = {'precision': graph_ret_relevance, 'relevance': graph_ret_relevance, 'recall': graph_ret_recall, 'faithfulness': graph_gen_faithfulness, 'accuracy': graph_gen_accuracy}
+    eval_metrics_hybridrag = {'precision': 0.6, 'relevance': 0.7, 'recall': 0.5, 'faithfulness': 0.7, 'accuracy': 0.5} # HybridRAG data needs to be filled with your logic
 
+    analysis_data = {
+        "accuracy": {
+            "graphrag": round(graph_gen_accuracy * 100, 1), # Convert to percentage and round
+            "vectorrag": round(vector_gen_accuracy * 100, 1),
+            "hybridrag": 80 # Placeholder for HybridRAG Accuracy - replace with actual data
+        },
+        "errorStatistics": {
+            "vectorrag": error_stats_vectorrag,
+            "graphrag": error_stats_graphrag,
+            "hybridrag": error_stats_hybridrag
+        },
+        "evaluationMetrics": {
+            "vectorrag": eval_metrics_vectorrag,
+            "graphrag": eval_metrics_graphrag,
+            "hybridrag": eval_metrics_hybridrag
+        }
+    }
+
+    return jsonify(analysis_data)
 
 
 @app.route('/api/register', methods=['POST'])
@@ -466,7 +579,7 @@ def web_chat():
                 op3=vector_db
             )
             for msg in answer:
-                # 按 SSE 格式发送 JSON 消息
+                # 按 SSE 格式发送 JSON 消息 
                 print(f"data: {json.dumps({'message': msg})}")
                 yield f"data: {json.dumps({'message': msg})}\n\n"
                 time.sleep(0.1)  # 模拟延时

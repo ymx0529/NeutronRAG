@@ -658,13 +658,101 @@ document.getElementById('get_suggestions').addEventListener('click', function() 
 
 
 document.getElementById('More_button').addEventListener('click', function() {
-    window.location.href = '/analysis';  // 假设分析页面在 Flask 路由中的 URL 是 '/analysis'
-  });
+    // 获取选定的数据集
+    const datasetRadios = document.querySelectorAll('input[name="dataset"]');
+    let selectedDataset = null;
+    for (const radio of datasetRadios) {
+        if (radio.checked) {
+            selectedDataset = radio.value;
+            break;
+        }
+    }
+
+    if (!selectedDataset) {
+        alert("请先选择一个数据集。"); // 提示用户先选择数据集
+        return; // 如果没有选择数据集，则不继续执行
+    }
+
+    // 发送数据集信息到后端进行分析
+    fetch('/analysis', {  // 发送 POST 请求到新的 '/analysis' 路由
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ dataset: selectedDataset }) // 将选定的数据集名称发送到后端
+    })
+    .then(response => response.json())
+    .then(analysisData => {
+        console.log("从后端获取的分析数据:", analysisData);
+        // 使用后端返回的数据更新分析 UI
+        updateAnalysisUI(analysisData);
+
+        // 显示 analysis section
+        const analysisSection = document.querySelector('.analysis-section');
+        analysisSection.style.display = 'flex';
+    })
+    .catch(error => {
+        console.error('获取分析数据时出错:', error);
+        alert('获取分析数据失败。'); // 提示用户获取分析数据失败
+    });
+});
+
+//  新的函数：用于更新 analysis UI
+function updateAnalysisUI(data) {
+    // 更新仪表盘
+    createGauge('gauge1', data.vector_accuracy, 'blue'); // 假设后端返回的 accuracy 数据字段名为 vector_accuracy
+    createGauge('gauge2', data.graph_accuracy, 'green'); // 假设后端返回的 accuracy 数据字段名为 graph_accuracy
+    createGauge('gauge3', data.hybrid_accuracy, 'purple'); // 假设后端返回的 accuracy 数据字段名为 hybrid_accuracy
+
+    // 更新饼图 (假设你已经有 createPieChart 函数)
+    updatePieChart(pieChart1, data.vector_error_data); // 假设后端返回饼图数据字段名为 vector_error_data
+    updatePieChart(pieChart2, data.graph_error_data); // 假设后端返回饼图数据字段名为 graph_error_data
+    updatePieChart(pieChart3, data.hybrid_error_data); // 假设后端返回饼图数据字段名为 hybrid_error_data
+
+    // 更新雷达图 (假设你已经有 createRadarChart 函数)
+    updateRadarChart(radarChart1, data.radar_labels, data.vector_radar_data); // 假设后端返回雷达图数据字段名和标签
+    updateRadarChart(radarChart2, data.radar_labels, data.graph_radar_data);
+    updateRadarChart(radarChart3, data.radar_labels, data.hybrid_radar_data);
+}
+
+// 初始化图表变量，在 updateAnalysisUI 函数外部定义
+let pieChart1, pieChart2, pieChart3, radarChart1, radarChart2, radarChart3;
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 初始化饼图
+    const pieChart1Ctx = document.getElementById('pieChart1').getContext('2d');
+    const pieChart2Ctx = document.getElementById('pieChart2').getContext('2d');
+    const pieChart3Ctx = document.getElementById('pieChart3').getContext('2d');
+    pieChart1 = createPieChart(pieChart1Ctx, [0, 0, 0, 0]); // 初始数据，可以设置为 0 或其他默认值
+    pieChart2 = createPieChart(pieChart2Ctx, [0, 0, 0, 0]);
+    pieChart3 = createPieChart(pieChart3Ctx, [0, 0, 0, 0]);
+
+    // 初始化雷达图
+    const radarChart1Ctx = document.getElementById('radarChart1').getContext('2d');
+    const radarChart2Ctx = document.getElementById('radarChart2').getContext('2d');
+    const radarChart3Ctx = document.getElementById('radarChart3').getContext('2d');
+    const radarLabels = ['Accuracy', 'Relevance', 'Recall', 'Faithfulness'];  // 定义雷达图的标签
+    radarChart1 = createRadarChart(radarChart1Ctx, radarLabels, [0, 0, 0, 0]); // 初始数据
+    radarChart2 = createRadarChart(radarChart2Ctx, radarLabels, [0, 0, 0, 0]);
+    radarChart3 = createRadarChart(radarChart3Ctx, radarLabels, [0, 0, 0, 0]);
+});
+
+// 更新饼图数据的函数
+function updatePieChart(chart, data) {
+    chart.data.datasets[0].data = data;
+    chart.update();
+}
+
+// 更新雷达图数据的函数
+function updateRadarChart(chart, labels, data) {
+    chart.data.labels = labels;
+    chart.data.datasets[0].data = data;
+    chart.update();
+}
 
 
 
-
-  function createGauge(elementId, percentage, color) {
+function createGauge(elementId, percentage, color) {
     // 设置不同颜色的渐变色
     let colorStart, colorStop;
     switch (color) {
