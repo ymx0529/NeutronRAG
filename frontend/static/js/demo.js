@@ -610,7 +610,8 @@ document.getElementById('readButton').addEventListener('click', function() {
                                         animate: true,  // 启用动画
                                         animationDuration: 1000,  // 动画持续时间
                                         animationEasing: 'ease-in-out'  // 动画缓动函数
-                                    }
+                                    },
+                                    hideEdgesOnViewport: true,
                                 });
                             
                                 // 根据 graphData 动态添加节点和边
