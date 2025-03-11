@@ -690,45 +690,45 @@ document.getElementById('get_suggestions').addEventListener('click', function() 
 
 
 
-document.getElementById('More_button').addEventListener('click', function() {
-    // 获取选定的数据集
-    const datasetRadios = document.querySelectorAll('input[name="dataset"]');
-    let selectedDataset = null;
-    for (const radio of datasetRadios) {
-        if (radio.checked) {
-            selectedDataset = radio.value;
-            break;
-        }
-    }
+// document.getElementById('More_button').addEventListener('click', function() {
+//     // 获取选定的数据集
+//     const datasetRadios = document.querySelectorAll('input[name="dataset"]');
+//     let selectedDataset = null;
+//     for (const radio of datasetRadios) {
+//         if (radio.checked) {
+//             selectedDataset = radio.value;
+//             break;
+//         }
+//     }
 
-    if (!selectedDataset) {
-        alert("请先选择一个数据集。"); // 提示用户先选择数据集
-        return; // 如果没有选择数据集，则不继续执行
-    }
+//     if (!selectedDataset) {
+//         alert("请先选择一个数据集。"); // 提示用户先选择数据集
+//         return; // 如果没有选择数据集，则不继续执行
+//     }
 
-    // 发送数据集信息到后端进行分析
-    fetch('/analysis', {  // 发送 POST 请求到新的 '/analysis' 路由
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ dataset: selectedDataset }) // 将选定的数据集名称发送到后端
-    })
-    .then(response => response.json())
-    .then(analysisData => {
-        console.log("从后端获取的分析数据:", analysisData);
-        // 使用后端返回的数据更新分析 UI
-        updateAnalysisUI(analysisData);
+//     // 发送数据集信息到后端进行分析
+//     fetch('/analysis_data', {  // 发送 POST 请求到新的 '/analysis' 路由
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({ dataset: selectedDataset }) // 将选定的数据集名称发送到后端
+//     })
+//     .then(response => response.json())
+//     .then(analysisData => {
+//         console.log("从后端获取的分析数据:", analysisData);
+//         // 使用后端返回的数据更新分析 UI
+//         updateAnalysisUI(analysisData);
 
-        // 显示 analysis section
-        const analysisSection = document.querySelector('.analysis-section');
-        analysisSection.style.display = 'flex';
-    })
-    .catch(error => {
-        console.error('获取分析数据时出错:', error);
-        alert('获取分析数据失败。'); // 提示用户获取分析数据失败
-    });
-});
+//         // 显示 analysis section
+//         const analysisSection = document.querySelector('.analysis-section');
+//         analysisSection.style.display = 'flex';
+//     })
+//     .catch(error => {
+//         console.error('获取分析数据时出错:', error);
+//         alert('获取分析数据失败。'); // 提示用户获取分析数据失败
+//     });
+// });
 
 //  新的函数：用于更新 analysis UI
 function updateAnalysisUI(data) {

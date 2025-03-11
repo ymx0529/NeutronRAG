@@ -158,6 +158,9 @@
 .chartjs-legend {
     margin-top: 30px; /* 增加图例的上外边距，使其向下移动 */
 }
+.chart-box:hover {
+    transform: scale(1.05); /*  添加和 gauge-wrapper 相同的放大效果  */
+}
 /* 雷达图样式 */
 .radar-container {
     display: flex;
@@ -192,6 +195,13 @@
 .radar-box canvas {
     width: 100% !important;
     height: 100% !important;
+}
+.radar-box:hover {
+    transform: scale(1.05); /*  添加和 gauge-wrapper 相同的放大效果  */
+}
+
+.chart-box, .radar-box {
+    transition: transform 0.3s ease-in-out; /*  添加或确认已存在 transition 属性，确保动画平滑  */
 }
 
 .all-charts-container{
