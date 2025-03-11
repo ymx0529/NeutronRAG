@@ -32,13 +32,10 @@ def analysis():
 VECTOR_FILE_PATH = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json'
 GRAPH_FILE_PATH = '/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_retrieval_merged.json'
 EVIDENCE_FILE_PATH = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb_evidence.json"
-<<<<<<< HEAD
 
 
 # [Rest of your functions: load_and_filter_data, find_right_arrow, find_left_arrow, get_all_dash, find_dash_positions, split_relation, convert_to_triples, triples_to_json, get_evidence, get_graph, read_file, get_vector, adviser, web_chat, test_chat, get_username, logout, register_user, login_user remain the same]
 # ... (Paste all your functions here: load_and_filter_data, find_right_arrow, find_left_arrow, get_all_dash, find_dash_positions, split_relation, convert_to_triples, triples_to_json, get_evidence, get_graph, read_file, get_vector, adviser, web_chat, test_chat, get_username, logout, register_user, login_user) ...
-=======
->>>>>>> 8a60045cf2af1c00589970f0a50e078978b9ee6a
 # [
     # {
     #     "id": 83,
@@ -495,7 +492,7 @@ def get_analysis_data():
             "hybridrag": eval_metrics_hybridrag
         }
     }
-
+    print(analysis_data)
     return jsonify(analysis_data)
 
 
