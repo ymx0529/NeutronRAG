@@ -1,11 +1,12 @@
 import json
 rgb_result_path = "rgb"
-rgb_graph_generation = "rgb/graphrag/analysis_generation___merged.json"
-rgb_graph_retrieval = "rgb/graphrag/analysis_retrieval_merged.json"
-rgb_vector_generation = "rgb/vectorrag/analysis_generation___top5_2024-11-26_21-32-23.json"
-rgb_vector_retrieval = "rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
-rgb_hybrid_generation = "rgb/hybridrag/hybrid_result.json"
-rgb_hybrid_retrieval = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/hybridrag/hybrid_retrieval.json" 
+
+rgb_graph_generation = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_generation___merged.json"
+rgb_graph_retrieval = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/graphrag/analysis_retrieval_merged.json"
+rgb_vector_generation = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_generation___top5_2024-11-26_21-32-23.json"
+rgb_vector_retrieval = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
+rgb_hybrid_generation = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/hybridrag/hybrid_result.json"
+rgb_hybrid_retrieval = "/home/lipz/NeutronRAG/NeutronRAG/NeutronRAG/backend/evaluator/rgb/hybridrag/hybrid_retrieval.json" 
 
 
 def construct_hybrid_retrieval(vector_retrieval = rgb_vector_retrieval,graph_retrieval = rgb_graph_retrieval):
@@ -75,7 +76,7 @@ def statistic_graph_generation(dataset):
 
 
     for data in dataset:
-        # print(f"data:{data}")
+        print(f"data:{data}")
         exact_match_sum += data['generation_evaluation']['exact_match']
         hallucinations_sum += data['generation_evaluation']['hallucinations']
 

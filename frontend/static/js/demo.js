@@ -528,11 +528,16 @@ document.getElementById('readButton').addEventListener('click', function() {
                     // 为 div 添加点击事件
                     div.addEventListener('click', function() {
                         const answerContentDiv = document.querySelector('.answer-content');
+                        const ragSelect = document.getElementById('rag-select');
+
+
                         if (answerContentDiv) {
-                            answerContentDiv.innerHTML = `
-                                <strong>Query:</strong> ${item.question}<br>
-                                <strong>Answer:</strong> ${item.answer}
-                            `;
+                            fetchData(item.id,ragSelect)
+
+                            ragSelect.addEventListener('change', function() {
+                                const selectedOption = ragSelect.value; // 获取当前选中的 RAG 模式
+                                fetchData(item.id,selectedOption)
+                            });
 
                             // 根据 div 的 ID，动态获取对应的 JSON 文件内容
                             const itemId = div.id;
@@ -857,6 +862,26 @@ function createGauge(elementId, percentage, color) {
     gauge.set(percentage); // Set actual value
     gauge.setTextField(document.getElementById('percentage' + elementId.slice(-1))); // Set text field for percentage
     return gauge;
+}
+
+
+
+function fetchData(itemId, optionValue) {
+    fetch(`/display_generate?item_id=${itemId}&option_value=${optionValue}`)
+        .then(response => response.json())
+        .then(data => {
+            const answerContentDiv = document.querySelector('.answer-content');
+            if (answerContentDiv) {
+                answerContentDiv.innerHTML = `
+                    <strong>Query:</strong> ${data.result.query}<br>
+                    <strong>Answer:</strong> ${data.result.answer}
+                    <strong>Option:</strong> ${optionValue}
+                `;
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
 }
 // function adjustMainContentHeight() {
 //     const settingBar = document.querySelector('.left-sidebar');

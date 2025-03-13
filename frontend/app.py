@@ -92,6 +92,7 @@ def find_left_arrow(s):
             i += 1
 
     return left_arrow_positions
+
     
 
 #获取所有的-的位置，但它不一定是关系的分隔符
@@ -425,8 +426,8 @@ def adviser():
     rgb_vector_retrieval = "/home/lipz/NeutronRAG/NeutronRAG/backend/evaluator/rgb/vectorrag/analysis_retrieval___top5_2024-11-26_21-32-23.json"
 
     # 假设 statistic_error_cause 函数已经定义
-    v_retrieve_error, v_lose_error, v_lose_correct =  statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
-    g_retrieve_error, g_lose_error, g_lose_correct = statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
+    v_retrieve_error, v_lose_error, v_lose_correct =  simulate.statistic_error_cause(rgb_vector_generation, rgb_vector_retrieval, "vector")
+    g_retrieve_error, g_lose_error, g_lose_correct = simulate.statistic_error_cause(rgb_graph_generation, rgb_graph_retrieval, "graph")
 
     suggestions = {
         "vector_retrieve_error": v_retrieve_error,
@@ -608,7 +609,24 @@ def web_chat():
     # 返回流式数据
     return Response(generate_chat(), content_type='text/event-stream'),200
 
-    
+
+
+@app.route('/display_generate', methods=['GET'])
+def display_generate():
+    item_id = request.args.get("item_id")
+    option_value = request.args.get("option_value")
+
+    if not item_id or not option_value:
+        return jsonify({"error": "Missing parameters"}), 400
+
+    # 这里模拟数据读取
+    result = {
+        "query": f"Query for item {item_id} with {option_value}",
+        "answer": f"Generated answer for {option_value} on item {item_id}"
+    }
+
+    return jsonify({"result": result})
+
 
 
 
