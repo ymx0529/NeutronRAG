@@ -473,6 +473,67 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.getElementById("readButton").addEventListener("click", function() {
+    const model = document.getElementById("model-select").value;
+    const apiKey = document.getElementById("api-key-input").value;
+    
+    // 获取数据集
+    const dataset = document.querySelector('input[name="dataset"]:checked')?.value || "RGB";
+
+    // VectorRAG 参数
+    const topK = parseInt(document.getElementById("top-k").value);
+    const threshold = parseFloat(document.getElementById("similarity-threshold").value);
+    const chunkSize = parseInt(document.getElementById("chunk-size").value);
+
+    // GraphRAG 参数
+    const kHop = parseInt(document.getElementById("k-hop").value);
+    const maxKeywords = parseInt(document.getElementById("max-keywords").value);
+    const pruning = document.getElementById("pruning").value === "yes";
+
+    // HybridRAG 参数
+    const strategy = document.getElementById("strategy").value;
+    const vectorProportion = parseFloat(document.getElementById("vector-proportion").value);
+    const graphProportion = parseFloat(document.getElementById("graph-proportion").value);
+
+    const requestData = {
+        model_name: model,
+        dataset: dataset,
+        key: apiKey,
+        top_k: topK,
+        threshold: threshold,
+        chunksize: chunkSize,
+        k_hop: kHop,
+        max_keywords: maxKeywords,
+        pruning: pruning,
+        strategy: strategy,
+        vector_proportion: vectorProportion,
+        graph_proportion: graphProportion
+    };
+
+    console.log("发送配置:", requestData);
+
+
+        // 发送请求到后端
+        fetch("/load_model", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(requestData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("模型加载成功:", data);
+            alert("模型加载成功!");
+        })
+        .catch(error => {
+            console.error("模型加载失败:", error);
+            alert("模型加载失败，请检查控制台错误日志。");
+        });
+
+
+});
+
 
 // ### History显示question_list
 document.getElementById('readButton').addEventListener('click', function() {

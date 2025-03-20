@@ -21,7 +21,7 @@
                 <h2 class="subtitle">Multi-Dimension Feedback</h2>
             </div>
             <input type="text" placeholder="请输入内容..." id="user-input" class="input-box">
-            <button id="send-button" class="send-button">发送</button>
+            <button id="send-button" class="send-button">Send</button>
             <div>
                 <i class="material-icons user-icon">account_circle</i>
             </div>
@@ -38,14 +38,14 @@
                     <div class="input-group">
                         <label for="model-select">Model:</label>
                         <select id="model-select" name="model-select">
-                            <option value="ModelA">Llama3:70b</option>
-                            <option value="ModelB">ModelB</option>
-                            <option value="ModelC">ModelC</option>
+                            <option value="llama3:70b">llama3:70b</option>
+                            <option value="llama3:8b">llama3:8b</option>
+                            <option value="llama2:13b">llama2:13b</option>
                         </select>
                     </div>
                     <div class="input-group">
                         <label for="api-key-input">API-KEY:</label>
-                        <input type="text" id="api-key-input" name="api-key-input" readonly>
+                        <input type="text" id="api-key-input" name="api-key-input" value="">
                     </div>
                     <div class="sidebar-section-inner">
                         <div class="sidebar-header-inner" onclick="toggleSidebarSection(this)">

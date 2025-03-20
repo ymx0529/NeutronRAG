@@ -7,11 +7,14 @@ from zhipuai import ZhipuAI
 from user import User  # 假设你的 User 类定义在 user.py 中
 from llmragenv.llmrag_env import LLMRAGEnv
 from evaluator import simulate  # Import simulate module
+from llmragenv.demo_chat import Demo_chat
 
 app = Flask(__name__)
 app.secret_key = 'ac1e22dfb44b87ef38f5bf2cd1cb0c6f93bb0a67f1b2d8f7'  # 用于 flash 消息
 CORS(app) # Enable CORS for all routes - important for frontend to access backend from different origins
 
+
+current_model = None
 
 @app.route('/')
 def index():
@@ -684,6 +687,45 @@ def get_username():
 def logout():
     session.clear()  # 清除所有 session 数据
     return jsonify({"message": "注销成功"}), 200
+
+
+
+@app.route('/load_model', methods=['POST'])
+def load_model():
+    global current_model  # 使用全局变量存储模型
+
+    try:
+        data = request.json
+        model_name = data.get("model_name")
+        url = data.get("url")
+        key = data.get("key")
+        dataset = data.get("dataset")
+        if key == "":
+            key = "ollama"
+        print(model_name,key)
+
+        if not model_name or not key:
+            return jsonify({"status": "error", "message": "缺少必要参数"}), 400
+
+        # 如果当前已有模型运行，则先关闭
+        if current_model is not None:
+            try:
+                current_model.close()  # 关闭当前模型（假设ClientFactory的客户端有close()方法）
+                print(f"已关闭模型: {current_model}")
+            except Exception as e:
+                print(f"关闭模型失败: {e}")
+
+        # 加载新模型
+        current_model = Demo_chat(model_name=model_name,api_key=key,dataset=dataset)
+        print(current_model.chat_test())
+
+        return jsonify({"status": "success", "message": f"模型 {model_name} 加载成功"}), 200
+
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False)
